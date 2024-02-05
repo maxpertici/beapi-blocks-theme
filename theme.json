@@ -11,38 +11,23 @@
 			"palette": [
 				{
 					"slug": "base",
-					"color": "#ffffff",
+					"color": "var(--wp--custom--color--light)",
 					"name": "Base"
 				},
 				{
 					"slug": "contrast",
-					"color": "#000000",
+					"color": "var(--wp--custom--color--dark)",
 					"name": "Contrast"
 				},
 				{
 					"slug": "primary",
-					"color": "#ffe600",
+					"color": "var(--wp--custom--color--yellow)",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#999999",
+					"color": "var(--wp--custom--color--grey-400)",
 					"name": "Secondary"
-				},
-				{
-					"slug": "grey-100",
-					"color": "#eee",
-					"name": "Grey 100"
-				},
-				{
-					"slug": "grey-200",
-					"color": "#ccc",
-					"name": "Grey 200"
-				},
-				{
-					"slug": "grey-300",
-					"color": "#aaa",
-					"name": "Grey 300"
 				}
 			]
 		},
@@ -50,50 +35,70 @@
 			"contentSize": "700px",
 			"wideSize": "1140px"
 		},
+		"custom": {
+			"color": {
+				"dark": "#000000",
+				"light": "#ffffff",
+				"yellow": "#ffe600",
+				"grey-100": "#eee",
+				"grey-200": "#ccc",
+				"grey-300": "#aaa",
+				"grey-400": "#999"
+			},
+			"typography": {
+				"line-height": {
+					"100": 1.1,
+					"200": 1.2,
+					"300": 1.25,
+					"400": 1.5,
+					"500": 1.75
+				}
+			}
+		},
 		"spacing": {
 			"units": [ "px" ],
 			"blockGap": true,
 			"customSpacingSize": false,
 			"spacingSizes": [
 				{
-					"name": "8px",
+					"name": "1",
 					"size": "0.5rem",
-					"slug": "8"
+					"slug": "1"
 				},
 				{
-					"name": "16px",
+					"name": "2",
 					"size": "1rem",
-					"slug": "16"
+					"slug": "2"
 				},
 				{
-					"name": "24px",
+					"name": "3",
 					"size": "clamp(1rem, 0.8236rem + 0.7526vw, 1.5rem)",
-					"slug": "24"
+					"slug": "3"
 				},
 				{
-					"name": "32px",
+					"name": "4",
 					"size": "clamp(1.5rem, 1.3236rem + 0.7526vw, 2rem)",
-					"slug": "32"
+					"slug": "4"
 				},
 				{
-					"name": "40px",
+					"name": "5",
 					"size": "clamp(2rem, 1.8236rem + 0.7526vw, 2.5rem)",
-					"slug": "40"
+					"slug": "5"
 				},
 				{
-					"name": "48px",
+					"name": "6",
 					"size": "clamp(2.5rem, 2.3236rem + 0.7526vw, 3rem)",
-					"slug": "48"
+					"slug": "6"
 				},
 				{
-					"name": "64px",
+					"name": "7",
 					"size": "clamp(3rem, 2.6472rem + 1.5052vw, 4rem)",
-					"slug": "64"
+					"slug": "7"
 				},
 				{
-					"name": "80px",
+					"name": "8",
 					"size": "clamp(4rem, 3.6472rem + 1.5052vw, 5rem)",
-					"slug": "80"
+					"slug": "8"
 				}
 			]
 		},
@@ -103,80 +108,44 @@
 			"customFontSize": false,
 			"fontFamilies": [
 				{
-					"fontFamily": "\"OpenSans\", sans-serif",
-					"name": "OpenSans",
+					"fontFamily": "\"Inter\", sans-serif",
+					"name": "Inter",
 					"slug": "primary",
 					"fontFace": [
 						{
-							"fontFamily": "OpenSans",
+							"fontFamily": "Inter",
 							"fontWeight": "400",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./assets/fonts/OpenSans-Regular.woff2"
+								"file:./assets/fonts/Inter-Regular.woff2"
 							]
 						},
 						{
-							"fontFamily": "OpenSans",
-							"fontWeight": "400",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [
-								"file:./assets/fonts/OpenSans-Italic.woff2"
-							]
-						},
-						{
-							"fontFamily": "OpenSans",
+							"fontFamily": "Inter",
 							"fontWeight": "300",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./assets/fonts/OpenSans-Light.woff2"
+								"file:./assets/fonts/Inter-Light.woff2"
 							]
 						},
 						{
-							"fontFamily": "OpenSans",
-							"fontWeight": "300",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [
-								"file:./assets/fonts/OpenSans-LightItalic.woff2"
-							]
-						},
-						{
-							"fontFamily": "OpenSans",
+							"fontFamily": "Inter",
 							"fontWeight": "500",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./assets/fonts/OpenSans-Medium.woff2"
+								"file:./assets/fonts/Inter-Medium.woff2"
 							]
 						},
 						{
-							"fontFamily": "OpenSans",
-							"fontWeight": "500",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [
-								"file:./assets/fonts/OpenSans-MediumItalic.woff2"
-							]
-						},
-						{
-							"fontFamily": "OpenSans",
+							"fontFamily": "Inter",
 							"fontWeight": "700",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./assets/fonts/OpenSans-Bold.woff2"
-							]
-						},
-						{
-							"fontFamily": "OpenSans",
-							"fontWeight": "700",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [
-								"file:./assets/fonts/OpenSans-BoldItalic.woff2"
+								"file:./assets/fonts/Inter-Bold.woff2"
 							]
 						}
 					]
@@ -251,7 +220,7 @@
 					"text": "var(--wp--preset--color--contrast)"
 				},
 				"typography": {
-					"lineHeight": "1.2"
+					"lineHeight": "var(--wp--custom--typography--line-height--200)"
 				}
 			},
 			"h1": {
@@ -287,10 +256,10 @@
 			"button": {
 				"spacing": {
 					"padding": {
-						"top": "var(--wp--preset--spacing--16)",
-						"right": "var(--wp--preset--spacing--24)",
-						"bottom": "var(--wp--preset--spacing--16)",
-						"left": "var(--wp--preset--spacing--24)"
+						"top": "var(--wp--preset--spacing--2)",
+						"right": "var(--wp--preset--spacing--3)",
+						"bottom": "var(--wp--preset--spacing--2)",
+						"left": "var(--wp--preset--spacing--3)"
 					}
 				},
 				"border": {
@@ -346,16 +315,16 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "var(--wp--preset--spacing--16)",
+			"blockGap": "var(--wp--preset--spacing--2)",
 			"padding": {
-				"right": "var(--wp--preset--spacing--16)",
-				"left": "var(--wp--preset--spacing--16)"
+				"right": "var(--wp--preset--spacing--2)",
+				"left": "var(--wp--preset--spacing--2)"
 			}
 		},
 		"typography": {
 			"fontSize": "var(--wp--preset--font-size--small)",
 			"fontFamily": "var(--wp--preset--font-family--primary)",
-			"lineHeight": "1.5"
+			"lineHeight": "var(--wp--custom--typography--line-height--400)"
 		}
 	},
 	"templateParts": [

@@ -4,6 +4,6 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package be-api-blocks-theme
+ * @package beapi-blocks-theme
  * @since 0.0.1
  */
