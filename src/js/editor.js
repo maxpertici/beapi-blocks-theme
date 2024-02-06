@@ -1,15 +1,6 @@
-import lazySizes from 'lazysizes'
 import domReady from '@wordpress/dom-ready'
 import { addFilter } from '@wordpress/hooks'
 import { unregisterBlockStyle, getBlockVariations, unregisterBlockVariation } from '@wordpress/blocks'
-
-/**
- * LazySizes configuration
- * https://github.com/aFarkas/lazysizes/#js-api---options
- */
-lazySizes.cfg.nativeLoading = {
-  setLoadingAttribute: false,
-}
 
 // Native Gutenberg
 domReady(() => {
@@ -29,10 +20,6 @@ if (window.acf) {
 }
 
 addFilter('blocks.registerBlockType', 'beapi-framework', function (settings, name) {
-  if (name === 'core/paragraph') {
-    settings.example.attributes.dropCap = false
-  }
-
   if (name === 'core/separator' || name === 'core/quote' || name === 'core/pullquote' || name === 'core/table') {
     // remove custom styles
     settings.styles = []

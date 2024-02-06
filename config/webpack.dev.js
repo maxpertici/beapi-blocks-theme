@@ -7,6 +7,7 @@ const mode = 'development'
 
 module.exports = (env) => {
   const bs = env.bs || false
+  const analyzer = env.analyzer || false
   return merge(common, {
     mode: mode,
     stats: 'errors-only',
@@ -14,7 +15,7 @@ module.exports = (env) => {
     devServer: {
       contentBase: path.join(__dirname, 'public'),
     },
-    plugins: plugins.get(mode, bs),
+    plugins: plugins.get(mode, bs, analyzer),
     module: {
       rules: loaders.get(mode),
     },

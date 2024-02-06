@@ -13,7 +13,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const browsersyncConfig = require('./browsersync.config')
 
 module.exports = {
-  get: function (mode, bs) {
+  get: function (mode, bs, analyzer) {
     const plugins = [
       new CleanWebpackPlugin(),
       new ESLintPlugin({
@@ -36,12 +36,14 @@ module.exports = {
     ]
 
     if (mode === 'production') {
-      plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'json',
-          generateStatsFile: true,
-        })
-      )
+      if (analyzer) {
+        plugins.push(
+          new BundleAnalyzerPlugin({
+            analyzerMode: 'json',
+            generateStatsFile: true,
+          })
+        )
+      }
       plugins.push(
         new WebpackManifestPlugin({
           fileName: 'assets.json',

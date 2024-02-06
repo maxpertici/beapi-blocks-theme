@@ -1,25 +1,24 @@
 {
-  "name": "beapi-frontend-framework",
-  "version": "5.1.0",
+  "name": "beapi-blocks-theme",
+  "version": "0.1.0",
   "author": "Be API",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BeAPI/beapi-frontend-framework"
+    "url": "https://github.com/BeAPI/beapi-blocks-theme"
   },
   "scripts": {
     "start": "yarn webpack --watch --config config/webpack.dev.js",
     "start:bs": "yarn webpack --watch --env bs --config config/webpack.dev.js",
     "build": "yarn webpack --config config/webpack.prod.js",
+    "build:analyzer": "yarn webpack --env analyzer --config config/webpack.prod.js",
     "lint:css": "node_modules/.bin/stylelint \"src/scss/**/*.scss\"",
     "lint:js": "node_modules/.bin/eslint \"src/js/**/*.js\"",
     "lint": "node_modules/.bin/concurrently \"yarn lint:css\" \"yarn lint:js\"",
-    "bundle-report": "yarn build && yarn webpack-bundle-analyzer dist/stats.json",
-    "image": "yarn node config/image-sizes.js"
+    "bundle-report": "yarn build:analyzer && yarn webpack-bundle-analyzer dist/stats.json"
   },
   "license": "GPL-2.0",
   "dependencies": {
-    "@fontsource/poppins": "^5.0.5",
-    "lazysizes": "^5.3.2",
+    "@beapi/be-a11y": "^1.5.2",
     "oneloop.js": "^5.0.0"
   },
   "devDependencies": {
@@ -46,9 +45,7 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
     "js-yaml": "^4.1.0",
-    "json2csv": "^5.0.6",
     "mini-css-extract-plugin": "^1.5.0",
-    "ora": "^5.4.0",
     "portfinder": "^1.0.28",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
@@ -60,7 +57,6 @@
     "prettier": "^2.2.1",
     "sass": "^1.52.3",
     "sass-loader": "^11.0.1",
-    "sharp": "^0.32.1",
     "style-loader": "^2.0.0",
     "stylelint": "^14.13.0",
     "stylelint-config-recess-order": "^3.0.0",
