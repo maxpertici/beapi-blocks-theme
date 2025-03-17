@@ -34,10 +34,10 @@ class Editor_Patterns implements Service {
 	public function register_categories(): void {
 
 		/**
-		 * usage : 'common' => [ 'label' => __( 'Common', 'beapi-frontend-framework' ) ]
+		 * usage : 'common' => [ 'label' => __( 'Common', 'beapi-blocks-theme' ) ]
 		 */
 		$pattern_categories = [
-			'common' => [ 'label' => __( 'Common', 'beapi-frontend-framework' ) ],
+			'common' => [ 'label' => __( 'Common', 'beapi-blocks-theme' ) ],
 		];
 
 		foreach ( $pattern_categories as $name => $properties ) {
@@ -122,7 +122,7 @@ class Editor_Patterns implements Service {
 							'_register_theme_block_patterns',
 							sprintf(
 							/* translators: %s: file name. */
-								esc_html__( 'Could not register file "%s" as a block pattern ("Slug" field missing)', 'beapi-frontend-framework' ),
+								esc_html__( 'Could not register file "%s" as a block pattern ("Slug" field missing)', 'beapi-blocks-theme' ),
 								esc_html( $file )
 							),
 							'6.0.0'
@@ -135,7 +135,7 @@ class Editor_Patterns implements Service {
 							'_register_theme_block_patterns',
 							sprintf(
 							/* translators: %1s: file name; %2s: slug value found. */
-								esc_html__( 'Could not register file "%1$s" as a block pattern (invalid slug "%2$s")', 'beapi-frontend-framework' ),
+								esc_html__( 'Could not register file "%1$s" as a block pattern (invalid slug "%2$s")', 'beapi-blocks-theme' ),
 								esc_html( $file ),
 								esc_html( $pattern_data['slug'] )
 							),
@@ -152,7 +152,7 @@ class Editor_Patterns implements Service {
 							'_register_theme_block_patterns',
 							sprintf(
 							/* translators: %1s: file name; %2s: slug value found. */
-								esc_html__( 'Could not register file "%s" as a block pattern ("Title" field missing)', 'beapi-frontend-framework' ),
+								esc_html__( 'Could not register file "%s" as a block pattern ("Title" field missing)', 'beapi-blocks-theme' ),
 								esc_html( $file )
 							),
 							'6.0.0'
