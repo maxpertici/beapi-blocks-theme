@@ -71,77 +71,7 @@ class Editor implements Service {
 	 *  - etc.
 	 *
 	 */
-	private function after_theme_setup(): void {
-
-		//color palettes
-		add_theme_support(
-			'editor-color-palette',
-			[
-				[
-					'name'  => __( 'Dark', 'beapi-blocks-theme' ),
-					'slug'  => 'dark',
-					'color' => '#000000',
-				],
-				[
-					'name'  => __( 'Light', 'beapi-blocks-theme' ),
-					'slug'  => 'light',
-					'color' => '#ffffff',
-				],
-				[
-					'name'  => __( 'Primary', 'beapi-blocks-theme' ),
-					'slug'  => 'primary',
-					'color' => '#ffff00',
-				],
-				[
-					'name'  => __( 'Secondary', 'beapi-blocks-theme' ),
-					'slug'  => 'secondary',
-					'color' => '#00ffff',
-				],
-			]
-		);
-		// font sizes
-		add_theme_support(
-			'editor-font-sizes',
-			[
-				[
-					'name'      => __( 'Title 6', 'beapi-blocks-theme' ),
-					'shortName' => 'h6',
-					'size'      => 14,
-					'slug'      => 'h6',
-				],
-				[
-					'name'      => __( 'Title 5', 'beapi-blocks-theme' ),
-					'shortName' => 'h5',
-					'size'      => 16,
-					'slug'      => 'h5',
-				],
-				[
-					'name'      => __( 'Title 4', 'beapi-blocks-theme' ),
-					'shortName' => 'h4',
-					'size'      => 18,
-					'slug'      => 'h4',
-				],
-				[
-					'name'      => __( 'Title 3', 'beapi-blocks-theme' ),
-					'shortName' => 'h3',
-					'size'      => 24,
-					'slug'      => 'h3',
-				],
-				[
-					'name'      => __( 'Title 2', 'beapi-blocks-theme' ),
-					'shortName' => 'h2',
-					'size'      => 40,
-					'slug'      => 'h2',
-				],
-				[
-					'name'      => __( 'Title 1', 'beapi-blocks-theme' ),
-					'shortName' => 'h1',
-					'size'      => 58,
-					'slug'      => 'h1',
-				],
-			]
-		);
-	}
+	private function after_theme_setup(): void {}
 
 	/**
 	 * editor style
@@ -309,7 +239,5 @@ class Editor implements Service {
 		];
 
 		return ( is_array( $allowed_blocks ) ) ? array_merge( $allowed, $allowed_blocks ) : $allowed;
-
 	}
-
 }
