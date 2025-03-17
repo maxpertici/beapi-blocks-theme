@@ -1,0 +1,487 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ae4a5f4288f02916b9c5fca22de6394b",
+    "packages": [
+        {
+            "name": "beapi/blockparty-accordion",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:BeAPI/blockparty-accordion.git",
+                "reference": "b9b05b51bfdde7bc62738bb870eed5649fc1b52e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.beapi.fr/dist/beapi/blockparty-accordion/beapi-blockparty-accordion-b9b05b51bfdde7bc62738bb870eed5649fc1b52e-zip-17599d.zip",
+                "reference": "b9b05b51bfdde7bc62738bb870eed5649fc1b52e",
+                "shasum": "aa1904802520d00d562afe04cc36d0ebbdb9ef58"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0",
+                "ext-json": "*",
+                "php": "^8.1 | ^8.2"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "overtrue/phplint": "^9.1",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "php-stubs/wordpress-stubs": "^6.4",
+                "phpcompatibility/phpcompatibility-wp": "^2.1",
+                "phpro/grumphp-shim": "^1.5",
+                "roave/security-advisories": "dev-latest",
+                "roots/wordpress-no-content": "^6.4",
+                "vimeo/psalm": "^5.20",
+                "wp-coding-standards/wpcs": "^3.0"
+            },
+            "type": "wordpress-plugin",
+            "scripts": {
+                "cs": [
+                    "./vendor/bin/phpcs"
+                ],
+                "cb": [
+                    "./vendor/bin/phpcbf"
+                ],
+                "psalm": [
+                    "./vendor/bin/psalm"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BeAPI",
+                    "email": "technical@beapi.fr"
+                }
+            ],
+            "description": "Accessible Accordion block for WordPress editor.",
+            "keywords": [
+                "block",
+                "gutenberg",
+                "multisite",
+                "plugin",
+                "share",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/BeAPI/blockparty-accordion/tree/1.0.3",
+                "issues": "https://github.com/BeAPI/blockparty-accordion/issues"
+            },
+            "time": "2024-09-12T07:02:55+00:00"
+        },
+        {
+            "name": "beapi/blockparty-faq",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:BeAPI/blockparty-faq.git",
+                "reference": "3e202e226a31bcbf61276c013012a2ae3b126833"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.beapi.fr/dist/beapi/blockparty-faq/beapi-blockparty-faq-3e202e226a31bcbf61276c013012a2ae3b126833-zip-7dbbe8.zip",
+                "reference": "3e202e226a31bcbf61276c013012a2ae3b126833",
+                "shasum": "b4a8d9821f463c92371b466ed77121b36b0ccecd"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0",
+                "ext-json": "*",
+                "php": "^8.1 | ^8.2"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "humanmade/psalm-plugin-wordpress": "^3.0",
+                "overtrue/phplint": "^9.1",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "php-stubs/wordpress-seo-stubs": "^20.5",
+                "phpcompatibility/phpcompatibility-wp": "^2.1",
+                "phpro/grumphp-shim": "^1.5",
+                "roave/security-advisories": "dev-latest",
+                "roots/wordpress-no-content": "^6.0",
+                "vimeo/psalm": "^5.20",
+                "wp-coding-standards/wpcs": "^3.0"
+            },
+            "type": "wordpress-plugin",
+            "scripts": {
+                "cs": [
+                    "./vendor/bin/phpcs"
+                ],
+                "cb": [
+                    "./vendor/bin/phpcbf"
+                ],
+                "psalm": [
+                    "./vendor/bin/psalm"
+                ]
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BeAPI",
+                    "email": "technique@beapi.fr"
+                }
+            ],
+            "description": "A Gutenberg block for SEO friendly FAQ in an accessible accordion.",
+            "keywords": [
+                "block",
+                "faq",
+                "gutenberg"
+            ],
+            "support": {
+                "source": "https://github.com/BeAPI/blockparty-faq/tree/1.0.2",
+                "issues": "https://github.com/BeAPI/blockparty-faq/issues"
+            },
+            "time": "2024-06-07T10:47:57+00:00"
+        },
+        {
+            "name": "beapi/blockparty-key-figure",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:BeAPI/blockparty-key-figure.git",
+                "reference": "7c6f4046744a8fde76eb59a86cf2966bbec0dce8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.beapi.fr/dist/beapi/blockparty-key-figure/beapi-blockparty-key-figure-7c6f4046744a8fde76eb59a86cf2966bbec0dce8-zip-376511.zip",
+                "reference": "7c6f4046744a8fde76eb59a86cf2966bbec0dce8",
+                "shasum": "e6aaccb860648bb78ff1e14623a9bfe1ae25b3d6"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0",
+                "ext-json": "*",
+                "php": "^8.1 | ^8.2"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "humanmade/psalm-plugin-wordpress": "^3.0",
+                "overtrue/phplint": "^9.1",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "php-stubs/wordpress-seo-stubs": "^20.5",
+                "phpcompatibility/phpcompatibility-wp": "^2.1",
+                "phpro/grumphp-shim": "^1.5",
+                "roave/security-advisories": "dev-latest",
+                "roots/wordpress-no-content": "^6.0",
+                "vimeo/psalm": "^5.20",
+                "wp-coding-standards/wpcs": "^3.0"
+            },
+            "type": "wordpress-plugin",
+            "scripts": {
+                "cs": [
+                    "./vendor/bin/phpcs"
+                ],
+                "cb": [
+                    "./vendor/bin/phpcbf"
+                ],
+                "psalm": [
+                    "./vendor/bin/psalm"
+                ],
+                "phpunit": [
+                    "phpunit"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BeAPI",
+                    "email": "technique@beapi.fr"
+                }
+            ],
+            "description": "Gutenberg key figure block.",
+            "keywords": [
+                "block",
+                "figure",
+                "gutenberg",
+                "key",
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/BeAPI/blockparty-key-figure/tree/1.0.3",
+                "issues": "https://github.com/BeAPI/blockparty-key-figure/issues"
+            },
+            "time": "2024-06-11T06:58:09+00:00"
+        },
+        {
+            "name": "beapi/blockparty-tabs",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:BeAPI/blockparty-tabs.git",
+                "reference": "fbeb43c4ad5b245205348acfeae92bdf31974707"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.beapi.fr/dist/beapi/blockparty-tabs/beapi-blockparty-tabs-fbeb43c4ad5b245205348acfeae92bdf31974707-zip-8b4d59.zip",
+                "reference": "fbeb43c4ad5b245205348acfeae92bdf31974707",
+                "shasum": "de31478ba30a077683d05c14f15525a784eb34a8"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "humanmade/psalm-plugin-wordpress": "^3.0",
+                "overtrue/phplint": "^9.1",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpcompatibility/phpcompatibility-wp": "^2.1",
+                "phpro/grumphp-shim": "^1.5",
+                "roave/security-advisories": "dev-latest",
+                "vimeo/psalm": "^5.20",
+                "wp-coding-standards/wpcs": "^3.0"
+            },
+            "type": "wordpress-plugin",
+            "scripts": {
+                "cs": [
+                    "./vendor/bin/phpcs"
+                ],
+                "cb": [
+                    "./vendor/bin/phpcbf"
+                ],
+                "psalm": [
+                    "./vendor/bin/psalm"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BeAPI",
+                    "email": "technique@beapi.fr"
+                }
+            ],
+            "description": "Accessible Tabs block for WordPress gutenberg.",
+            "keywords": [
+                "gutenberg",
+                "plugin",
+                "tabs",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/BeAPI/blockparty-tabs/tree/1.0.2",
+                "issues": "https://github.com/BeAPI/blockparty-tabs/issues"
+            },
+            "time": "2025-02-26T10:01:20+00:00"
+        },
+        {
+            "name": "beapi/icon-block",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:BeAPI/beapi-icon-block.git",
+                "reference": "6614ff9a8a772c3dc731eeba73896f337f87e2ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.beapi.fr/dist/beapi/icon-block/beapi-icon-block-6614ff9a8a772c3dc731eeba73896f337f87e2ba-zip-0fffd9.zip",
+                "reference": "6614ff9a8a772c3dc731eeba73896f337f87e2ba",
+                "shasum": "b8c4e287fe5c6b2d5ae45effbd3c440f96cb2332"
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "overtrue/phplint": "^3.0",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpro/grumphp-shim": "^1.5",
+                "squizlabs/php_codesniffer": "^3.6",
+                "wp-coding-standards/wpcs": "^2.3"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Beapi\\IconBlock\\": "includes/"
+                }
+            },
+            "scripts": {
+                "cs": [
+                    "./vendor/bin/phpcs"
+                ],
+                "cbf": [
+                    "./vendor/bin/phpcbf"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BeAPI",
+                    "email": "technique@beapi.fr"
+                }
+            ],
+            "description": "Icon block for WordPress gutenberg",
+            "support": {
+                "source": "https://github.com/BeAPI/beapi-icon-block/tree/2.2.0",
+                "issues": "https://github.com/BeAPI/beapi-icon-block/issues"
+            },
+            "time": "2024-11-14T08:37:36+00:00"
+        },
+        {
+            "name": "composer/installers",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "12fb2dfe5e16183de69e784a7b84046c43d97e8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/12fb2dfe5e16183de69e784a7b84046c43d97e8e",
+                "reference": "12fb2dfe5e16183de69e784a7b84046c43d97e8e",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.10.27 || ^2.7",
+                "composer/semver": "^1.7.2 || ^3.4.0",
+                "phpstan/phpstan": "^1.11",
+                "phpstan/phpstan-phpunit": "^1",
+                "symfony/phpunit-bridge": "^7.1.1",
+                "symfony/process": "^5 || ^6 || ^7"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                },
+                "plugin-modifies-install-path": true
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "MantisBT",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Starbug",
+                "Thelia",
+                "Whmcs",
+                "WolfCMS",
+                "agl",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "concreteCMS",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "known",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "majima",
+                "mako",
+                "matomo",
+                "mediawiki",
+                "miaoxing",
+                "modulework",
+                "modx",
+                "moodle",
+                "osclass",
+                "pantheon",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "processwire",
+                "puppet",
+                "pxcms",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "sylius",
+                "tastyigniter",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/installers/issues",
+                "source": "https://github.com/composer/installers/tree/v2.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-06-24T20:46:46+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "beapi/beapi-blocks-theme",
+  "type": "project",
+  "license": "MIT",
+  "description": "BeAPI Blocks Theme",
+  "keywords": [],
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+      {
+          "type": "composer",
+          "url": "https://wpackagist.org",
+          "only": ["wpackagist-plugin/*", "wpackagist-theme/*"],
+          "canonical": false
+      },
+      {
+          "type": "composer",
+          "url": "https://composer.beapi.fr"
+      }
+  ],
+  "require": {
+    "beapi/blockparty-accordion": "^1.0",
+    "beapi/blockparty-faq": "^1.0",
+    "beapi/blockparty-key-figure": "^1.0",
+    "beapi/blockparty-tabs": "^1.0",
+    "beapi/icon-block": "^2.2",
+    "composer/installers": "^1.0|^2.0"
+  },
+  "extra": {
+      "installer-paths": {
+          "mu-plugins/{$name}/": [
+              "type:wordpress-muplugin"
+          ],
+          "plugins/{$name}/": [
+              "type:wordpress-plugin"
+          ],
+          "themes/{$name}/": [
+              "type:wordpress-theme"
+          ]
+      }
+  }
+}

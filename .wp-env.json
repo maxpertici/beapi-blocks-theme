@@ -1,0 +1,12 @@
+{
+	"plugins": [
+    "./plugins/blockparty-accordion",
+    "./plugins/blockparty-faq",
+    "./plugins/blockparty-tabs",
+    "./plugins/blockparty-key-figure",
+    "./plugins/icon-block"
+  ],
+	"themes": [
+    "./themes/beapi-blocks-theme"
+  ]
+}
