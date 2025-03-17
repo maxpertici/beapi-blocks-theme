@@ -7,7 +7,6 @@
     "./plugins/blockparty-key-figure",
     "./plugins/icon-block",
     "./plugins/query-monitor",
-    "./plugins/rewrite-rules-inspector",
     "./plugins/safe-svg"
   ],
 	"themes": [
