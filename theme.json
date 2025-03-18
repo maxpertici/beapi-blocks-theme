@@ -9,14 +9,14 @@
   },
   "templateParts": [
 		{
-			"area": "site-header",
-			"name": "site-header",
-			"title": "Site Header"
+			"area": "header",
+			"name": "header",
+			"title": "Header"
 		},
 		{
-			"area": "site-footer",
-			"name": "site-footer",
-			"title": "Site Footer"
+			"area": "footer",
+			"name": "footer",
+			"title": "Footer"
 		}
 	]
 }

@@ -56,7 +56,7 @@ class Editor implements Service {
 		/**
 		 * White list of gutenberg blocks
 		 */
-		add_filter( 'allowed_block_types_all', [ $this, 'gutenberg_blocks_allowed' ], 11, 2 );
+		add_filter( 'allowed_block_types_all', [ $this, 'gutenberg_blocks_allowed' ], 10, 2 );
 	}
 
 	/**
@@ -116,7 +116,7 @@ class Editor implements Service {
 			$filepath,
 			$asset_data['dependencies'],
 			$asset_data['version'],
-			true
+			[ 'in_footer' => true ]
 		);
 
 		$this->assets_tools->add_inline_script(
