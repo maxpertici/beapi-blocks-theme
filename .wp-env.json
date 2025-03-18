@@ -1,21 +1,16 @@
 {
 	"plugins": [
-    "./plugins/advanced-custom-fields-pro",
-    "./plugins/blockparty-accordion",
-    "./plugins/blockparty-faq",
-    "./plugins/blockparty-tabs",
-    "./plugins/blockparty-key-figure",
-    "./plugins/icon-block",
-    "./plugins/query-monitor",
-    "./plugins/safe-svg"
+    "./.wp-env/plugins/advanced-custom-fields-pro",
+    "./.wp-env/plugins/blockparty-accordion",
+    "./.wp-env/plugins/blockparty-faq",
+    "./.wp-env/plugins/blockparty-tabs",
+    "./.wp-env/plugins/blockparty-key-figure",
+    "./.wp-env/plugins/icon-block",
+    "./.wp-env/plugins/safe-svg"
   ],
-	"themes": [
-    "./themes/beapi-blocks-theme"
-  ],
+	"themes": ["."],
   "mappings": {
-    "wp-content/mu-plugins": "./mu-plugins",
-    "wp-content/plugins": "./plugins",
-    "wp-content/themes": "./themes",
-    "wp-content/vendor": "./vendor"
+    "wp-content/mu-plugins": "./.wp-env/mu-plugins",
+    "wp-content/plugins": "./.wp-env/plugins"
   }
 }

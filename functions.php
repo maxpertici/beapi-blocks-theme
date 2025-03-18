@@ -2,8 +2,8 @@
 /**
  * Local
  */
-if ( file_exists( '/var/www/html/wp-content/vendor/autoload.php' ) ) {
-	require '/var/www/html/wp-content/vendor/autoload.php';
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
 }
 
 /**

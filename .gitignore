@@ -1,9 +1,17 @@
-mu-plugins/*
-!mu-plugins/.gitkeep
-plugins/*
-!plugins/.gitkeep
+.DS_Store
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+node_modules/
+package-lock.json
+
+.wp-env/
 vendor/
 
-.DS_Store
-node_modules
-package-lock.json
+assets/conf-img/image-locations.json
+assets/conf-img/image-sizes.json
+dist/
