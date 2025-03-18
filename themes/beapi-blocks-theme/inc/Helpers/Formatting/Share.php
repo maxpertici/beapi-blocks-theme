@@ -62,7 +62,7 @@ function get_share_link( string $name, string $link_to_share, array $share_attri
 		'x'         => [
 			'attributes' => [
 				'title' => __( 'Share on X', 'beapi-blocks-theme' ),
-				'href'  => 'https://twitter.com/intent/tweet',
+				'href'  => 'https://x.com/intent/tweet',
 				'class' => 'share__link',
 			],
 			'icon'       => 'social/x',
@@ -92,7 +92,7 @@ function get_share_link( string $name, string $link_to_share, array $share_attri
 				'url' => $link_to_share,
 			],
 		],
-		'bluesky' => [
+		'bluesky'   => [
 			'attributes' => [
 				'title' => __( 'Share on Bluesky', 'beapi-blocks-theme' ),
 				'href'  => 'https://bsky.app/intent/compose',
@@ -198,5 +198,5 @@ function get_share_link( string $name, string $link_to_share, array $share_attri
  * @return void Echo the markup of the share link
  */
 function the_share_link( string $name, string $link_to_share, array $share_attributes = [], array $attributes = [], array $settings = [] ): void {
-	echo get_share_link( $name, $link_to_share, $share_attributes, $attributes, $settings );
+	echo get_share_link( $name, $link_to_share, $share_attributes, $attributes, $settings ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
