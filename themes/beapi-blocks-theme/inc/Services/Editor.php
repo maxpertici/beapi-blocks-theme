@@ -44,11 +44,6 @@ class Editor implements Service {
 		$this->style();
 
 		/**
-		 * Register custom block style
-		 */
-		$this->register_custom_block_styles();
-
-		/**
 		 * Customize theme.json settings
 		 */
 		add_filter( 'wp_theme_json_data_theme', [ $this, 'filter_theme_json_theme' ], 10, 1 );
@@ -156,47 +151,6 @@ class Editor implements Service {
 		);
 
 		$this->assets_tools->enqueue_script( 'theme-admin-editor-script' );
-	}
-
-	/**
-	 * Register custom block styles
-	 */
-
-	private function register_custom_block_styles() {
-		// Buttons
-		//      register_block_style(
-		//          'core/button',
-		//          [
-		//              'name'  => 'reverse',
-		//              'label' => __( 'Reverse', 'beapi-blocks-theme' ),
-		//          ]
-		//      );
-
-		// Paragraph
-
-		register_block_style(
-			'core/paragraph',
-			[
-				'name'  => 'small',
-				'label' => __( 'Small', 'beapi-blocks-theme' ),
-			]
-		);
-
-		register_block_style(
-			'core/paragraph',
-			[
-				'name'  => 'large',
-				'label' => __( 'Large', 'beapi-blocks-theme' ),
-			]
-		);
-
-		register_block_style(
-			'core/paragraph',
-			[
-				'name'  => 'huge',
-				'label' => __( 'Huge', 'beapi-blocks-theme' ),
-			]
-		);
 	}
 
 	/**
