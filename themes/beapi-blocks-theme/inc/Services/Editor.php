@@ -52,6 +52,7 @@ class Editor implements Service {
 		 * Load editor JS for ADMIN
 		 */
 		add_action( 'enqueue_block_editor_assets', [ $this, 'admin_editor_script' ] );
+
 		/**
 		 * White list of gutenberg blocks
 		 */
@@ -93,14 +94,7 @@ class Editor implements Service {
 	 * return WP_Theme_JSON_Data
 	 */
 	public function filter_theme_json_theme( \WP_Theme_JSON_Data $theme_json ): \WP_Theme_JSON_Data {
-		$custom_theme_json = [
-			'version'  => 2,
-			'settings' => [
-				'typography' => [
-					'dropCap' => false,
-				],
-			],
-		];
+		$custom_theme_json = [];
 
 		return $theme_json->update_with( $custom_theme_json );
 	}
