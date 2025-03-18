@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<psalm
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <directory name="web" />
+        <ignoreFiles>
+            <directory name="vendor" />
+            <directory name="docs" />
+            <directory name="tools" />
+            <directory name="web/wp" />
+            <directory name="web/app/languages/" />
+            <directory name="web/app/plugins/advanced-custom-fields-pro/" />
+            <directory name="web/app/plugins/advanced-responsive-images/" />
+            <directory name="web/app/plugins/bbq-pro/" />
+            <directory name="web/app/plugins/beapi-maintenance-mode/" />
+            <directory name="web/app/plugins/delete-expired-transients/" />
+            <directory name="web/app/plugins/disable-block-editor-fullscreen-mode/" />
+            <directory name="web/app/plugins/disable-comments/" />
+            <directory name="web/app/plugins/disable-embeds/" />
+            <directory name="web/app/plugins/disable-emojis/" />
+            <directory name="web/app/plugins/disable-wordpress-updates/" />
+            <directory name="web/app/plugins/duracelltomi-google-tag-manager/" />
+            <directory name="web/app/plugins/optimus/" />
+            <directory name="web/app/plugins/query-monitor/" />
+            <directory name="web/app/plugins/redirection/" />
+            <directory name="web/app/plugins/rewrite-rules-inspector/" />
+            <directory name="web/app/plugins/safe-svg/" />
+            <directory name="web/app/plugins/user-switching/" />
+            <directory name="web/app/plugins/wordpress-seo/" />
+            <directory name="web/app/plugins/wp-cerber/" />
+            <directory name="web/app/plugins/wp-http-blocklist/" />
+            <directory name="web/app/plugins/wp-sentry-integration/" />
+            <directory name="web/app/plugins/wp-thumb/" />
+            <directory name="web/app/mu-plugins/bea-wp-thumb/" />
+            <directory name="web/app/mu-plugins/bedrock-disallow-indexing/" />
+            <directory name="web/app/mu-plugins/disable-xmlrpc/" />
+            <directory name="web/app/mu-plugins/missed-schedule/" />
+            <directory name="web/app/mu-plugins/multisite-url-fixer/" />
+            <directory name="web/app/mu-plugins/plugin-redirection/" />
+            <directory name="web/app/mu-plugins/prod-images/" />
+            <directory name="web/app/mu-plugins/redirect-loop-detector/" />
+            <directory name="web/app/mu-plugins/sanitize-filename/" />
+            <directory name="web/app/mu-plugins/wp-login-page/" />
+
+            <!-- BFF themes src folder is not for the real theme, ignore them -->
+            <!-- UNCOMMENT ME AFTER SCAFFOLD <directory name="web/app/themes/*/src/" /> -->
+
+            <file name="web/app/db-error.php" />
+            <file name="web/app/maintenance.php" />
+            <file name="web/app/mu-plugins/bedrock-autoloader.php" />
+        </ignoreFiles>
+    </projectFiles>
+
+    <issueHandlers>
+        <LessSpecificReturnType errorLevel="info" />
+
+        <!-- WordPress -->
+        <UndefinedFunction errorLevel="suppress"/>
+        <UndefinedClass errorLevel="suppress"/>
+        <UndefinedConstant errorLevel="suppress" />
+
+        <!-- level 3 issues - slightly lazy code writing, but provably low false-negatives -->
+
+        <DeprecatedMethod errorLevel="info" />
+        <DeprecatedProperty errorLevel="info" />
+        <DeprecatedClass errorLevel="info" />
+        <DeprecatedConstant errorLevel="info" />
+        <DeprecatedFunction errorLevel="info" />
+        <DeprecatedInterface errorLevel="info" />
+        <DeprecatedTrait errorLevel="info" />
+
+        <InternalMethod errorLevel="info" />
+        <InternalProperty errorLevel="info" />
+        <InternalClass errorLevel="info" />
+
+        <MissingClosureReturnType errorLevel="info" />
+        <MissingReturnType errorLevel="info" />
+        <MissingPropertyType errorLevel="info" />
+        <InvalidDocblock errorLevel="info" />
+
+        <PropertyNotSetInConstructor errorLevel="info" />
+        <MissingConstructor errorLevel="info" />
+        <MissingClosureParamType errorLevel="info" />
+        <MissingParamType errorLevel="info" />
+
+        <RedundantCondition errorLevel="info" />
+
+        <DocblockTypeContradiction errorLevel="info" />
+        <RedundantConditionGivenDocblockType errorLevel="info" />
+
+        <UnresolvableInclude errorLevel="info" />
+
+        <RawObjectIteration errorLevel="info" />
+
+        <InvalidStringClass errorLevel="info" />
+    </issueHandlers>
+</psalm>

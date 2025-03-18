@@ -1,0 +1,21 @@
+{
+	"plugins": [
+    "./plugins/advanced-custom-fields-pro",
+    "./plugins/blockparty-accordion",
+    "./plugins/blockparty-faq",
+    "./plugins/blockparty-tabs",
+    "./plugins/blockparty-key-figure",
+    "./plugins/icon-block",
+    "./plugins/query-monitor",
+    "./plugins/safe-svg"
+  ],
+	"themes": [
+    "./themes/beapi-blocks-theme"
+  ],
+  "mappings": {
+    "wp-content/mu-plugins": "./mu-plugins",
+    "wp-content/plugins": "./plugins",
+    "wp-content/themes": "./themes",
+    "wp-content/vendor": "./vendor"
+  }
+}
