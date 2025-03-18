@@ -60,7 +60,7 @@ class Editor implements Service {
 		/**
 		 * White list of gutenberg blocks
 		 */
-		add_filter( 'allowed_block_types_all', [ $this, 'gutenberg_blocks_allowed' ], 10, 2 );
+		add_filter( 'allowed_block_types_all', [ $this, 'gutenberg_blocks_allowed' ], 11, 2 );
 	}
 
 	/**
@@ -208,36 +208,21 @@ class Editor implements Service {
 	 * @return array
 	 */
 	public function gutenberg_blocks_allowed( $allowed_blocks, \WP_Block_Editor_Context $block_editor_context ): array {
+		// If boolean, get explicit list of allowed blocks
+		if ( is_bool( $allowed_blocks ) ) {
+			$allowed_blocks = $allowed_blocks ? array_keys( \WP_Block_Type_Registry::get_instance()->get_all_registered() ) : [];
+		}
 
-		$allowed = [
-			//base
-			'core/block',
-			'core/heading',
-			'core/paragraph',
-			'core/image',
-			'core/list',
-			'core/list-item',
-			'core/quote',
-			'core/pullquote',
-			'core/table',
-			'core/buttons',
-			'core/button',
-			'core/group',
-			'core/columns',
-			'core/column',
-			'core/media-text',
-			'core/spacer',
-			'core/separator',
-			'core/cover',
-			'core/gallery',
-			'core/video',
-			'core/file',
-			'core/embed',
-			// custom
-			'beapi/manual-block',
-			'beapi/dynamic-block',
-		];
+		// list of disallowed blocks
+		$disallowed_blocks = [];
 
-		return ( is_array( $allowed_blocks ) ) ? array_merge( $allowed, $allowed_blocks ) : $allowed;
+		// remove disallowed blocks from allowed blocks
+		foreach ( $disallowed_blocks as $block ) {
+			if ( in_array( $block, $allowed_blocks, true ) ) {
+				unset( $allowed_blocks[ array_search( $block, $allowed_blocks, true ) ] );
+			}
+		}
+
+		return array_values( $allowed_blocks );
 	}
 }
