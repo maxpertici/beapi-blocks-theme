@@ -24,35 +24,11 @@ class WebpackThemeJsonPlugin {
   apply() {}
 
   /**
-   * Generate image-sises.json and image-location.json
+   * Generate theme json file
    */
   generateThemeJson() {
     const jsonFiles = fs.readdirSync(this._themeFolder, { withFileTypes: true })
     const themeJson = {}
-
-    function isPlainObject(o) {
-      return o?.constructor === Object || Object.getPrototypeOf(o ?? 0) === null
-    }
-
-    function extend() {
-      const args = arguments
-      const firstArgIsBool = typeof args[0] === 'boolean'
-      const deep = firstArgIsBool ? args[0] : false
-      const start = firstArgIsBool ? 1 : 0
-      const rt = isPlainObject(args[start]) ? args[start] : {}
-
-      for (let i = start + 1; i < args.length; i++) {
-        for (let prop in args[i]) {
-          if (deep && isPlainObject(args[i][prop])) {
-            rt[prop] = extend(true, {}, rt[prop], args[i][prop])
-          } else if (typeof args[i][prop] !== 'undefined') {
-            rt[prop] = args[i][prop]
-          }
-        }
-      }
-
-      return rt
-    }
 
     jsonFiles.forEach((file) => {
       if (file.isFile() && file.name.endsWith('.json')) {
@@ -67,7 +43,7 @@ class WebpackThemeJsonPlugin {
         if (isPlainObject(json)) {
           extend(true, themeJson, json)
         } else {
-          console.error(logId, 'Invalid JSON file:', file.name)
+          console.error(logId, 'JSON file is not a plain object:', file.name)
         }
       }
     })
@@ -77,6 +53,33 @@ class WebpackThemeJsonPlugin {
 
     return this
   }
+}
+
+// ----
+// utils
+// ----
+function isPlainObject(o) {
+  return o?.constructor === Object || Object.getPrototypeOf(o ?? 0) === null
+}
+
+function extend() {
+  const args = arguments
+  const firstArgIsBool = typeof args[0] === 'boolean'
+  const deep = firstArgIsBool ? args[0] : false
+  const start = firstArgIsBool ? 1 : 0
+  const rt = isPlainObject(args[start]) ? args[start] : {}
+
+  for (let i = start + 1; i < args.length; i++) {
+    for (let prop in args[i]) {
+      if (deep && isPlainObject(args[i][prop])) {
+        rt[prop] = extend(true, {}, rt[prop], args[i][prop])
+      } else if (typeof args[i][prop] !== 'undefined') {
+        rt[prop] = args[i][prop]
+      }
+    }
+  }
+
+  return rt
 }
 
 module.exports = WebpackThemeJsonPlugin
