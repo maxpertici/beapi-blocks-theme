@@ -12,6 +12,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const browsersyncConfig = require('./browsersync.config')
 const WebpackImageSizesPlugin = require('./WebpackImageSizesPlugin')
+const WebpackThemeJsonPlugin = require('./WebpackThemeJsonPlugin')
 
 module.exports = {
   get: function (mode) {
@@ -35,6 +36,9 @@ module.exports = {
       }),
       new DependencyExtractionWebpackPlugin(),
       new WebpackImageSizesPlugin({
+        watch: mode !== 'production',
+      }),
+      new WebpackThemeJsonPlugin({
         watch: mode !== 'production',
       }),
     ]
