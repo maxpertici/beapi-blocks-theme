@@ -4,8 +4,8 @@
   "settings": {
     "typography": {
       "customFontSize": false,
-      "defaultFontSizes": false,
-      "dropCap": false,
+      "defaultFontSizes": true,
+      "dropCap": true,
       "fluid": false,
       "fontFamilies": [
         {
@@ -121,11 +121,11 @@
           "slug": "p-small"
         }
       ],
-      "fontStyle": false,
+      "fontStyle": true,
       "fontWeight": true,
-      "letterSpacing": false,
-      "lineHeight": false,
-      "textDecoration": false,
+      "letterSpacing": true,
+      "lineHeight": true,
+      "textDecoration": true,
       "textTransform": true
     }
   }
