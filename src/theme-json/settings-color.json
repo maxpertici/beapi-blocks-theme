@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "settings": {
+    "color": {
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "palette": [
+        {
+          "color": "#414b5a",
+          "name": "Gray 100",
+          "slug": "gray-100"
+        },
+        {
+          "color": "#7e8c9f",
+          "name": "Gray 75",
+          "slug": "gray-75"
+        },
+        {
+          "color": "#cddcdf",
+          "name": "Gray 50",
+          "slug": "gray-50"
+        },
+        {
+          "color": "#dceaed",
+          "name": "Gray 25",
+          "slug": "gray-25"
+        },
+        {
+          "color": "#eff5f7",
+          "name": "Gray 10",
+          "slug": "gray-10"
+        },
+        {
+          "color": "#fff",
+          "name": "White",
+          "slug": "white"
+        }
+      ]
+    }
+  }
+}

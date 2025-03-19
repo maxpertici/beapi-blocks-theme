@@ -1,0 +1,54 @@
+{
+  "version": 3,
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "settings": {
+    "typography": {
+      "customFontSize": false,
+      "defaultFontSizes": false,
+      "dropCap": false,
+      "fluid": false,
+      "fontFamilies": [
+        {
+          "fontFace": [
+            {
+              "fontFamily": "Lexend",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "100 900",
+              "src": [
+                "file:./assets/fonts/Lexend-VariableFont_wght.woff2"
+              ]
+            }
+          ],
+          "fontFamily": "\"Lexend\", sans-serif",
+          "name": "Heading",
+          "slug": "heading"
+        },
+        {
+          "fontFace": [
+            {
+              "fontFamily": "Lexend",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "100 900",
+              "src": [
+                "file:./assets/fonts/Lexend-VariableFont_wght.woff2"
+              ]
+            }
+          ],
+          "fontFamily": "\"Lexend\", sans-serif",
+          "name": "Default",
+          "slug": "default"
+        }
+      ],
+      "fontSizes": [
+      ],
+      "fontStyle": false,
+      "fontWeight": true,
+      "letterSpacing": false,
+      "lineHeight": false,
+      "textDecoration": false,
+      "textTransform": true
+    }
+  }
+}
