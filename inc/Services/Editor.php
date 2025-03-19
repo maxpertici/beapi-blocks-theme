@@ -7,19 +7,28 @@ use BEA\Theme\Framework\Service;
 use BEA\Theme\Framework\Service_Container;
 use BEA\Theme\Framework\Tools\Assets as Assets_Tools;
 
+/**
+ * The editor service
+ */
 class Editor implements Service {
 	/**
+	 * Assets tools
+	 *
 	 * @var Assets_Tools $assets_tools
 	 */
 	private $assets_tools;
 
 	/**
-	 * @var Assets;
+	 * Assets
+	 *
+	 * @var Assets $assets
 	 */
 	private $assets;
 
 	/**
-	 * @param Service_Container $container
+	 * Register the service
+	 *
+	 * @param Service_Container $container The service container.
 	 */
 	public function register( Service_Container $container ): void {
 		$this->assets_tools = new Assets_Tools();
@@ -27,14 +36,18 @@ class Editor implements Service {
 	}
 
 	/**
-	 * @return string
+	 * Get the service name
+	 *
+	 * @return string The service name.
 	 */
 	public function get_service_name(): string {
 		return 'editor';
 	}
 
 	/**
-	 * @param Service_Container $container
+	 * Boot the service
+	 *
+	 * @param Service_Container $container The service container.
 	 */
 	public function boot( Service_Container $container ): void {
 		$this->after_theme_setup();
@@ -65,12 +78,11 @@ class Editor implements Service {
 	 *  - color palettes
 	 *  - font sizes
 	 *  - etc.
-	 *
 	 */
 	private function after_theme_setup(): void {}
 
 	/**
-	 * editor style
+	 * Editor style
 	 */
 	private function style(): void {
 		$file = $this->assets->is_minified() ? $this->assets->get_min_file( 'editor.css' ) : 'editor.css';
@@ -91,7 +103,7 @@ class Editor implements Service {
 	 *
 	 * @param WP_Theme_JSON_Data $theme_json Class to access and update the underlying data.
 	 *
-	 * return WP_Theme_JSON_Data
+	 * @return WP_Theme_JSON_Data
 	 */
 	public function filter_theme_json_theme( \WP_Theme_JSON_Data $theme_json ): \WP_Theme_JSON_Data {
 		$custom_theme_json = [];
@@ -150,21 +162,21 @@ class Editor implements Service {
 	/**
 	 * Allow some core Gutenberg blocks
 	 *
-	 * @param bool|array $allowed_blocks
-	 * @param \WP_Block_Editor_Context $block_editor_context
+	 * @param bool|array               $allowed_blocks The allowed blocks.
+	 * @param \WP_Block_Editor_Context $block_editor_context The block editor context.
 	 *
-	 * @return array
+	 * @return array The allowed blocks.
 	 */
 	public function gutenberg_blocks_allowed( $allowed_blocks, \WP_Block_Editor_Context $block_editor_context ): array {
-		// If boolean, get explicit list of allowed blocks
+		// If boolean, get explicit list of allowed blocks.
 		if ( is_bool( $allowed_blocks ) ) {
 			$allowed_blocks = $allowed_blocks ? array_keys( \WP_Block_Type_Registry::get_instance()->get_all_registered() ) : [];
 		}
 
-		// list of disallowed blocks
+		// List of disallowed blocks.
 		$disallowed_blocks = [];
 
-		// remove disallowed blocks from allowed blocks
+		// Remove disallowed blocks from allowed blocks.
 		foreach ( $disallowed_blocks as $block ) {
 			if ( in_array( $block, $allowed_blocks, true ) ) {
 				unset( $allowed_blocks[ array_search( $block, $allowed_blocks, true ) ] );

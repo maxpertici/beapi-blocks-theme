@@ -1,27 +1,42 @@
 <?php
-
+/**
+ * Editor Patterns
+ *
+ * @package    BeAPI Blocks Theme
+ * @subpackage BeAPI Blocks Theme
+ * @since      BeAPI Blocks Theme 1.0
+ */
 
 namespace BEA\Theme\Framework\Services;
 
 use BEA\Theme\Framework\Service;
 use BEA\Theme\Framework\Service_Container;
 
+/**
+ * The editor patterns service
+ */
 class Editor_Patterns implements Service {
 	/**
-	 * @param Service_Container $container
+	 * Register the service
+	 *
+	 * @param Service_Container $container The service container.
 	 */
 	public function register( Service_Container $container ): void {
 	}
 
 	/**
-	 * @return string
+	 * Get the service name
+	 *
+	 * @return string The service name.
 	 */
 	public function get_service_name(): string {
 		return 'editor-patterns';
 	}
 
 	/**
-	 * @param Service_Container $container
+	 * Boot the service
+	 *
+	 * @param Service_Container $container The service container.
 	 */
 	public function boot( Service_Container $container ): void {
 		\add_action( 'init', [ $this, 'register_categories' ], 10 );
@@ -36,7 +51,7 @@ class Editor_Patterns implements Service {
 		 * usage : 'common' => [ 'label' => __( 'Common', 'beapi-blocks-theme' ) ]
 		 */
 		$pattern_categories = [
-			'common' => [ 'label' => __( 'Common', 'beapi-blocks-theme' ) ],
+			'beapi-blocks-theme' => [ 'label' => __( 'BeAPI Blocks Theme', 'beapi-blocks-theme' ) ],
 		];
 
 		foreach ( $pattern_categories as $name => $properties ) {
