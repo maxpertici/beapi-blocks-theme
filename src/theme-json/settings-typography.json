@@ -42,6 +42,84 @@
         }
       ],
       "fontSizes": [
+        {
+          "fluid": false,
+          "name": "Label",
+          "size": "",
+          "slug": "label"
+        },
+        {
+          "fluid": {
+            "min": "40px",
+            "max": "72px"
+          },
+          "name": "XXL",
+          "size": "72px",
+          "slug": "xxl"
+        },
+        {
+          "fluid": {
+            "min": "36px",
+            "max": "56px"
+          },
+          "name": "XL",
+          "size": "56px",
+          "slug": "xl"
+        },
+        {
+          "fluid": {
+            "min": "28px",
+            "max": "42px"
+          },
+          "name": "L",
+          "size": "42px",
+          "slug": "l"
+        },
+        {
+          "fluid": {
+            "min": "24px",
+            "max": "28px"
+          },
+          "name": "M",
+          "size": "28px",
+          "slug": "m"
+        },
+        {
+          "fluid": false,
+          "name": "S",
+          "size": "21px",
+          "slug": "s"
+        },
+        {
+          "fluid": false,
+          "name": "XS",
+          "size": "16px",
+          "slug": "xs"
+        },
+        {
+          "fluid": false,
+          "name": "P Huge",
+          "size": "24px",
+          "slug": "p-huge"
+        },
+        {
+          "fluid": false,
+          "name": "P Large",
+          "size": "18px",
+          "slug": "p-large"
+        },
+        {
+          "fluid": false,
+          "name": "P Default",
+          "size": "16px",
+          "slug": "p-default"
+        },
+        {
+          "fluid": false,
+          "name": "P Small",
+          "size": "13px",
+          "slug": "p-small"
+        }
       ],
       "fontStyle": false,
       "fontWeight": true,
