@@ -3,10 +3,14 @@
     "./.wp-env/plugins/advanced-custom-fields-pro",
     "./.wp-env/plugins/blockparty-accordion",
     "./.wp-env/plugins/blockparty-faq",
-    "./.wp-env/plugins/blockparty-tabs",
     "./.wp-env/plugins/blockparty-key-figure",
+    "./.wp-env/plugins/blockparty-tabs",
     "./.wp-env/plugins/icon-block",
-    "./.wp-env/plugins/safe-svg"
+    "./.wp-env/plugins/mega-menu-block",
+    "./.wp-env/plugins/safe-svg",
+    "./.wp-env/plugins/sugar-calendar",
+    "./.wp-env/plugins/wp-grid-builder",
+    "./.wp-env/plugins/wp-seopress"
   ],
 	"themes": ["."],
   "mappings": {
