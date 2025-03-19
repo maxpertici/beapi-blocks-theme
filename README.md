@@ -31,3 +31,9 @@ yarn start
 # Génère les assets pour la production
 yarn build
 ```
+
+## Theme.json
+
+Le fichier `theme.json` est généré automatiquement.
+
+Il est stocké à la racine du thème et est utilisé pour configurer le thème dans l'interface Gutenberg. Il ne faaut pas éditer le fichier `theme.json` manuellement.
