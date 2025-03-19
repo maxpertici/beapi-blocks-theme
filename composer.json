@@ -41,8 +41,12 @@
     "beapi/blockparty-key-figure": "^1.0",
     "beapi/blockparty-tabs": "^1.0",
     "beapi/icon-block": "^2.2",
-    "wpackagist-plugin/safe-svg": "*@stable",
-    "wpengine/advanced-custom-fields-pro": "*@stable"
+    "beapi/mega-menu-block": "^1.0",
+    "sandhills/sugar-calendar": "^3.0",
+    "themeone/wp-grid-builder": "^2.1",
+    "wpackagist-plugin/safe-svg": "^2.0",
+    "wpackagist-plugin/wp-seopress": "^8.6",
+    "wpengine/advanced-custom-fields-pro": "^6.3"
   },
   "require-dev": {
     "composer/installers": "^1.0|^2.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c29572ff0a023ba4d2bcfa03b45546a9",
+    "content-hash": "d1b080bac3f1d66271f682fd175c03e0",
     "packages": [
         {
             "name": "beapi/blockparty-accordion",
@@ -329,6 +329,84 @@
             "time": "2024-11-14T08:37:36+00:00"
         },
         {
+            "name": "beapi/mega-menu-block",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:BeAPI/beapi-mega-menu-block.git",
+                "reference": "39fd10fd048097f5b84a99e520a16053443a73c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.beapi.fr/dist/beapi/mega-menu-block/beapi-mega-menu-block-39fd10fd048097f5b84a99e520a16053443a73c7-zip-1a411f.zip",
+                "reference": "39fd10fd048097f5b84a99e520a16053443a73c7",
+                "shasum": "3dc16876bf9fbf17d116ea15113f48065359c217"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0",
+                "ext-json": "*",
+                "php": "^7.2 || ^8"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+                "humanmade/psalm-plugin-wordpress": "^2.0",
+                "overtrue/phplint": "^3.2",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpro/grumphp-shim": "^0.22",
+                "roave/security-advisories": "dev-latest",
+                "roots/wordpress-no-content": "^6.0",
+                "squizlabs/php_codesniffer": "^3.7",
+                "vimeo/psalm": "~4.23.0",
+                "wp-cli/wp-cli": "^2.6",
+                "wp-coding-standards/wpcs": "^2.3",
+                "wp-phpunit/wp-phpunit": "^6.0",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "BEAPI\\MegaMenuBlock\\": "classes/"
+                }
+            },
+            "scripts": {
+                "cs": [
+                    "./vendor/bin/phpcs"
+                ],
+                "cb": [
+                    "./vendor/bin/phpcbf"
+                ],
+                "psalm": [
+                    "./vendor/bin/psalm"
+                ],
+                "phpunit": [
+                    "phpunit"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BeAPI",
+                    "email": "technical@beapi.fr"
+                }
+            ],
+            "description": "Build Mega Menu with blocks.",
+            "keywords": [
+                "block",
+                "gutenberg",
+                "mega menu",
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/BeAPI/beapi-mega-menu-block/tree/1.0.2",
+                "issues": "https://github.com/BeAPI/beapi-mega-menu-block/issues"
+            },
+            "time": "2025-03-19T13:56:54+00:00"
+        },
+        {
             "name": "composer/installers",
             "version": "v2.3.0",
             "source": {
@@ -475,6 +553,30 @@
             "time": "2024-06-24T20:46:46+00:00"
         },
         {
+            "name": "sandhills/sugar-calendar",
+            "version": "3.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://packages.beapi.fr/sandhills/sugar-calendar.3.0.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.12.0 || ^2.0.1"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "themeone/wp-grid-builder",
+            "version": "2.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://packages.beapi.fr/themeone/wp-grid-builder.2.1.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.12.0 || ^2.0.1"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "wpackagist-plugin/safe-svg",
             "version": "2.3.1",
             "source": {
@@ -491,6 +593,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/safe-svg/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-seopress",
+            "version": "8.6.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-seopress/",
+                "reference": "tags/8.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-seopress.8.6.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-seopress/"
         },
         {
             "name": "wpengine/advanced-custom-fields-pro",
@@ -3226,10 +3346,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "wpackagist-plugin/safe-svg": 0,
-        "wpengine/advanced-custom-fields-pro": 0
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},
