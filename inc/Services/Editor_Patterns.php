@@ -51,7 +51,7 @@ class Editor_Patterns implements Service {
 		 * usage : 'common' => [ 'label' => __( 'Common', 'beapi-blocks-theme' ) ]
 		 */
 		$pattern_categories = [
-			'beapi-blocks-theme' => [ 'label' => __( 'BeAPI Blocks Theme', 'beapi-blocks-theme' ) ],
+			'common' => [ 'label' => __( 'Common', 'beapi-blocks-theme' ) ],
 		];
 
 		foreach ( $pattern_categories as $name => $properties ) {
