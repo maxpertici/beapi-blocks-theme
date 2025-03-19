@@ -5,12 +5,21 @@ const fs = require('fs')
 const logId = '[' + chalk.blue('WebpackThemeJsonPlugin') + ']'
 
 class WebpackThemeJsonPlugin {
+  /**
+   * constructor
+   * @param {Object} options = {
+   *      context: string - default: '../src/theme-json'
+   *      output: string - default: '../theme.json'
+   *      watch: boolean - default: false
+   * }
+   */
   constructor(options) {
     // folders
-    this._themeFolder = path.resolve(__dirname, '../src/theme') + '/'
+    this._context = options.context || path.resolve(__dirname, '../src/theme-json') + '/'
+    this._output = options.output || path.resolve(__dirname, '../theme.json')
 
     if (options.watch) {
-      fs.watch(this._themeFolder, () => {
+      fs.watch(this._context, () => {
         this.generateThemeJson()
       })
     }
@@ -27,12 +36,12 @@ class WebpackThemeJsonPlugin {
    * Generate theme json file
    */
   generateThemeJson() {
-    const jsonFiles = fs.readdirSync(this._themeFolder, { withFileTypes: true })
+    const jsonFiles = fs.readdirSync(this._context, { withFileTypes: true })
     const themeJson = {}
 
     jsonFiles.forEach((file) => {
       if (file.isFile() && file.name.endsWith('.json')) {
-        let json = fs.readFileSync(this._themeFolder + file.name, 'utf8')
+        let json = fs.readFileSync(this._context + file.name, 'utf8')
 
         try {
           json = JSON.parse(json)
@@ -48,7 +57,7 @@ class WebpackThemeJsonPlugin {
       }
     })
 
-    fs.writeFileSync(path.resolve(__dirname, '../theme.json'), JSON.stringify(themeJson, null, 2))
+    fs.writeFileSync(this._output, JSON.stringify(themeJson, null, 2))
     console.log(logId, 'JSON files successfully generated !')
 
     return this
