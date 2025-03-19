@@ -1,27 +1,42 @@
 <?php
-
+/**
+ * Editor Patterns
+ *
+ * @package    BeAPI Blocks Theme
+ * @subpackage BeAPI Blocks Theme
+ * @since      BeAPI Blocks Theme 1.0
+ */
 
 namespace BEA\Theme\Framework\Services;
 
 use BEA\Theme\Framework\Service;
 use BEA\Theme\Framework\Service_Container;
 
+/**
+ * The editor patterns service
+ */
 class Editor_Patterns implements Service {
 	/**
-	 * @param Service_Container $container
+	 * Register the service
+	 *
+	 * @param Service_Container $container The service container.
 	 */
 	public function register( Service_Container $container ): void {
 	}
 
 	/**
-	 * @return string
+	 * Get the service name
+	 *
+	 * @return string The service name.
 	 */
 	public function get_service_name(): string {
 		return 'editor-patterns';
 	}
 
 	/**
-	 * @param Service_Container $container
+	 * Boot the service
+	 *
+	 * @param Service_Container $container The service container.
 	 */
 	public function boot( Service_Container $container ): void {
 		\add_action( 'init', [ $this, 'register_categories' ], 10 );

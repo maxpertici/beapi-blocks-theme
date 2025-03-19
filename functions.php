@@ -1,7 +1,12 @@
 <?php
 /**
  * Local
+ *
+ * @package    BeAPI Blocks Theme
+ * @subpackage BeAPI Blocks Theme
+ * @since      BeAPI Blocks Theme 1.0
  */
+
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
