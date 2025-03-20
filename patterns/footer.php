@@ -23,7 +23,7 @@
 			<!-- wp:columns -->
 			<div class="wp-block-columns">
 				<!-- wp:column {"width":"100%"} -->
-				<div class="wp-block-column" style="flex-basis:100%"><!-- wp:site-title {"level":2} /-->
+				<div class="wp-block-column" style="flex-basis:100%"><!-- wp:site-title {"level":6} /-->
 
 				<!-- wp:site-tagline /-->
 				</div>

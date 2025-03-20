@@ -1,0 +1,26 @@
+/**
+ * Style for Frontend UI only
+ *
+ * @author Nicolas Langle
+ *
+ * Examples :
+ *
+ *      Style inside the mixin while be writed only for style.scss
+ *
+ *      .my-pattern {
+ *          @include style-only {
+ *              ... css only for the front office
+ *          }
+ *      }
+ *
+ *      the variable $entry-file-name is defined in style.scss and editor.scss
+ *
+ */
+
+@use "../00-variables/config" as *;
+
+@mixin style-only {
+    @if ($entry-file-name == "style") {
+        @content;
+    }
+}

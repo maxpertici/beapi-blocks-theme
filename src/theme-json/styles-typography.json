@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--default)",
+      "fontSize": "var(--wp--preset--font-size--default)",
+      "fontStyle": "normal",
+      "fontWeight": "var(--wp--custom--default--font-weight)",
+      "lineHeight": "var(--wp--custom--default--line-height)"
+    }
+  }
+}
