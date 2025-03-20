@@ -89,7 +89,6 @@ class WebpackThemeJsonPlugin {
         return result
       },
       'settings-custom': 'default',
-      'settings-layout': 'default',
     }
     const taskNames = Object.keys(tasks)
     let jsonFile = fs.readFileSync(this._output, 'utf8')
