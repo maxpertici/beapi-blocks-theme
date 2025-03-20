@@ -3,8 +3,8 @@
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "settings": {
     "layout": {
-      "contentSize": "760px",
-      "wideSize": "1200px"
+      "contentSize": "min(100vw - var(--wp--custom--external-gutter) * 2, 760px)",
+      "wideSize": "min(100vw - var(--wp--custom--external-gutter) * 2, 1200px)"
     }
   }
 }
