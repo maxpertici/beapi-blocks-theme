@@ -1,10 +1,10 @@
 {
-  "version": 3,
-  "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "settings": {
-    "layout": {
-      "contentSize": "min(100vw - var(--wp--custom--external-gutter) * 2, 760px)",
-      "wideSize": "min(100vw - var(--wp--custom--external-gutter) * 2, 1200px)"
-    }
-  }
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"settings": {
+		"layout": {
+			"contentSize": "min(100vw - var(--wp--custom--external-gutter) * 2, 760px)",
+			"wideSize": "min(100vw - var(--wp--custom--external-gutter) * 2, 1200px)"
+		}
+	}
 }

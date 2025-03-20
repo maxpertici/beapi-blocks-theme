@@ -5,46 +5,46 @@ const portfinder = require('portfinder')
 let landoProjectName = 'sample'
 
 try {
-  if (fs.existsSync('../../../../.lando.yml')) {
-    let fileContents = fs.readFileSync('../../../../.lando.yml', 'utf8')
-    let data = yaml.load(fileContents)
+	if (fs.existsSync('../../../../.lando.yml')) {
+		let fileContents = fs.readFileSync('../../../../.lando.yml', 'utf8')
+		let data = yaml.load(fileContents)
 
-    if (data.name) {
-      landoProjectName = data.name
-    }
-  }
+		if (data.name) {
+			landoProjectName = data.name
+		}
+	}
 } catch (e) {
-  console.log(e)
+	console.log(e)
 }
 
 // BrowserSync options
 const browserSyncOptions = {
-  port: 3000,
-  proxy: `https://${landoProjectName}.lndo.site/`,
-  https: true,
-  injectChanges: true,
-  files: ['*.php', '**/*.php', 'dist/*.css', 'dist/*.js', 'dist/icons/*.svg'],
-  startPath: '/',
-  notify: true,
-  open: false,
+	port: 3000,
+	proxy: `https://${landoProjectName}.lndo.site/`,
+	https: true,
+	injectChanges: true,
+	files: ['*.php', '**/*.php', 'dist/*.css', 'dist/*.js', 'dist/icons/*.svg'],
+	startPath: '/',
+	notify: true,
+	open: false,
 }
 
 // Plugin options
 const pluginOptions = {
-  injectCss: true,
+	injectCss: true,
 }
 
 portfinder.getPort(
-  {
-    port: 3000, // default port
-    stopPort: 3333, // maximum port
-  },
-  function (port) {
-    browserSyncOptions.port = port
-  }
+	{
+		port: 3000, // default port
+		stopPort: 3333, // maximum port
+	},
+	function (port) {
+		browserSyncOptions.port = port
+	}
 )
 
 module.exports = {
-  browserSyncOptions,
-  pluginOptions,
+	browserSyncOptions,
+	pluginOptions,
 }

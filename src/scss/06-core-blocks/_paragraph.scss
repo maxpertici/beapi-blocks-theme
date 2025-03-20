@@ -1,10 +1,10 @@
 @each $size in "default", "small", "large", "huge" {
-    .is-style-#{$size} {
-        font: var(--wp--custom--default--font-weight) var(--wp--preset--font-size--#{$size})/var(--wp--custom--default--line-height) var(--wp--preset--font-family--default);
-    }
+	.is-style-#{$size} {
+		font: var(--wp--custom--default--font-weight) var(--wp--preset--font-size--#{$size})/var(--wp--custom--default--line-height) var(--wp--preset--font-family--default);
+	}
 
-    .has-#{$size}-font-size {
-        font-size: var(--wp--preset--font-size--#{$size});
-        line-height: var(--wp--custom--#{$size}--line-height);
-    }
+	.has-#{$size}-font-size {
+		font-size: var(--wp--preset--font-size--#{$size});
+		line-height: var(--wp--custom--#{$size}--line-height);
+	}
 }

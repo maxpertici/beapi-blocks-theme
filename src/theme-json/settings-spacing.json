@@ -1,71 +1,71 @@
 {
-  "version": 3,
-  "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "settings": {
-    "spacing": {
-      "margin": true,
-      "padding": true,
-      "defaultSpacingSizes": false,
-      "spacingSizes": [
-        {
-          "name": "xxxs",
-          "size": "var(--wp--custom--spacings--xxxs)",
-          "slug": "xxxs"
-        },
-        {
-          "name": "xxs",
-          "size": "clamp(var(--wp--custom--spacings--xxxs), var(--wp--custom--spacings--xxxs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--xxs))",
-          "slug": "xxs"
-        },
-        {
-          "name": "xs",
-          "size": "clamp(var(--wp--custom--spacings--xxs), var(--wp--custom--spacings--xxs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--xs))",
-          "slug": "xs"
-        },
-        {
-          "name": "sm",
-          "size": "clamp(var(--wp--custom--spacings--xs), var(--wp--custom--spacings--xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--sm))",
-          "slug": "sm"
-        },
-        {
-          "name": "md",
-          "size": "clamp(var(--wp--custom--spacings--sm), var(--wp--custom--spacings--sm) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--md))",
-          "slug": "md"
-        },
-        {
-          "name": "lg",
-          "size": "clamp(var(--wp--custom--spacings--md), var(--wp--custom--spacings--md) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--lg))",
-          "slug": "lg"
-        },
-        {
-          "name": "xl",
-          "size": "clamp(var(--wp--custom--spacings--lg), var(--wp--custom--spacings--lg) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--xl))",
-          "slug": "xl"
-        },
-        {
-          "name": "xxl",
-          "size": "clamp(var(--wp--custom--spacings--xl), var(--wp--custom--spacings--xl) + (100vw - 480px) / (1024 - 480) * 32, var(--wp--custom--spacings--xxl))",
-          "slug": "xxl"
-        },
-        {
-          "name": "xxxl",
-          "size": "clamp(var(--wp--custom--spacings--xxl), var(--wp--custom--spacings--xxl) + (100vw - 480px) / (1024 - 480) * 48, var(--wp--custom--spacings--xxxl))",
-          "slug": "xxxl"
-        },
-        {
-          "name": "xxxxl",
-          "size": "clamp(var(--wp--custom--spacings--xxxl), var(--wp--custom--spacings--xxxl) + (100vw - 480px) / (1024 - 480) * 40, var(--wp--custom--spacings--xxxxl))",
-          "slug": "xxxxl"
-        }
-      ],
-      "units": [
-        "%",
-        "px",
-        "em",
-        "rem",
-        "vh",
-        "vw"
-      ]
-    }
-  }
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"settings": {
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"name": "xxxs",
+					"size": "var(--wp--custom--spacings--xxxs)",
+					"slug": "xxxs"
+				},
+				{
+					"name": "xxs",
+					"size": "clamp(var(--wp--custom--spacings--xxxs), var(--wp--custom--spacings--xxxs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--xxs))",
+					"slug": "xxs"
+				},
+				{
+					"name": "xs",
+					"size": "clamp(var(--wp--custom--spacings--xxs), var(--wp--custom--spacings--xxs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--xs))",
+					"slug": "xs"
+				},
+				{
+					"name": "sm",
+					"size": "clamp(var(--wp--custom--spacings--xs), var(--wp--custom--spacings--xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--sm))",
+					"slug": "sm"
+				},
+				{
+					"name": "md",
+					"size": "clamp(var(--wp--custom--spacings--sm), var(--wp--custom--spacings--sm) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--md))",
+					"slug": "md"
+				},
+				{
+					"name": "lg",
+					"size": "clamp(var(--wp--custom--spacings--md), var(--wp--custom--spacings--md) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--lg))",
+					"slug": "lg"
+				},
+				{
+					"name": "xl",
+					"size": "clamp(var(--wp--custom--spacings--lg), var(--wp--custom--spacings--lg) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--xl))",
+					"slug": "xl"
+				},
+				{
+					"name": "xxl",
+					"size": "clamp(var(--wp--custom--spacings--xl), var(--wp--custom--spacings--xl) + (100vw - 480px) / (1024 - 480) * 32, var(--wp--custom--spacings--xxl))",
+					"slug": "xxl"
+				},
+				{
+					"name": "xxxl",
+					"size": "clamp(var(--wp--custom--spacings--xxl), var(--wp--custom--spacings--xxl) + (100vw - 480px) / (1024 - 480) * 48, var(--wp--custom--spacings--xxxl))",
+					"slug": "xxxl"
+				},
+				{
+					"name": "xxxxl",
+					"size": "clamp(var(--wp--custom--spacings--xxxl), var(--wp--custom--spacings--xxxl) + (100vw - 480px) / (1024 - 480) * 40, var(--wp--custom--spacings--xxxxl))",
+					"slug": "xxxxl"
+				}
+			],
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		}
+	}
 }
