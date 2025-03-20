@@ -7,7 +7,7 @@
         font: var(--wp--custom--default--font-weight) var(--wp--preset--font-size--h-#{$i})/var(--wp--custom--h-#{$i}--line-height) var(--wp--preset--font-family--heading);
     }
 
-    .has-h#{$i}-font-size {
+    .has-h-#{$i}-font-size {
         font-size: var(--wp--preset--font-size--h-#{$i});
         line-height: var(--wp--custom--h-#{$i}--line-height);
     }
