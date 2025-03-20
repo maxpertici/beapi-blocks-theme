@@ -8,54 +8,54 @@
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
-					"name": "3-x-sm",
-					"size": "var(--wp--custom--spacings--3-x-sm)",
-					"slug": "3-x-sm"
+					"name": "3-xs",
+					"size": "var(--wp--custom--spacings--3-xs)",
+					"slug": "3-xs"
 				},
 				{
-					"name": "2-x-sm",
-					"size": "clamp(var(--wp--custom--spacings--3-x-sm), var(--wp--custom--spacings--3-x-sm) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--2-x-sm))",
-					"slug": "2-x-sm"
+					"name": "2-xs",
+					"size": "clamp(var(--wp--custom--spacings--3-xs), var(--wp--custom--spacings--3-xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--2-xs))",
+					"slug": "2-xs"
 				},
 				{
-					"name": "x-sm",
-					"size": "clamp(var(--wp--custom--spacings--2-x-sm), var(--wp--custom--spacings--2-x-sm) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--x-sm))",
-					"slug": "x-sm"
+					"name": "xs",
+					"size": "clamp(var(--wp--custom--spacings--2-xs), var(--wp--custom--spacings--2-xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--xs))",
+					"slug": "xs"
 				},
 				{
-					"name": "sm",
-					"size": "clamp(var(--wp--custom--spacings--x-sm), var(--wp--custom--spacings--x-sm) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--sm))",
-					"slug": "sm"
+					"name": "s",
+					"size": "clamp(var(--wp--custom--spacings--xs), var(--wp--custom--spacings--xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--s))",
+					"slug": "s"
 				},
 				{
 					"name": "md",
-					"size": "clamp(var(--wp--custom--spacings--sm), var(--wp--custom--spacings--sm) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--md))",
+					"size": "clamp(var(--wp--custom--spacings--s), var(--wp--custom--spacings--s) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--md))",
 					"slug": "md"
 				},
 				{
-					"name": "lg",
-					"size": "clamp(var(--wp--custom--spacings--md), var(--wp--custom--spacings--md) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--lg))",
-					"slug": "lg"
+					"name": "l",
+					"size": "clamp(var(--wp--custom--spacings--md), var(--wp--custom--spacings--md) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--l))",
+					"slug": "l"
 				},
 				{
-					"name": "x-lg",
-					"size": "clamp(var(--wp--custom--spacings--lg), var(--wp--custom--spacings--lg) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--x-lg))",
-					"slug": "x-lg"
+					"name": "xl",
+					"size": "clamp(var(--wp--custom--spacings--l), var(--wp--custom--spacings--l) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--xl))",
+					"slug": "xl"
 				},
 				{
-					"name": "2-x-lg",
-					"size": "clamp(var(--wp--custom--spacings--x-lg), var(--wp--custom--spacings--x-lg) + (100vw - 480px) / (1024 - 480) * 32, var(--wp--custom--spacings--2-x-lg))",
-					"slug": "2-x-lg"
+					"name": "2-xl",
+					"size": "clamp(var(--wp--custom--spacings--xl), var(--wp--custom--spacings--xl) + (100vw - 480px) / (1024 - 480) * 32, var(--wp--custom--spacings--2-xl))",
+					"slug": "2-xl"
 				},
 				{
-					"name": "3-x-lg",
-					"size": "clamp(var(--wp--custom--spacings--2-x-lg), var(--wp--custom--spacings--2-x-lg) + (100vw - 480px) / (1024 - 480) * 48, var(--wp--custom--spacings--3-x-lg))",
-					"slug": "3-x-lg"
+					"name": "3-xl",
+					"size": "clamp(var(--wp--custom--spacings--2-xl), var(--wp--custom--spacings--2-xl) + (100vw - 480px) / (1024 - 480) * 48, var(--wp--custom--spacings--3-xl))",
+					"slug": "3-xl"
 				},
 				{
-					"name": "4-x-lg",
-					"size": "clamp(var(--wp--custom--spacings--3-x-lg), var(--wp--custom--spacings--3-x-lg) + (100vw - 480px) / (1024 - 480) * 40, var(--wp--custom--spacings--4-x-lg))",
-					"slug": "4-x-lg"
+					"name": "4-xl",
+					"size": "clamp(var(--wp--custom--spacings--3-xl), var(--wp--custom--spacings--3-xl) + (100vw - 480px) / (1024 - 480) * 40, var(--wp--custom--spacings--4-xl))",
+					"slug": "4-xl"
 				}
 			],
 			"units": [

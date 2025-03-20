@@ -7,7 +7,7 @@
 				"lineHeight": "1.5",
 				"fontWeight": "300"
 			},
-			"externalGutter": "clamp(25px, 25px + (100vw - 480px) / (1024 - 480) * 50, 75px)",
+			"externalutter": "clamp(25px, 25px + (100vw - 480px) / (1024 - 480) * 50, 75px)",
 			"heading": {
 				"fontWeight": "400"
 			},
@@ -30,16 +30,16 @@
 				"lineHeight": "1.31"
 			},
 			"spacings": {
-				"3-x-sm": "4px",
-				"2-x-sm": "8px",
-				"x-sm": "12px",
-				"sm": "16px",
+				"3-xs": "4px",
+				"2-xs": "8px",
+				"xs": "12px",
+				"s": "16px",
 				"md": "24px",
-				"lg": "32px",
-				"x-lg": "40px",
-				"2-x-lg": "72px",
-				"3-x-lg": "120px",
-				"4-x-lg": "160px"
+				"l": "32px",
+				"xl": "40px",
+				"2-xl": "72px",
+				"3-xl": "120px",
+				"4-xl": "160px"
 			}
 		}
 	}
