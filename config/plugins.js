@@ -17,6 +17,9 @@ const WebpackThemeJsonPlugin = require('./WebpackThemeJsonPlugin')
 module.exports = {
   get: function (mode) {
     const plugins = [
+      new WebpackThemeJsonPlugin({
+        watch: mode !== 'production',
+      }),
       new CleanWebpackPlugin(),
       new ESLintPlugin({
         overrideConfigFile: path.resolve(__dirname, '../.eslintrc'),
@@ -36,9 +39,6 @@ module.exports = {
       }),
       new DependencyExtractionWebpackPlugin(),
       new WebpackImageSizesPlugin({
-        watch: mode !== 'production',
-      }),
-      new WebpackThemeJsonPlugin({
         watch: mode !== 'production',
       }),
     ]
