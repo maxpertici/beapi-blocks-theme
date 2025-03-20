@@ -57,6 +57,11 @@ class Editor implements Service {
 		$this->style();
 
 		/**
+		 * Register custom block style
+		 */
+		$this->register_custom_block_styles();
+
+		/**
 		 * Customize theme.json settings
 		 */
 		add_filter( 'wp_theme_json_data_theme', [ $this, 'filter_theme_json_theme' ], 10, 1 );
@@ -80,6 +85,54 @@ class Editor implements Service {
 	 *  - etc.
 	 */
 	private function after_theme_setup(): void {}
+
+	/**
+	 * Register custom block styles
+	 */
+	private function register_custom_block_styles() {
+		for ( $i = 1; $i <= 6; $i++ ) {
+			$style = [
+				'name'  => 'h' . (string) $i,
+				'label' => sprintf( 'Style H%s', (string) $i ),
+			];
+
+			// heading
+			register_block_style(
+				'core/heading',
+				$style
+			);
+
+			// paragraph
+			register_block_style(
+				'core/paragraph',
+				$style
+			);
+		}
+
+		register_block_style(
+			'core/paragraph',
+			[
+				'name'  => 'small',
+				'label' => __( 'Small', 'beapi-frontend-framework' ),
+			]
+		);
+
+		register_block_style(
+			'core/paragraph',
+			[
+				'name'  => 'large',
+				'label' => __( 'Large', 'beapi-frontend-framework' ),
+			]
+		);
+
+		register_block_style(
+			'core/paragraph',
+			[
+				'name'  => 'huge',
+				'label' => __( 'Huge', 'beapi-frontend-framework' ),
+			]
+		);
+	}
 
 	/**
 	 * Editor style

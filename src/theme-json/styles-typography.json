@@ -4,10 +4,10 @@
   "styles": {
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--default)",
-      "fontSize": "var(--wp--preset--font-size--p-default)",
+      "fontSize": "var(--wp--preset--font-size--default)",
       "fontStyle": "normal",
-      "fontWeight": "300",
-      "lineHeight": "1.5"
+      "fontWeight": "var(--wp--custom--default--font-weight)",
+      "lineHeight": "var(--wp--custom--default--line-height)"
     }
   }
 }

@@ -1,1 +1,9 @@
+/**
+ * Editor
+ */
+@use "00-variables/config" as *;
+
 $entry-file-name: "editor";
+
+@use "06-core-blocks/heading";
+@use "06-core-blocks/paragraph";

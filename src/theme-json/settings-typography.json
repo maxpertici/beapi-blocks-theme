@@ -53,72 +53,72 @@
             "min": "40px",
             "max": "72px"
           },
-          "name": "XXL",
+          "name": "H1",
           "size": "72px",
-          "slug": "xxl"
+          "slug": "h1"
         },
         {
           "fluid": {
             "min": "36px",
             "max": "56px"
           },
-          "name": "XL",
+          "name": "H2",
           "size": "56px",
-          "slug": "xl"
+          "slug": "h2"
         },
         {
           "fluid": {
             "min": "28px",
             "max": "42px"
           },
-          "name": "L",
+          "name": "H3",
           "size": "42px",
-          "slug": "l"
+          "slug": "h3"
         },
         {
           "fluid": {
             "min": "24px",
             "max": "28px"
           },
-          "name": "M",
+          "name": "H4",
           "size": "28px",
-          "slug": "m"
+          "slug": "h4"
         },
         {
           "fluid": false,
-          "name": "S",
+          "name": "H5",
           "size": "21px",
-          "slug": "s"
+          "slug": "h5"
         },
         {
           "fluid": false,
-          "name": "XS",
+          "name": "H6",
           "size": "16px",
-          "slug": "xs"
+          "slug": "h6"
         },
         {
           "fluid": false,
-          "name": "P Huge",
+          "name": "Huge",
           "size": "24px",
-          "slug": "p-huge"
+          "slug": "huge"
         },
         {
           "fluid": false,
-          "name": "P Large",
+          "name": "Large",
           "size": "18px",
-          "slug": "p-large"
+          "slug": "large"
         },
         {
           "fluid": false,
-          "name": "P Default",
+          "name": "Default",
           "size": "16px",
-          "slug": "p-default"
+          "slug": "default"
         },
         {
           "fluid": false,
-          "name": "P Small",
+          "name": "Small",
           "size": "13px",
-          "slug": "p-small"
+          "slug": "small"
         }
       ],
       "fontStyle": true,
