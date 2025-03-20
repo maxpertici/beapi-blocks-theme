@@ -30,16 +30,16 @@
 				"lineHeight": "1.31"
 			},
 			"spacings": {
-				"xxxs": "4px",
-				"xxs": "8px",
-				"xs": "12px",
+				"3-x-sm": "4px",
+				"2-x-sm": "8px",
+				"x-sm": "12px",
 				"sm": "16px",
 				"md": "24px",
 				"lg": "32px",
-				"xl": "40px",
-				"xxl": "72px",
-				"xxxl": "120px",
-				"xxxxl": "160px"
+				"x-lg": "40px",
+				"2-x-lg": "72px",
+				"3-x-lg": "120px",
+				"4-x-lg": "160px"
 			}
 		}
 	}

@@ -8,23 +8,23 @@
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
-					"name": "xxxs",
-					"size": "var(--wp--custom--spacings--xxxs)",
-					"slug": "xxxs"
+					"name": "3-x-sm",
+					"size": "var(--wp--custom--spacings--3-x-sm)",
+					"slug": "3-x-sm"
 				},
 				{
-					"name": "xxs",
-					"size": "clamp(var(--wp--custom--spacings--xxxs), var(--wp--custom--spacings--xxxs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--xxs))",
-					"slug": "xxs"
+					"name": "2-x-sm",
+					"size": "clamp(var(--wp--custom--spacings--3-x-sm), var(--wp--custom--spacings--3-x-sm) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--2-x-sm))",
+					"slug": "2-x-sm"
 				},
 				{
-					"name": "xs",
-					"size": "clamp(var(--wp--custom--spacings--xxs), var(--wp--custom--spacings--xxs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--xs))",
-					"slug": "xs"
+					"name": "x-sm",
+					"size": "clamp(var(--wp--custom--spacings--2-x-sm), var(--wp--custom--spacings--2-x-sm) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--x-sm))",
+					"slug": "x-sm"
 				},
 				{
 					"name": "sm",
-					"size": "clamp(var(--wp--custom--spacings--xs), var(--wp--custom--spacings--xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--sm))",
+					"size": "clamp(var(--wp--custom--spacings--x-sm), var(--wp--custom--spacings--x-sm) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--sm))",
 					"slug": "sm"
 				},
 				{
@@ -38,24 +38,24 @@
 					"slug": "lg"
 				},
 				{
-					"name": "xl",
-					"size": "clamp(var(--wp--custom--spacings--lg), var(--wp--custom--spacings--lg) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--xl))",
-					"slug": "xl"
+					"name": "x-lg",
+					"size": "clamp(var(--wp--custom--spacings--lg), var(--wp--custom--spacings--lg) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--x-lg))",
+					"slug": "x-lg"
 				},
 				{
-					"name": "xxl",
-					"size": "clamp(var(--wp--custom--spacings--xl), var(--wp--custom--spacings--xl) + (100vw - 480px) / (1024 - 480) * 32, var(--wp--custom--spacings--xxl))",
-					"slug": "xxl"
+					"name": "2-x-lg",
+					"size": "clamp(var(--wp--custom--spacings--x-lg), var(--wp--custom--spacings--x-lg) + (100vw - 480px) / (1024 - 480) * 32, var(--wp--custom--spacings--2-x-lg))",
+					"slug": "2-x-lg"
 				},
 				{
-					"name": "xxxl",
-					"size": "clamp(var(--wp--custom--spacings--xxl), var(--wp--custom--spacings--xxl) + (100vw - 480px) / (1024 - 480) * 48, var(--wp--custom--spacings--xxxl))",
-					"slug": "xxxl"
+					"name": "3-x-lg",
+					"size": "clamp(var(--wp--custom--spacings--2-x-lg), var(--wp--custom--spacings--2-x-lg) + (100vw - 480px) / (1024 - 480) * 48, var(--wp--custom--spacings--3-x-lg))",
+					"slug": "3-x-lg"
 				},
 				{
-					"name": "xxxxl",
-					"size": "clamp(var(--wp--custom--spacings--xxxl), var(--wp--custom--spacings--xxxl) + (100vw - 480px) / (1024 - 480) * 40, var(--wp--custom--spacings--xxxxl))",
-					"slug": "xxxxl"
+					"name": "4-x-lg",
+					"size": "clamp(var(--wp--custom--spacings--3-x-lg), var(--wp--custom--spacings--3-x-lg) + (100vw - 480px) / (1024 - 480) * 40, var(--wp--custom--spacings--4-x-lg))",
+					"slug": "4-x-lg"
 				}
 			],
 			"units": [
