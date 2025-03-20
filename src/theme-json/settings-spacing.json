@@ -1,0 +1,71 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"settings": {
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"name": "3-xs",
+					"size": "var(--wp--custom--spacings--3-xs)",
+					"slug": "3-xs"
+				},
+				{
+					"name": "2-xs",
+					"size": "clamp(var(--wp--custom--spacings--3-xs), var(--wp--custom--spacings--3-xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--2-xs))",
+					"slug": "2-xs"
+				},
+				{
+					"name": "xs",
+					"size": "clamp(var(--wp--custom--spacings--2-xs), var(--wp--custom--spacings--2-xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--xs))",
+					"slug": "xs"
+				},
+				{
+					"name": "s",
+					"size": "clamp(var(--wp--custom--spacings--xs), var(--wp--custom--spacings--xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--s))",
+					"slug": "s"
+				},
+				{
+					"name": "md",
+					"size": "clamp(var(--wp--custom--spacings--s), var(--wp--custom--spacings--s) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--md))",
+					"slug": "md"
+				},
+				{
+					"name": "l",
+					"size": "clamp(var(--wp--custom--spacings--md), var(--wp--custom--spacings--md) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--l))",
+					"slug": "l"
+				},
+				{
+					"name": "xl",
+					"size": "clamp(var(--wp--custom--spacings--l), var(--wp--custom--spacings--l) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--xl))",
+					"slug": "xl"
+				},
+				{
+					"name": "2-xl",
+					"size": "clamp(var(--wp--custom--spacings--xl), var(--wp--custom--spacings--xl) + (100vw - 480px) / (1024 - 480) * 32, var(--wp--custom--spacings--2-xl))",
+					"slug": "2-xl"
+				},
+				{
+					"name": "3-xl",
+					"size": "clamp(var(--wp--custom--spacings--2-xl), var(--wp--custom--spacings--2-xl) + (100vw - 480px) / (1024 - 480) * 48, var(--wp--custom--spacings--3-xl))",
+					"slug": "3-xl"
+				},
+				{
+					"name": "4-xl",
+					"size": "clamp(var(--wp--custom--spacings--3-xl), var(--wp--custom--spacings--3-xl) + (100vw - 480px) / (1024 - 480) * 40, var(--wp--custom--spacings--4-xl))",
+					"slug": "4-xl"
+				}
+			],
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		}
+	}
+}

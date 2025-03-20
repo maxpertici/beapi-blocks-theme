@@ -1,0 +1,36 @@
+/**
+* Reset
+*/
+@use "../01-mixins/rtl" as *;
+
+html {
+	/* Set automatic RTL direction depending on lang attribute */
+	@include set-rtl-direction;
+
+	/* Apply border-box across the entire page. */
+	box-sizing: border-box;
+
+	// Scroll resets
+	-webkit-overflow-scrolling: touch;
+	scroll-behavior: smooth;
+
+	// Fonts resets
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: auto;
+}
+
+/**
+* Relax the definition a bit, to allow components to override it manually.
+*/
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+}
+
+body {
+	background-color: #fff;
+}

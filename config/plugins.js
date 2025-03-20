@@ -15,58 +15,58 @@ const WebpackImageSizesPlugin = require('./WebpackImageSizesPlugin')
 const WebpackThemeJsonPlugin = require('./WebpackThemeJsonPlugin')
 
 module.exports = {
-  get: function (mode) {
-    const plugins = [
-      new WebpackThemeJsonPlugin({
-        watch: mode !== 'production',
-      }),
-      new CleanWebpackPlugin(),
-      new ESLintPlugin({
-        overrideConfigFile: path.resolve(__dirname, '../.eslintrc'),
-        context: path.resolve(__dirname, '../src/js'),
-        files: '**/*.js',
-      }),
-      new SpriteLoaderPlugin({
-        plainSprite: true,
-      }),
-      new StyleLintPlugin({
-        configFile: path.resolve(__dirname, '../.stylelintrc'),
-        context: path.resolve(__dirname, '../src/scss'),
-        files: '**/*.scss',
-      }),
-      new WebpackBar({
-        color: '#ffe600',
-      }),
-      new DependencyExtractionWebpackPlugin(),
-      new WebpackImageSizesPlugin({
-        watch: mode !== 'production',
-      }),
-    ]
+	get: function (mode) {
+		const plugins = [
+			new WebpackThemeJsonPlugin({
+				watch: mode !== 'production',
+			}),
+			new CleanWebpackPlugin(),
+			new ESLintPlugin({
+				overrideConfigFile: path.resolve(__dirname, '../.eslintrc'),
+				context: path.resolve(__dirname, '../src/js'),
+				files: '**/*.js',
+			}),
+			new SpriteLoaderPlugin({
+				plainSprite: true,
+			}),
+			new StyleLintPlugin({
+				configFile: path.resolve(__dirname, '../.stylelintrc'),
+				context: path.resolve(__dirname, '../src/scss'),
+				files: '**/*.scss',
+			}),
+			new WebpackBar({
+				color: '#ffe600',
+			}),
+			new DependencyExtractionWebpackPlugin(),
+			new WebpackImageSizesPlugin({
+				watch: mode !== 'production',
+			}),
+		]
 
-    if (mode === 'production') {
-      plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'json',
-          generateStatsFile: true,
-        })
-      )
-      plugins.push(
-        new WebpackManifestPlugin({
-          fileName: 'assets.json',
-        }),
-        new MiniCssExtractPlugin({
-          filename: '[name].[contenthash:8].min.css',
-        })
-      )
-    } else {
-      plugins.push(
-        new BrowserSyncPlugin(browsersyncConfig.browserSyncOptions, browsersyncConfig.pluginOptions),
-        new MiniCssExtractPlugin({
-          filename: '[name].css',
-        })
-      )
-    }
+		if (mode === 'production') {
+			plugins.push(
+				new BundleAnalyzerPlugin({
+					analyzerMode: 'json',
+					generateStatsFile: true,
+				})
+			)
+			plugins.push(
+				new WebpackManifestPlugin({
+					fileName: 'assets.json',
+				}),
+				new MiniCssExtractPlugin({
+					filename: '[name].[contenthash:8].min.css',
+				})
+			)
+		} else {
+			plugins.push(
+				new BrowserSyncPlugin(browsersyncConfig.browserSyncOptions, browsersyncConfig.pluginOptions),
+				new MiniCssExtractPlugin({
+					filename: '[name].css',
+				})
+			)
+		}
 
-    return plugins
-  },
+		return plugins
+	},
 }

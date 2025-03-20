@@ -1,5 +1,8 @@
 /**
  * Styles
  */
+@use "03-base/normalize";
+@use "03-base/reset";
+
 @use "06-core-blocks/heading";
 @use "06-core-blocks/paragraph";

@@ -20,7 +20,7 @@
 @use "../00-variables/config" as *;
 
 @mixin style-only {
-    @if ($entry-file-name == "style") {
-        @content;
-    }
+	@if ($entry-file-name == "style") {
+		@content;
+	}
 }

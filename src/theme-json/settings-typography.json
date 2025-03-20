@@ -1,132 +1,132 @@
 {
-  "version": 3,
-  "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "settings": {
-    "typography": {
-      "customFontSize": false,
-      "defaultFontSizes": true,
-      "dropCap": true,
-      "fluid": false,
-      "fontFamilies": [
-        {
-          "fontFace": [
-            {
-              "fontFamily": "Lexend",
-              "fontStretch": "normal",
-              "fontStyle": "normal",
-              "fontWeight": "100 900",
-              "src": [
-                "file:./assets/fonts/Lexend-VariableFont_wght.woff2"
-              ]
-            }
-          ],
-          "fontFamily": "\"Lexend\", sans-serif",
-          "name": "Heading",
-          "slug": "heading"
-        },
-        {
-          "fontFace": [
-            {
-              "fontFamily": "Lexend",
-              "fontStretch": "normal",
-              "fontStyle": "normal",
-              "fontWeight": "100 900",
-              "src": [
-                "file:./assets/fonts/Lexend-VariableFont_wght.woff2"
-              ]
-            }
-          ],
-          "fontFamily": "\"Lexend\", sans-serif",
-          "name": "Default",
-          "slug": "default"
-        }
-      ],
-      "fontSizes": [
-        {
-          "fluid": false,
-          "name": "Label",
-          "size": "",
-          "slug": "label"
-        },
-        {
-          "fluid": {
-            "min": "40px",
-            "max": "72px"
-          },
-          "name": "H1",
-          "size": "72px",
-          "slug": "h1"
-        },
-        {
-          "fluid": {
-            "min": "36px",
-            "max": "56px"
-          },
-          "name": "H2",
-          "size": "56px",
-          "slug": "h2"
-        },
-        {
-          "fluid": {
-            "min": "28px",
-            "max": "42px"
-          },
-          "name": "H3",
-          "size": "42px",
-          "slug": "h3"
-        },
-        {
-          "fluid": {
-            "min": "24px",
-            "max": "28px"
-          },
-          "name": "H4",
-          "size": "28px",
-          "slug": "h4"
-        },
-        {
-          "fluid": false,
-          "name": "H5",
-          "size": "21px",
-          "slug": "h5"
-        },
-        {
-          "fluid": false,
-          "name": "H6",
-          "size": "16px",
-          "slug": "h6"
-        },
-        {
-          "fluid": false,
-          "name": "Huge",
-          "size": "24px",
-          "slug": "huge"
-        },
-        {
-          "fluid": false,
-          "name": "Large",
-          "size": "18px",
-          "slug": "large"
-        },
-        {
-          "fluid": false,
-          "name": "Default",
-          "size": "16px",
-          "slug": "default"
-        },
-        {
-          "fluid": false,
-          "name": "Small",
-          "size": "13px",
-          "slug": "small"
-        }
-      ],
-      "fontStyle": true,
-      "fontWeight": true,
-      "letterSpacing": true,
-      "lineHeight": true,
-      "textDecoration": true,
-      "textTransform": true
-    }
-  }
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"settings": {
+		"typography": {
+			"customFontSize": false,
+			"defaultFontSizes": true,
+			"dropCap": true,
+			"fluid": false,
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Lexend",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/Lexend-VariableFont_wght.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Lexend\", sans-serif",
+					"name": "Heading",
+					"slug": "heading"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Lexend",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/Lexend-VariableFont_wght.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Lexend\", sans-serif",
+					"name": "Default",
+					"slug": "default"
+				}
+			],
+			"fontSizes": [
+				{
+					"fluid": false,
+					"name": "Label",
+					"size": "",
+					"slug": "label"
+				},
+				{
+					"fluid": {
+						"min": "40px",
+						"max": "72px"
+					},
+					"name": "H1",
+					"size": "72px",
+					"slug": "h1"
+				},
+				{
+					"fluid": {
+						"min": "36px",
+						"max": "56px"
+					},
+					"name": "H2",
+					"size": "56px",
+					"slug": "h2"
+				},
+				{
+					"fluid": {
+						"min": "28px",
+						"max": "42px"
+					},
+					"name": "H3",
+					"size": "42px",
+					"slug": "h3"
+				},
+				{
+					"fluid": {
+						"min": "24px",
+						"max": "28px"
+					},
+					"name": "H4",
+					"size": "28px",
+					"slug": "h4"
+				},
+				{
+					"fluid": false,
+					"name": "H5",
+					"size": "21px",
+					"slug": "h5"
+				},
+				{
+					"fluid": false,
+					"name": "H6",
+					"size": "16px",
+					"slug": "h6"
+				},
+				{
+					"fluid": false,
+					"name": "Huge",
+					"size": "24px",
+					"slug": "huge"
+				},
+				{
+					"fluid": false,
+					"name": "Large",
+					"size": "18px",
+					"slug": "large"
+				},
+				{
+					"fluid": false,
+					"name": "Default",
+					"size": "16px",
+					"slug": "default"
+				},
+				{
+					"fluid": false,
+					"name": "Small",
+					"size": "13px",
+					"slug": "small"
+				}
+			],
+			"fontStyle": true,
+			"fontWeight": true,
+			"letterSpacing": true,
+			"lineHeight": true,
+			"textDecoration": true,
+			"textTransform": true
+		}
+	}
 }

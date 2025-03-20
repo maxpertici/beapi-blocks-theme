@@ -1,0 +1,48 @@
+/**
+ * Support for rtl text, explicit support for all RTL languages
+ *
+ * @author Cédric Andrietti
+ *
+ * Examples :
+ *
+ *      .my-element {
+ *          @include rtl() {
+ *              ... your css
+ *          }
+ *      }
+ *
+ */
+
+@use "sass:list";
+@use "../00-variables/config" as *;
+
+$rtl-languages: (
+	":lang(ar)",  // Arabic
+	":lang(fa)",  // Persian (Farsi)
+	":lang(he)",  // Hebrew (modern code)
+	":lang(iw)",  // Hebrew (legacy code)
+	":lang(ur)",  // Urdu
+	":lang(ps)",  // Pashto
+	":lang(sd)",  // Sindhi
+	":lang(ug)",  // Uyghur
+	":lang(dv)",  // Divehi (Maldivian)
+	":lang(ku)",  // Kurdish (Sorani)
+	":lang(yi)"   // Yiddish
+);
+
+@mixin rtl {
+	@if ($is-rtl-enabled) {
+		*[dir="rtl"] &,
+		:root:is(#{list.append((), $rtl-languages, $separator: comma)}) & {
+			@content;
+		}
+	}
+}
+
+@mixin set-rtl-direction {
+	@if ($is-rtl-enabled) {
+		&:is(#{list.append((), $rtl-languages, $separator: comma)}) {
+			direction: rtl;
+		}
+	}
+}
