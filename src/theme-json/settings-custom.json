@@ -29,9 +29,9 @@
 				"lineHeight": "1.31"
 			},
 			"layout": {
-                "contentSize": "760px",
+				"contentSize": "760px",
 				"wideSize": "1200px",
-                "mobileExternalGutter": "25px",
+				"mobileExternalGutter": "25px",
 				"desktopExternalGutter": "75px",
 				"externalGutterDelta": "50",
 				"fluidExternalGutter": "clamp(var(--wp--custom--layout--mobile-external-gutter), var(--wp--custom--layout--mobile-external-gutter) + (100vw - 480px) / (1024 - 480) * var(--wp--custom--layout--external-gutter-delta), var(--wp--custom--layout--desktop-external-gutter))"
