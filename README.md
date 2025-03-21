@@ -34,6 +34,26 @@ yarn build
 
 ## Theme.json
 
-Le fichier `theme.json` est généré automatiquement.
+Le fichier `theme.json`, stocké à la racine du thème, est utilisé pour configurer le thème dans l'interface Gutenberg. Il est généré automatiquement à partir des fichiers json dans `src/theme-json`. **Il ne faut pas l'éditer manuellement**.
 
-Il est stocké à la racine du thème et est utilisé pour configurer le thème dans l'interface Gutenberg. Il ne faaut pas éditer le fichier `theme.json` manuellement.
+Le plugin `WebpakThemeJsonPlugin` dans le dossier `config/` qui se charge de la concaténation génère également le fichier `_theme-json.scss` dans le dossier `src/scss/00-variables/`. Les variables de couleurs ainsi que les variables customs y sont exportées :
+
+```json
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"settings": {
+		"custom": {
+			"h1": {
+				"lineHeight": "1.11"
+			},
+        }
+    }
+}
+```
+
+Deviendra dans le fichier `_theme-json.scss` :
+
+```scss
+$settings-custom-h1-line-height: 1.11
+```
