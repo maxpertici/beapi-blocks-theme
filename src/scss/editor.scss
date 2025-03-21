@@ -5,8 +5,11 @@
 
 $entry-file-name: "editor";
 
+@use "03-base/variables";
 @use "03-base/normalize";
 @use "03-base/reset";
 
 @use "06-core-blocks/heading";
 @use "06-core-blocks/paragraph";
+@use "06-core-blocks/navigation";
+@use "09-template-parts/header";

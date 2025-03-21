@@ -1,0 +1,18 @@
+/**
+ * Header
+ */
+@use "../00-variables/easings" as *;
+@use "../01-mixins/style-only" as *;
+
+header.wp-block-template-part {
+	@include style-only {
+		position: sticky;
+		top: var(--wp-admin-bar-height);
+		z-index: 1000;
+		transition: transform .75s $ease-out-expo;
+
+		html.scroll-down & {
+			transform: translateY(-100%);
+		}
+	}
+}

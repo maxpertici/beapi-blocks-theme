@@ -65,7 +65,8 @@
 				"rem",
 				"vh",
 				"vw"
-			]
+			],
+			"blockGap": true
 		}
 	}
 }

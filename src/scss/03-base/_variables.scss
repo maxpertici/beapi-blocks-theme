@@ -1,0 +1,23 @@
+/**
+ * Variables
+ */
+
+@use "../01-mixins/breakpoint" as *;
+
+:root {
+	/*
+	 * Admin bar
+	 */
+	--wp-admin-bar-height: var(--wp-admin--admin-bar--height, 0rem);
+
+	@include breakpoints(4xs, max) {
+		/*
+         * Admin bar become not sticky
+         */
+		&:not(.scroll-top) {
+			.admin-bar {
+				--wp-admin-bar-height: 0rem;
+			}
+		}
+	}
+}
