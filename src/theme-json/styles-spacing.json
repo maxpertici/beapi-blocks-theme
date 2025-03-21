@@ -3,11 +3,7 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"styles": {
 		"spacing": {
-			"blockGap": "var(--wp--custom--spacings--md)",
-			"padding": {
-				"left": "var(--wp--custom--spacings--md)",
-				"right": "var(--wp--custom--spacings--md)"
-			}
+			"blockGap": "var(--wp--custom--spacings--md)"
 		}
 	}
 }

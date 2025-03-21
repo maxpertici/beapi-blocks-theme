@@ -1,10 +1,13 @@
 /**
  * Heading
  */
+
+@use "../01-mixins/heading" as *;
+
 @for $i from 1 through 6 {
 	h#{$i},
 	.is-style-h#{$i} {
-		font: var(--wp--custom--default--font-weight) var(--wp--preset--font-size--h-#{$i})/var(--wp--custom--h-#{$i}--line-height) var(--wp--preset--font-family--heading);
+		@include heading(h#{$i});
 	}
 
 	.has-h-#{$i}-font-size {

@@ -2,6 +2,8 @@
  * Header
  */
 @use "../00-variables/easings" as *;
+@use "../00-variables/config" as *;
+@use "../01-mixins/breakpoint" as *;
 @use "../01-mixins/style-only" as *;
 
 header.wp-block-template-part {
@@ -10,9 +12,13 @@ header.wp-block-template-part {
 		top: var(--wp-admin-bar-height);
 		z-index: 1000;
 		transition: transform .75s $ease-out-expo;
+	}
 
-		html.scroll-down & {
-			transform: translateY(-100%);
+	@include breakpoints($mobile-to-desktop-nav-breakpoint) {
+		@include style-only {
+			html.scroll-down &:not(:has(.mega-menu__toggle[aria-expanded="true"])) {
+				transform: translateY(-100%);
+			}
 		}
 	}
 }

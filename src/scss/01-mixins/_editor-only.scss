@@ -20,7 +20,7 @@
 @use "../00-variables/config" as *;
 
 @mixin editor-only {
-	@if ($entry-file-name == "editor") {
+	@if ($entry-file-name == editor) {
 		@content;
 	}
 }

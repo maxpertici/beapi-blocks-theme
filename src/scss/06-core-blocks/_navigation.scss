@@ -1,6 +1,7 @@
 /**
  * Navigation
  */
+@use "../00-variables/config" as *;
 @use "../01-mixins/breakpoint" as *;
 
 .wp-block-navigation {
@@ -10,7 +11,7 @@
 		cursor: pointer;
 	}
 
-	@include breakpoints(md, max) {
+	@include breakpoints($mobile-to-desktop-nav-breakpoint, max) {
 		&.items-justified-right {
 			--navigation-layout-justification-setting: start;
 			--navigation-layout-justify: start;
@@ -28,7 +29,7 @@
 		}
 	}
 
-	@include breakpoints(md) {
+	@include breakpoints($mobile-to-desktop-nav-breakpoint) {
 		&__responsive-dialog {
 			position: initial !important;
 		}

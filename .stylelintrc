@@ -30,6 +30,7 @@
 				"scss/at-if-closing-brace-newline-after": null,
 				"scss/at-else-empty-line-before": null,
 				"scss/at-if-closing-brace-space-after": null,
+				"scss/at-if-no-null": null,
 				"no-invalid-position-at-import-rule": null,
 				"custom-property-pattern": null,
 				"indentation": "tab",
