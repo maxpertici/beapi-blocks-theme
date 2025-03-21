@@ -7,7 +7,7 @@
 				"lineHeight": "1.5",
 				"fontWeight": "300"
 			},
-			"externalutter": "clamp(25px, 25px + (100vw - 480px) / (1024 - 480) * 50, 75px)",
+			"externalGutter": "clamp(25px, 25px + (100vw - 480px) / (1024 - 480) * 50, 75px)",
 			"heading": {
 				"fontWeight": "400"
 			},
