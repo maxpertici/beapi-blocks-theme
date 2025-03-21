@@ -1,6 +1,17 @@
-@each $size in "default", "small", "large", "huge" {
+/**
+ * Paragraph
+ */
+
+@use "../00-variables/config" as *;
+@use "../01-mixins/text" as *;
+
+p {
+	font: var(--wp--custom--default--font-weight) var(--wp--preset--font-size--default)/var(--wp--custom--default--line-height) var(--wp--preset--font-family--default);
+}
+
+@each $size in $paragraph-sizes {
 	.is-style-#{$size} {
-		font: var(--wp--custom--default--font-weight) var(--wp--preset--font-size--#{$size})/var(--wp--custom--default--line-height) var(--wp--preset--font-family--default);
+		@include text($size);
 	}
 
 	.has-#{$size}-font-size {

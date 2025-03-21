@@ -1,5 +1,33 @@
 /**
  * Config
  */
-$entry-file-name: "style";
+@use "sass:math";
+@use "./theme-json" as *;
+
+// ----
+// Misc
+// ----
+// entry file name for mixins editor-only and style-only, see editor.scss for override
+$entry-file-name: style;
+// is rtl enabled for mixin rtl and rtl-set-direction
 $is-rtl-enabled: false;
+// nagivation mobile/desktop breakpoint
+$mobile-to-desktop-nav-breakpoint: md;
+// paragraph sizes
+$paragraph-sizes: (default, small, large, huge);
+
+// ----
+// Breakpoints
+// Based on WordPress breakpoints (https://github.com/WordPress/gutenberg/blob/trunk/packages/base-styles/_breakpoints.scss)
+// ----
+$breakpoints: (
+	6xs: 480,
+	5xs: 600,
+	4xs: 601,  // 601px is a wordpress breakpoint (admin-bar become sticky)
+	3xs: 768,
+	2xs: 781,
+	xs: 784,   // admin bar height change
+	s: 960,
+	md: 1024,
+	l: math.div($settings-custom-layout-content-size + $settings-custom-layout-desktop-external-gutter * 2, 1px),
+);

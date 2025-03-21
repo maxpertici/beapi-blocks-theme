@@ -5,7 +5,7 @@
 
 html {
 	/* Set automatic RTL direction depending on lang attribute */
-	@include set-rtl-direction;
+	@include rtl-set-direction;
 
 	/* Apply border-box across the entire page. */
 	box-sizing: border-box;

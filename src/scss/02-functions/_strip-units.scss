@@ -1,0 +1,21 @@
+/**
+ * Strip units - Remove unit
+ *
+ * @author Nicolas Langle
+ *
+ * @param $value
+ *
+ * Examples :
+ *
+ *      strip-units(10px)  -> return 10
+ *      strip-units(10%)   -> return 10
+ *      strip-units(10)    -> return 10
+ *
+ */
+
+@use "sass:math";
+
+@function strip-units($value) {
+
+	@return math.div($value, ($value * 0 + 1));
+}

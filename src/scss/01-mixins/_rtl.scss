@@ -39,7 +39,7 @@ $rtl-languages: (
 	}
 }
 
-@mixin set-rtl-direction {
+@mixin rtl-set-direction {
 	@if ($is-rtl-enabled) {
 		&:is(#{list.append((), $rtl-languages, $separator: comma)}) {
 			direction: rtl;
