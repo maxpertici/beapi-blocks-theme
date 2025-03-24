@@ -9,12 +9,18 @@
 // ----
 // entry file name for mixins editor-only and style-only, see editor.scss for override
 $entry-file-name: style;
+
 // is rtl enabled for mixin rtl and rtl-set-direction
 $is-rtl-enabled: false;
+
 // nagivation mobile/desktop breakpoint
 $mobile-to-desktop-nav-breakpoint: md;
+
 // paragraph sizes
 $paragraph-sizes: (default, small, large, huge);
+
+// hero single variations, by default the four styles are enabled
+$hero-single-variations: (1, 2, 3, 4);
 
 // ----
 // Breakpoints

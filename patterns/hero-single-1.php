@@ -10,8 +10,8 @@
  */
 
 ?>
-<!-- wp:group {"className":"wp-pattern-hero-single-1","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3-xl"}}}} -->
-<div class="wp-block-group wp-pattern-hero-single-1" style="margin-bottom:var(--wp--preset--spacing--3-xl)">
+<!-- wp:group {"className":"wp-pattern-hero-single wp-pattern-hero-single-1","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3-xl"}}}} -->
+<div class="wp-block-group wp-pattern-hero-single wp-pattern-hero-single-1" style="margin-bottom:var(--wp--preset--spacing--3-xl)">
 	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--s)">
 		<!-- wp:group {"layout":{"type":"constrained"}} -->
