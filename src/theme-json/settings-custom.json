@@ -3,6 +3,7 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"settings": {
 		"custom": {
+
 			"default": {
 				"lineHeight": "1.5",
 				"fontWeight": "300"
@@ -31,9 +32,9 @@
 			"layout": {
 				"contentSize": "760px",
 				"wideSize": "1200px",
-				"mobileExternalGutter": "25px",
+				"mobileExternalGutter": "20px",
 				"desktopExternalGutter": "75px",
-				"externalGutterDelta": "50",
+				"externalGutterDelta": "55",
 				"fluidExternalGutter": "clamp(var(--wp--custom--layout--mobile-external-gutter), var(--wp--custom--layout--mobile-external-gutter) + (100vw - 480px) / (1024 - 480) * var(--wp--custom--layout--external-gutter-delta), var(--wp--custom--layout--desktop-external-gutter))"
 			},
 			"spacings": {
