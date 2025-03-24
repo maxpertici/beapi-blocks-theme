@@ -11,7 +11,7 @@
 .wp-pattern-hero-single {
 	$base: ".wp-block-group";
 
-	@if (list.index($hero-single-variantes, 1) != null) {
+	@if (list.index($hero-single-variations, 1) != null) {
 		// ----
 		// variante 1
 		// ----
@@ -49,7 +49,7 @@
 		}
 	}
 
-	@if (list.index($hero-single-variantes, 2) != null) {
+	@if (list.index($hero-single-variations, 2) != null) {
 		// ----
 		// variante 2
 		// ----
