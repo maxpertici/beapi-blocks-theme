@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Hero single
+ * Title: Hero single 2
  * Slug: beapi-blocks-theme/hero-single-2
  * Inserter: no
  *
