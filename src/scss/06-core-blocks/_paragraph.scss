@@ -9,6 +9,10 @@ p {
 	font: var(--wp--custom--default--font-weight) var(--wp--preset--font-size--default)/var(--wp--custom--default--line-height) var(--wp--preset--font-family--default);
 }
 
+.is-style-label {
+	@include text(label);
+}
+
 @each $size in $paragraph-sizes {
 	.is-style-#{$size} {
 		@include text($size);

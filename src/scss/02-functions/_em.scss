@@ -23,6 +23,8 @@
 
 @function em($pxval, $base: 16px) {
 
+	@debug $pxval;
+
 	@if not unitless($pxval) {
 		$pxval: strip-units($pxval);
 	}

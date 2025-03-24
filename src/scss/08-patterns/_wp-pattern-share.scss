@@ -1,0 +1,21 @@
+.wp-pattern-share {
+	.wp-block-social-links,
+	.wp-block-buttons {
+		gap: 8px;
+	}
+
+	.wp-block-social-links + .wp-block-buttons {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: -12px;
+			width: 1px;
+			height: 28px;
+			margin-top: -14px;
+			content: "";
+			background-color: var(--wp--preset--color--gray-75);
+		}
+	}
+}

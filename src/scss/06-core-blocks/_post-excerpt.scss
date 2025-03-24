@@ -1,0 +1,9 @@
+/**
+ * Post excerpt
+ */
+
+.wp-block-post-excerpt {
+	&[class*="is-style-"] p {
+		font: inherit;
+	}
+}

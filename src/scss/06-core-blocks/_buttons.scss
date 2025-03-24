@@ -1,0 +1,45 @@
+/**
+ * Buttons and button
+ */
+.wo-block-buttons {
+	$el: &;
+}
+
+.wp-block-button {
+	$el: &;
+
+	.is-style-email > &__link,
+	.is-style-print > &__link {
+		position: relative;
+		width: 36px;
+		height: 36px;
+		padding: 0;
+		overflow: hidden;
+		line-height: 36px;
+		text-indent: -1000px;
+		vertical-align: middle;
+		border-radius: 50%;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 20px;
+			height: 20px;
+			margin: -10px 0 0 -10px;
+			vertical-align: middle;
+			content: "";
+			mask-image: url(../img/static/email.svg);
+			mask-size: 100%;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			background-color: #fff;
+		}
+	}
+
+	.is-style-print > &__link {
+		&::before {
+			mask-image: url(../img/static/print.svg);
+		}
+	}
+}

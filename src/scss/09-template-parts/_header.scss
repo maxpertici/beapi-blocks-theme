@@ -3,7 +3,7 @@
  */
 @use "../00-variables/easings" as *;
 @use "../00-variables/config" as *;
-@use "../01-mixins/breakpoint" as *;
+@use "../01-mixins/breakpoints" as *;
 @use "../01-mixins/style-only" as *;
 
 header.wp-block-template-part {

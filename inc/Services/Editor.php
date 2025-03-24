@@ -109,27 +109,46 @@ class Editor implements Service {
 			);
 		}
 
+		// paragraph
 		register_block_style(
 			'core/paragraph',
 			[
-				'name'  => 'small',
-				'label' => __( 'Small', 'beapi-frontend-framework' ),
+				'name'  => 'label',
+				'label' => __( 'Label', 'beapi-frontend-framework' ),
 			]
 		);
 
-		register_block_style(
-			'core/paragraph',
-			[
-				'name'  => 'large',
-				'label' => __( 'Large', 'beapi-frontend-framework' ),
-			]
-		);
+		foreach ( [ 'core/paragraph', 'core/post-excerpt' ] as $block_name ) {
+			register_block_style(
+				$block_name,
+				[
+					'name'  => 'small',
+					'label' => __( 'Small', 'beapi-frontend-framework' ),
+				]
+			);
+
+			register_block_style(
+				$block_name,
+				[
+					'name'  => 'large',
+					'label' => __( 'Large', 'beapi-frontend-framework' ),
+				]
+			);
+
+			register_block_style(
+				$block_name,
+				[
+					'name'  => 'huge',
+					'label' => __( 'Huge', 'beapi-frontend-framework' ),
+				]
+			);
+		}
 
 		register_block_style(
-			'core/paragraph',
+			'core/post-terms',
 			[
-				'name'  => 'huge',
-				'label' => __( 'Huge', 'beapi-frontend-framework' ),
+				'name'  => 'tag',
+				'label' => __( 'Tag', 'beapi-frontend-framework' ),
 			]
 		);
 	}

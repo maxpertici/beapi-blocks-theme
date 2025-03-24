@@ -1,0 +1,27 @@
+/**
+ * Hero single 1
+ */
+
+@use "../01-mixins/breakpoints" as *;
+
+.wp-pattern-hero-single-1 {
+	@include breakpoints(3xs, max) {
+		display: flex;
+		flex-direction: column;
+
+		> * {
+			margin-block-start: 0;
+		}
+
+		.wp-block-post-featured-image {
+			order: 1000;
+			width: calc(100% + var(--wp--custom--layout--fluid-external-gutter) * 2);
+			margin-left: calc(-1 * var(--wp--custom--layout--fluid-external-gutter));
+		}
+
+		.wp-pattern-share {
+			justify-content: flex-end;
+			margin: 0 0 var(--wp--preset--spacing--s);
+		}
+	}
+}
