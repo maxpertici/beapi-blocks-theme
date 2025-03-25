@@ -12,7 +12,7 @@
 
 	&.is-style-tag {
 		display: flex;
-		gap: $settings-custom-spacings-s;
+		gap: var(--wp--preset--spacing--s);
 		align-items: center;
 
 		#{context-selector("a", "a, span:not([class])")} {

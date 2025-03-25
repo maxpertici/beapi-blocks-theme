@@ -18,7 +18,7 @@
 		// ----
 		&-1 {
 			&#{$base} {
-				margin-top: $settings-custom-spacings-xl;
+				margin-top: var(--wp--preset--spacing--xl);
 			}
 
 			.wp-block-post-featured-image {
@@ -72,8 +72,11 @@
 
 			.wp-block-group {
 				&.has-background {
-					max-width: min(100vw - var(--wp--custom--layout--fluid-external-gutter) * 2, var(--wp--custom--layout--content-size) + fluid-size($settings-custom-spacings-s, $settings-custom-spacings-2-xl) * 2);
-					padding: fluid-size($settings-custom-spacings-s, $settings-custom-spacings-xl) fluid-size($settings-custom-spacings-s, $settings-custom-spacings-2-xl);
+					$vertical-padding: fluid-size($settings-spacing-s, $settings-spacing-xl);
+					$horizontal-padding: fluid-size($settings-spacing-s, $settings-spacing-2-xl);
+
+					max-width: min(100vw - var(--wp--custom--layout--fluid-external-gutter) * 2, var(--wp--custom--layout--content-size) + #{$horizontal-padding} * 2);
+					padding: $vertical-padding $horizontal-padding;
 				}
 			}
 
