@@ -11,16 +11,16 @@ yarn
 Après l'installation, vous pouvez utiliser les commandes suivantes pour gérer l'environnement local :
 ```bash
 # Démarrer l'environnement local (disponible à http://localhost:8889)
-yarn wp-env-start
+yarn wp-env start
 
 # Arrêter l'environnement local
-yarn wp-env-stop
+yarn wp-env stop
 
 # Réinitialiser la base de données (supprimera toutes les données de manière permanente)
-yarn wp-env-clean
+yarn wp-env clean
 
 # Supprimer l'environnement local (supprimera toutes les données et fichiers de manière permanente)
-yarn wp-env-destroy
+yarn wp-env destroy
 ```
 
 Après l'installation, vous pouvez utiliser les commandes suivantes pour la génération des assets :
@@ -58,4 +58,16 @@ Deviendra dans le fichier `_theme-json.scss` :
 
 ```scss
 $settings-custom-h1-line-height: 1.11
+```
+
+## Single news
+
+4 heros sont disponibles pour la single news, `parts/hero-single-[1-4].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/single.html`. Puis sélectionner le numéro correspondant de le fichier `00-variables/_config.scss`
+
+```html
+<!-- wp:pattern {"slug":"beapi-blocks-theme/hero-single-3"} /-->
+```
+
+```scss
+$hero-single-variations: (3);
 ```

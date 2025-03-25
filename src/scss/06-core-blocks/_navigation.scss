@@ -18,7 +18,7 @@
 		}
 	}
 
-	@include breakpoints(5xs) {
+	@include breakpoints(6xs) {
 		/* Change the WordPress default css to match memgamenu breacking points */
 		&__responsive-container-open:not(.always-shown) {
 			display: flex;

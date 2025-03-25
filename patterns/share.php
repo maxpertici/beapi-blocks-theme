@@ -28,8 +28,8 @@ $mail_to_title    = rawurlencode( _x( 'Discover an article:', 'Share an article 
 	<p class="is-style-label"><?php esc_html_e( 'Share', 'beapi-blocks-theme' ); ?></p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:social-links -->
-	<ul class="wp-block-social-links">
+	<!-- wp:social-links {"iconColor":"gray-100","iconColorValue":"#414b5a","size":"has-large-icon-size","className":"is-style-logos-only"} -->
+	<ul class="wp-block-social-links has-large-icon-size has-icon-color is-style-logos-only">
 		<!-- wp:social-link {"url":"<?php echo esc_url( 'http://www.facebook.com/sharer.php?u=' . $url ); ?>","service":"facebook"} /-->
 		<!-- wp:social-link {"url":"<?php echo esc_url( 'https://x.com/intent/tweet?url=' . $url ); ?>","service":"x"} /-->
 		<!-- wp:social-link {"url":"<?php echo esc_url( 'https://www.linkedin.com/shareArticle?url=' . $url ); ?>","service":"linkedin"} /-->
