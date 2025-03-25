@@ -4,6 +4,7 @@
 
 @use "../00-variables/theme-json" as *;
 @use "../01-mixins/text" as *;
+@use "../02-functions/context-selector" as *;
 @use "../04-utilities/sr-only" as *;
 
 .wp-block-post-terms {
@@ -14,7 +15,7 @@
 		gap: $settings-custom-spacings-s;
 		align-items: center;
 
-		a {
+		#{context-selector("a", "a, span:not([class])")} {
 			display: inline-block;
 			padding: 4px 8px;
 			color: inherit;
