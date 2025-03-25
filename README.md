@@ -59,3 +59,15 @@ Deviendra dans le fichier `_theme-json.scss` :
 ```scss
 $settings-custom-h1-line-height: 1.11
 ```
+
+## Single news
+
+4 heros sont disponibles pour la single news, `parts/hero-single-[1-4].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/single.html`. Puis sélectionner le numéro correspondant de le fichier `00-variables/_config.scss`
+
+```html
+<!-- wp:pattern {"slug":"beapi-blocks-theme/hero-single-3"} /-->
+```
+
+```scss
+$hero-single-variations: (3);
+```

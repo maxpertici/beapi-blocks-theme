@@ -110,13 +110,15 @@ class Editor implements Service {
 		}
 
 		// paragraph
-		register_block_style(
-			'core/paragraph',
-			[
-				'name'  => 'label',
-				'label' => __( 'Label', 'beapi-frontend-framework' ),
-			]
-		);
+		foreach ( [ 'core/paragraph', 'core/post-date' ] as $block_name ) {
+			register_block_style(
+				$block_name,
+				[
+					'name'  => 'label',
+					'label' => __( 'Label', 'beapi-frontend-framework' ),
+				]
+			);
+		}
 
 		foreach ( [ 'core/paragraph', 'core/post-excerpt' ] as $block_name ) {
 			register_block_style(

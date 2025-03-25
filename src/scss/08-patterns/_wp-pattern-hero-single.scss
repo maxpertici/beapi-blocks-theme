@@ -13,7 +13,7 @@
 
 	@if (list.index($hero-single-variations, 1) != null) {
 		// ----
-		// variante 1
+		// variation 1
 		// ----
 		&-1 {
 			&#{$base} {
@@ -27,7 +27,7 @@
 				}
 			}
 
-			@include breakpoints(3xs, max) {
+			@include breakpoints(4xs, max) {
 				display: flex;
 				flex-direction: column;
 
@@ -51,7 +51,7 @@
 
 	@if (list.index($hero-single-variations, 2) != null) {
 		// ----
-		// variante 2
+		// variation 2
 		// ----
 		&-2 {
 			.wp-block-post-featured-image {
@@ -74,6 +74,33 @@
 					img {
 						aspect-ratio: 1440/404;
 					}
+				}
+			}
+		}
+	}
+
+	@if (list.index($hero-single-variations, 3) != null) {
+		// ----
+		// variation 3
+		// ----
+		&-3 {
+			.wp-block-post-featured-image {
+				img {
+					object-fit: cover;
+					aspect-ratio: 1200/675;
+				}
+			}
+
+			@include breakpoints(4xs, max) {
+				.wp-block-post-featured-image {
+					width: calc(100% + var(--wp--custom--layout--fluid-external-gutter) * 2);
+					margin-left: calc(-1 * var(--wp--custom--layout--fluid-external-gutter));
+				}
+			}
+
+			@include breakpoints(2xs) {
+				.wp-pattern-share {
+					justify-content: flex-end;
 				}
 			}
 		}

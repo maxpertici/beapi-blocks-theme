@@ -26,7 +26,7 @@
 @use "../00-variables/config" as *;
 @use "../02-functions/strip-units" as *;
 
-@function fluid-size($min, $max, $start: 6xs, $end: md) {
+@function fluid-size($min, $max, $start: 7xs, $end: md) {
 	$start: math.div(map.get($breakpoints, $start), 100);
 	$end: math.div(map.get($breakpoints, $end), 100);
 

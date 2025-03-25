@@ -14,17 +14,17 @@
 				},
 				{
 					"name": "2-xs",
-					"size": "clamp(var(--wp--custom--spacings--3-xs), var(--wp--custom--spacings--3-xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--2-xs))",
+					"size": "var(--wp--custom--spacings--2-xs)",
 					"slug": "2-xs"
 				},
 				{
 					"name": "xs",
-					"size": "clamp(var(--wp--custom--spacings--2-xs), var(--wp--custom--spacings--2-xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--xs))",
+					"size": "var(--wp--custom--spacings--xs)",
 					"slug": "xs"
 				},
 				{
 					"name": "s",
-					"size": "clamp(var(--wp--custom--spacings--xs), var(--wp--custom--spacings--xs) + (100vw - 480px) / (1024 - 480) * 4, var(--wp--custom--spacings--s))",
+					"size": "var(--wp--custom--spacings--s)",
 					"slug": "s"
 				},
 				{

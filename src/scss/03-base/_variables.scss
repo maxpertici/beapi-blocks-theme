@@ -10,7 +10,7 @@
 	 */
 	--wp-admin-bar-height: var(--wp-admin--admin-bar--height, 0rem);
 
-	@include breakpoints(4xs, max) {
+	@include breakpoints(5xs, max) {
 		/*
          * Admin bar become not sticky
          */
