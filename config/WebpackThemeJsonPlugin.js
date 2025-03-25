@@ -89,6 +89,15 @@ class WebpackThemeJsonPlugin {
 				return result
 			},
 			'settings-custom': 'default',
+			'settings-spacing-spacingSizes': function (key, value) {
+				let result = ''
+
+				for (const spacing of value) {
+					result += `${getVariableName('settings-spacing-' + spacing.slug)}: ${spacing.size};\n`
+				}
+
+				return result
+			},
 		}
 		const taskNames = Object.keys(tasks)
 		let jsonFile = fs.readFileSync(this._output, 'utf8')
