@@ -116,4 +116,35 @@
 			}
 		}
 	}
+
+	@if (list.index($hero-single-variations, 4) != null) {
+		// ----
+		// variation 4
+		// ----
+		&-4 {
+			.wp-block-columns {
+				gap: 0 var(--wp--preset--spacing--3-xl);
+			}
+
+			.wp-block-post-featured-image {
+				#{context-selector("img", "img, .components-placeholder")} {
+					object-fit: cover;
+					aspect-ratio: 540/404;
+				}
+			}
+
+			@include breakpoints(2xs, max) {
+				position: relative;
+				padding-bottom: 76px;
+
+				.wp-pattern-share {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					justify-content: flex-end;
+					width: 100%;
+				}
+			}
+		}
+	}
 }

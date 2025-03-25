@@ -8,14 +8,21 @@
 @use "../04-utilities/sr-only" as *;
 
 .wp-block-post-terms {
+	$el: &;
+
 	@include text(small);
+
+	&__prefix,
+	&__suffix {
+		@include text(label);
+	}
 
 	&.is-style-tag {
 		display: flex;
 		gap: var(--wp--preset--spacing--s);
 		align-items: center;
 
-		#{context-selector("a", "a, span:not([class])")} {
+		#{context-selector("a", "a, > span:not([class])")} {
 			display: inline-block;
 			padding: 4px 8px;
 			color: inherit;
