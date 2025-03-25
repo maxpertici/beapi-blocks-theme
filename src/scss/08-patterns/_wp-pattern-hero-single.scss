@@ -60,15 +60,20 @@
 					object-fit: cover;
 					aspect-ratio: 375/280;
 				}
+
+				+ .wp-block-group {
+					&.has-background {
+						position: relative;
+						z-index: 1;
+						margin-top: calc(#{fluid-size(100px, 110px)} * -1);
+					}
+				}
 			}
 
 			.wp-block-group {
 				&.has-background {
-					position: relative;
-					z-index: 1;
 					max-width: min(100vw - var(--wp--custom--layout--fluid-external-gutter) * 2, var(--wp--custom--layout--content-size) + fluid-size($settings-custom-spacings-s, $settings-custom-spacings-2-xl) * 2);
 					padding: fluid-size($settings-custom-spacings-s, $settings-custom-spacings-xl) fluid-size($settings-custom-spacings-s, $settings-custom-spacings-2-xl);
-					margin-top: calc(#{fluid-size(100px, 110px)} * -1);
 				}
 			}
 
