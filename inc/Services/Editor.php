@@ -151,6 +151,7 @@ class Editor implements Service {
 			);
 		}
 
+		// post-terms
 		register_block_style(
 			'core/post-terms',
 			[
@@ -158,6 +159,23 @@ class Editor implements Service {
 				'label' => __( 'Tag', 'beapi-frontend-framework' ),
 			]
 		);
+
+		foreach (
+			[
+				'icon',
+			]
+			as
+			$style_name
+		) {
+			// button
+			register_block_style(
+				'core/button',
+				[
+					'name'  => $style_name,
+					'label' => str_replace( '-', ' ', ucfirst( $style_name ) ),
+				]
+			);
+		}
 	}
 
 	/**
@@ -268,18 +286,14 @@ class Editor implements Service {
 	/**
 	 * Register icon block collections
 	 *
-	 * @param array $attributes
-	 * @param string $content
-	 * @param WP_Block $block
-	 *
-	 * @return string
+	 * @return void
 	 */
 	public function register_icon_block_collections(): void {
 		if ( ! defined( 'BEAPI_ICON_DIR' ) ) {
 			return;
 		}
 
-		// Register icon theme
+		// Register icon theme.
 		$sprite_file = get_theme_file_path( '/dist/icons/sprite.svg' );
 
 		if ( is_readable( $sprite_file ) ) {
@@ -297,7 +311,7 @@ class Editor implements Service {
 			}
 		}
 
-		// Register icon theme
+		// Register icon theme.
 		$social_file = get_theme_file_path( '/dist/icons/social.svg' );
 
 		if ( is_readable( $social_file ) ) {

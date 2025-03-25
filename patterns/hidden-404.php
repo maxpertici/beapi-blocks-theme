@@ -30,53 +30,20 @@ $template_icons_uri = get_template_directory_uri() . '/dist/icons/sprite.svg';
 					<p><?php esc_html_e( 'code erreur : 404', 'beapi-blocks-theme' ); ?><br><?php esc_html_e( 'Voici quelques liens utiles à la place :', 'beapi-blocks-theme' ); ?></p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|s"}},"layout":{"type":"constrained"}} -->
-					<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-xs"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-						<div class="wp-block-group"><!-- wp:paragraph {"className":"is-style-label"} -->
-							<p class="is-style-label"><?php esc_html_e( 'retour à l’accueil', 'beapi-blocks-theme' ); ?></p>
-							<!-- /wp:paragraph -->
+					<!-- wp:buttons {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
+					<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-icon"} -->
+					<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Retour à l\'accueil', 'beapi-blocks-theme' ); ?></a></div>
+					<!-- /wp:button -->
 
-							<!-- wp:beapi/icon-block {"collection":{"name":"icon-theme","label":"Thème","count":1},"icon":{"name":"icon-arrow-right","label":"Arrow right","type":"sprite"},"url":"<?php echo esc_url( $template_icons_uri ); ?>#icon-arrow-right","size":24,"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}} -->
-							<div class="wp-block-beapi-icon-block">
-								<div class="icon-container" style="border-radius:0%;display:inline-block;padding:0px 0px 0px 0px;"><svg class="icon icon-arrow-right" style="width:24px;height:24px" focusable="false" aria-hidden="true">
-										<use href="<?php echo esc_url( $template_icons_uri ); ?>#icon-arrow-right"></use>
-									</svg></div>
-							</div>
-							<!-- /wp:beapi/icon-block -->
-						</div>
-						<!-- /wp:group -->
+					<!-- wp:button {"className":"is-style-icon"} -->
+					<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Lien', 'beapi-blocks-theme' ); ?></a></div>
+					<!-- /wp:button -->
 
-						<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-xs"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-						<div class="wp-block-group"><!-- wp:paragraph {"className":"is-style-label"} -->
-							<p class="is-style-label"><?php esc_html_e( 'Lien', 'beapi-blocks-theme' ); ?></p>
-							<!-- /wp:paragraph -->
+					<!-- wp:button {"className":"is-style-icon"} -->
+					<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Lien', 'beapi-blocks-theme' ); ?></a></div>
+					<!-- /wp:button --></div>
+					<!-- /wp:buttons -->
 
-							<!-- wp:beapi/icon-block {"collection":{"name":"icon-theme","label":"Thème","count":1},"icon":{"name":"icon-arrow-right","label":"Arrow right","type":"sprite"},"url":"<?php echo esc_url( $template_icons_uri ); ?>#icon-arrow-right","size":24,"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}} -->
-							<div class="wp-block-beapi-icon-block">
-								<div class="icon-container" style="border-radius:0%;display:inline-block;padding:0px 0px 0px 0px;"><svg class="icon icon-arrow-right" style="width:24px;height:24px" focusable="false" aria-hidden="true">
-										<use href="<?php echo esc_url( $template_icons_uri ); ?>#icon-arrow-right"></use>
-									</svg></div>
-							</div>
-							<!-- /wp:beapi/icon-block -->
-						</div>
-						<!-- /wp:group -->
-
-						<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2-xs"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-						<div class="wp-block-group"><!-- wp:paragraph {"className":"is-style-label"} -->
-							<p class="is-style-label">Lien</p>
-							<!-- /wp:paragraph -->
-
-							<!-- wp:beapi/icon-block {"collection":{"name":"icon-theme","label":"Thème","count":1},"icon":{"name":"icon-arrow-right","label":"Arrow right","type":"sprite"},"url":"<?php echo esc_url( $template_icons_uri ); ?>#icon-arrow-right","size":24,"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}} -->
-							<div class="wp-block-beapi-icon-block">
-								<div class="icon-container" style="border-radius:0%;display:inline-block;padding:0px 0px 0px 0px;"><svg class="icon icon-arrow-right" style="width:24px;height:24px" focusable="false" aria-hidden="true">
-										<use href="<?php echo esc_url( $template_icons_uri ); ?>#icon-arrow-right"></use>
-									</svg></div>
-							</div>
-							<!-- /wp:beapi/icon-block -->
-						</div>
-						<!-- /wp:group -->
-					</div>
-					<!-- /wp:group -->
 				</div>
 				<!-- /wp:group -->
 			</div>
