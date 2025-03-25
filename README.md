@@ -11,16 +11,16 @@ yarn
 Après l'installation, vous pouvez utiliser les commandes suivantes pour gérer l'environnement local :
 ```bash
 # Démarrer l'environnement local (disponible à http://localhost:8889)
-yarn wp-env-start
+yarn wp-env start
 
 # Arrêter l'environnement local
-yarn wp-env-stop
+yarn wp-env stop
 
 # Réinitialiser la base de données (supprimera toutes les données de manière permanente)
-yarn wp-env-clean
+yarn wp-env clean
 
 # Supprimer l'environnement local (supprimera toutes les données et fichiers de manière permanente)
-yarn wp-env-destroy
+yarn wp-env destroy
 ```
 
 Après l'installation, vous pouvez utiliser les commandes suivantes pour la génération des assets :
