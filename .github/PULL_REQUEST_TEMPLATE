@@ -1,0 +1,53 @@
+- Fixe l'issue #
+
+### Figma
+
+<!-- Si applicable, indiquer le lien vers Figma. -->
+
+
+### Description
+
+<!-- Expliquer pourquoi ces changements sont importants - quel est le problème, et comment cette PR y remédie. -->
+
+
+### Changements dans cette PR
+
+-
+-
+-
+
+### Instructions de test
+
+<!-- Ajouter les étapes spécifiques pour reproduire le problème, et confirmer la correction. Idéalement, ces étapes devraient permettre à n'importe qui de reproduire le problème et la correction tels qu'un utilisateur lambda les expérimenterait. -->
+
+1. Checkout cette branche en local.
+2.
+3.
+
+### Screenshots
+
+<!-- Placer les screenshots ici -->
+
+### Elements facultatifs à vérifier
+
+Voici certaines choses que nous devrions vérifier à chaque fois que nous créons une PR.
+Selon le changement effectué, certaines choses peuvent ne pas s'appliquer à la PR actuelle.
+
+Cette liste est destinée à l'auteur, mais les réviseurs devraient également effectuer ces vérifications.
+
+-   [ ] Toues les textes sont-ils internationalisés ?
+-   [ ] Une mise en cache a t-elle été ajoutée ?
+-   [ ] Les hooks/filters sont-il appelés uniquement quand nécessaire ?
+-   [ ] Les logs locaux ont-ils été vérifiés pour s'assurer que cette PR n'introduit pas de nouvelles erreurs, avertissements ou notifications ?
+
+### Accessibilité
+
+Voici certaines choses que nous devrions vérifier chaque fois qu'une PR ajoute/modifie du contenu ou des fonctionnalités orientés utilisateur pour nous assurer que nous adhérons aux normes d'accessibilité.
+
+-   [ ] Le contenu textuel des éléments `button`, `a`, et `label` est unique et descriptif
+-   [ ] Les éléments interactifs peuvent être navigués et actionnés via le clavier
+-   [ ] Les éléments interactifs reçoivent un focus visible lorsqu'ils sont navigués via le clavier
+-   [ ] Le contenu textuel des éléments interactifs est lu par les lecteurs d'écran lorsqu'ils reçoivent le focus
+-   [ ] L'ordre de focus du clavier correspond à la disposition
+-   [ ] Les éléments invisibles (contenu à l'intérieur des modaux, accordéons repliés) ne sont pas focusables
+-   [ ] Tous les éléments `img` ont un attribut `alt`, et fournissent une alternative textuelle pour les images complexes
