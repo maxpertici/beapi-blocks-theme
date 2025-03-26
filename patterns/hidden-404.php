@@ -10,7 +10,6 @@
  * @since BeAPI Blocks Theme 1.0
  */
 
-$template_icons_uri = get_template_directory_uri() . '/dist/icons/sprite.svg';
 ?>
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"110px","bottom":"80px","left":"var:preset|spacing|3-xl","right":"var:preset|spacing|3-xl"}}},"layout":{"type":"default"}} -->
@@ -35,7 +34,7 @@ $template_icons_uri = get_template_directory_uri() . '/dist/icons/sprite.svg';
 
 						<!-- wp:buttons {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
 						<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-icon"} -->
-							<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Back to home', 'beapi-blocks-theme' ); ?></a></div>
+							<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url() ); ?>"><?php esc_html_e( 'Back to home', 'beapi-blocks-theme' ); ?></a></div>
 							<!-- /wp:button -->
 
 							<!-- wp:button {"className":"is-style-icon"} -->
