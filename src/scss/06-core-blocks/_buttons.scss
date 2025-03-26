@@ -1,6 +1,9 @@
 /**
  * Buttons and button
  */
+
+@use "../01-mixins/hover" as *;
+
 .wo-block-buttons {
 	$el: &;
 }
@@ -64,6 +67,17 @@
 			background-color: currentColor;
 			mask-image: url(../img/static/arrow-right.svg);
 			mask-size: contain;
+
+	.is-style-link > &__link {
+		padding: 0;
+		font-weight: 500;
+		color: inherit;
+		text-decoration: underline;
+		background: transparent;
+		border: none;
+
+		@include hover {
+			text-decoration: none;
 		}
 	}
 }

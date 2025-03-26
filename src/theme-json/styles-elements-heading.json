@@ -6,7 +6,7 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading)",
-					"fontWeight": "var(--wp--custom--h-eading--font-weight)"
+					"fontWeight": "var(--wp--custom--heading--font-weight)"
 				}
 			},
 			"h1": {

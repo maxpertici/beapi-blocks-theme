@@ -9,52 +9,52 @@
 			"spacingSizes": [
 				{
 					"name": "3-xs",
-					"size": "var(--wp--custom--spacings--3-xs)",
+					"size": "4px",
 					"slug": "3-xs"
 				},
 				{
 					"name": "2-xs",
-					"size": "var(--wp--custom--spacings--2-xs)",
+					"size": "8px",
 					"slug": "2-xs"
 				},
 				{
 					"name": "xs",
-					"size": "var(--wp--custom--spacings--xs)",
+					"size": "12px",
 					"slug": "xs"
 				},
 				{
 					"name": "s",
-					"size": "var(--wp--custom--spacings--s)",
+					"size": "16px",
 					"slug": "s"
 				},
 				{
 					"name": "md",
-					"size": "clamp(var(--wp--custom--spacings--s), var(--wp--custom--spacings--s) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--md))",
+					"size": "24px",
 					"slug": "md"
 				},
 				{
 					"name": "l",
-					"size": "clamp(var(--wp--custom--spacings--md), var(--wp--custom--spacings--md) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--l))",
+					"size": "32px",
 					"slug": "l"
 				},
 				{
 					"name": "xl",
-					"size": "clamp(var(--wp--custom--spacings--l), var(--wp--custom--spacings--l) + (100vw - 480px) / (1024 - 480) * 8, var(--wp--custom--spacings--xl))",
+					"size": "40px",
 					"slug": "xl"
 				},
 				{
 					"name": "2-xl",
-					"size": "clamp(var(--wp--custom--spacings--xl), var(--wp--custom--spacings--xl) + (100vw - 480px) / (1024 - 480) * 32, var(--wp--custom--spacings--2-xl))",
+					"size": "72px",
 					"slug": "2-xl"
 				},
 				{
 					"name": "3-xl",
-					"size": "clamp(var(--wp--custom--spacings--2-xl), var(--wp--custom--spacings--2-xl) + (100vw - 480px) / (1024 - 480) * 48, var(--wp--custom--spacings--3-xl))",
+					"size": "120px",
 					"slug": "3-xl"
 				},
 				{
 					"name": "4-xl",
-					"size": "clamp(var(--wp--custom--spacings--3-xl), var(--wp--custom--spacings--3-xl) + (100vw - 480px) / (1024 - 480) * 40, var(--wp--custom--spacings--4-xl))",
+					"size": "160px",
 					"slug": "4-xl"
 				}
 			],

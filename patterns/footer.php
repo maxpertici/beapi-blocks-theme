@@ -12,8 +12,8 @@
  */
 
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--50)">
+<!-- wp:group {"metadata":{"name":"Footer"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|50"}}},"backgroundColor":"gray-10","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-gray-10-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--50)">
 	<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
 	<div class="wp-block-group alignwide">
 		<!-- wp:site-logo /-->

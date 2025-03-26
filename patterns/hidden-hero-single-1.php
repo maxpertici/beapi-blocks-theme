@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Hero single
- * Slug: beapi-blocks-theme/hero-single-1
+ * Slug: beapi-blocks-theme/hidden-hero-single-1
  * Inserter: no
  *
  * @package WordPress
@@ -10,7 +10,7 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"header","className":"wp-pattern-hero-single wp-pattern-hero-single-1","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3-xl"}}}} -->
+<!-- wp:group {"tagName":"header","className":"wp-pattern-hidden-hero-single wp-pattern-hidden-hero-single-1","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3-xl"}}}} -->
 <header class="wp-block-group wp-pattern-hero-single wp-pattern-hero-single-1" style="margin-bottom:var(--wp--preset--spacing--3-xl)">
 	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--s)">
@@ -26,6 +26,6 @@
 	<!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|xl"}}}} /-->
 	<!-- wp:post-excerpt {"excerptLength":10000,"className":"is-style-huge","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"bottom":"var:preset|spacing|xl"}}}} /-->
 	<!-- wp:post-featured-image {"style":{"spacing":{"margin":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l"}}}} /-->
-	<!-- wp:pattern {"slug":"beapi-blocks-theme/share"} /-->
+	<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-share"} /-->
 </header>
 <!-- /wp:group -->

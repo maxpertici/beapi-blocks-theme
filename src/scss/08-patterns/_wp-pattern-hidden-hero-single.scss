@@ -1,5 +1,5 @@
 /**
- * Hero single 1
+ * WP Pattern: Hidden hero single
  */
 
 @use "sass:list";
@@ -9,7 +9,7 @@
 @use "../02-functions/context-selector" as *;
 @use "../02-functions/fluid-size" as *;
 
-.wp-pattern-hero-single {
+.wp-pattern-hidden-hero-single {
 	$base: ".wp-block-group";
 
 	@if (list.index($hero-single-variations, 1) != null) {
@@ -18,7 +18,7 @@
 		// ----
 		&-1 {
 			&#{$base} {
-				margin-top: $settings-custom-spacings-xl;
+				margin-top: var(--wp--preset--spacing--xl);
 			}
 
 			.wp-block-post-featured-image {
@@ -42,7 +42,7 @@
 					margin-left: calc(-1 * var(--wp--custom--layout--fluid-external-gutter));
 				}
 
-				.wp-pattern-share {
+				.wp-pattern-hidden-share {
 					justify-content: flex-end;
 					margin: 0 0 var(--wp--preset--spacing--s);
 				}
@@ -72,8 +72,11 @@
 
 			.wp-block-group {
 				&.has-background {
-					max-width: min(100vw - var(--wp--custom--layout--fluid-external-gutter) * 2, var(--wp--custom--layout--content-size) + fluid-size($settings-custom-spacings-s, $settings-custom-spacings-2-xl) * 2);
-					padding: fluid-size($settings-custom-spacings-s, $settings-custom-spacings-xl) fluid-size($settings-custom-spacings-s, $settings-custom-spacings-2-xl);
+					$vertical-padding: fluid-size($settings-spacing-s, $settings-spacing-xl);
+					$horizontal-padding: fluid-size($settings-spacing-s, $settings-spacing-2-xl);
+
+					max-width: min(100vw - var(--wp--custom--layout--fluid-external-gutter) * 2, var(--wp--custom--layout--content-size) + #{$horizontal-padding} * 2);
+					padding: $vertical-padding $horizontal-padding;
 				}
 			}
 
@@ -107,8 +110,39 @@
 			}
 
 			@include breakpoints(2xs) {
-				.wp-pattern-share {
+				.wp-pattern-hidden-share {
 					justify-content: flex-end;
+				}
+			}
+		}
+	}
+
+	@if (list.index($hero-single-variations, 4) != null) {
+		// ----
+		// variation 4
+		// ----
+		&-4 {
+			.wp-block-columns {
+				gap: 0 var(--wp--preset--spacing--3-xl);
+			}
+
+			.wp-block-post-featured-image {
+				#{context-selector("img", "img, .components-placeholder")} {
+					object-fit: cover;
+					aspect-ratio: 540/404;
+				}
+			}
+
+			@include breakpoints(2xs, max) {
+				position: relative;
+				padding-bottom: 76px;
+
+				.wp-pattern-hidden-share {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					justify-content: flex-end;
+					width: 100%;
 				}
 			}
 		}

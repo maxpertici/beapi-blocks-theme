@@ -3,25 +3,37 @@
  */
 
 @use "../00-variables/theme-json" as *;
+@use "../01-mixins/hover" as *;
 @use "../01-mixins/text" as *;
 @use "../02-functions/context-selector" as *;
 @use "../04-utilities/sr-only" as *;
 
 .wp-block-post-terms {
+	$el: &;
+
 	@include text(small);
+
+	&__prefix,
+	&__suffix {
+		@include text(label);
+	}
 
 	&.is-style-tag {
 		display: flex;
-		gap: $settings-custom-spacings-s;
+		gap: var(--wp--preset--spacing--s);
 		align-items: center;
 
-		#{context-selector("a", "a, span:not([class])")} {
+		#{context-selector("a", "a, > span:not([class])")} {
 			display: inline-block;
 			padding: 4px 8px;
 			color: inherit;
 			text-decoration: none;
 			border: 1px solid var(--wp--preset--color--gray-75);
 			border-radius: 9999px;
+
+			@include hover {
+				background-color: var(--wp--preset--color--gray-10);
+			}
 		}
 
 		.wp-block-post-terms__separator {

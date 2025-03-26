@@ -101,6 +101,12 @@ class Editor implements Service {
 				'label' => sprintf( 'Style H%s', (string) $i ),
 			];
 
+			// post-title
+			register_block_style(
+				'core/post-title',
+				$style
+			);
+
 			// heading
 			register_block_style(
 				'core/heading',
@@ -163,6 +169,7 @@ class Editor implements Service {
 		foreach (
 			[
 				'icon',
+        'link'
 			]
 			as
 			$style_name
