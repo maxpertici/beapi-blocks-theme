@@ -11,7 +11,7 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"article","className":"wp-pattern-hidden-card wp-pattern-hidden-card-post wp-pattern-hidden-card-post-1","layout":{"type":"constrained"}} -->
+<!-- wp:group {"tagName":"article","className":"wp-pattern-hidden-card wp-pattern-hidden-card-post wp-pattern-hidden-card-post-1","layout":{"type":"constrained"},"metadata":{"patternName":"beapi-blocks-theme/hidden-card-post-1","name":"Hidden card post 1"}} -->
 <article class="wp-block-group wp-pattern-hidden-card wp-pattern-hidden-card-post wp-pattern-hidden-card-post-1">
 	<!-- wp:post-featured-image {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}}} /-->
 	<!-- wp:post-date {"className":"is-style-label","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}}} /-->
