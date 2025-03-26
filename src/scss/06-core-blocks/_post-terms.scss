@@ -3,6 +3,7 @@
  */
 
 @use "../00-variables/theme-json" as *;
+@use "../01-mixins/hover" as *;
 @use "../01-mixins/text" as *;
 @use "../02-functions/context-selector" as *;
 @use "../04-utilities/sr-only" as *;
@@ -29,6 +30,10 @@
 			text-decoration: none;
 			border: 1px solid var(--wp--preset--color--gray-75);
 			border-radius: 9999px;
+
+			@include hover {
+				background-color: var(--wp--preset--color--gray-10);
+			}
 		}
 
 		.wp-block-post-terms__separator {

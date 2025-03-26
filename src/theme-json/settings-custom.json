@@ -3,7 +3,6 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"settings": {
 		"custom": {
-
 			"default": {
 				"lineHeight": "1.5",
 				"fontWeight": "300"

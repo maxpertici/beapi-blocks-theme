@@ -96,6 +96,12 @@ class Editor implements Service {
 				'label' => sprintf( 'Style H%s', (string) $i ),
 			];
 
+			// post-title
+			register_block_style(
+				'core/post-title',
+				$style
+			);
+
 			// heading
 			register_block_style(
 				'core/heading',
@@ -151,6 +157,14 @@ class Editor implements Service {
 			[
 				'name'  => 'tag',
 				'label' => __( 'Tag', 'beapi-frontend-framework' ),
+			]
+		);
+
+		register_block_style(
+			'core/button',
+			[
+				'name'  => 'Link',
+				'label' => __( 'Link', 'beapi-frontend-framework' ),
 			]
 		);
 	}

@@ -1,6 +1,9 @@
 /**
  * Buttons and button
  */
+
+@use "../01-mixins/hover" as *;
+
 .wo-block-buttons {
 	$el: &;
 }
@@ -41,6 +44,19 @@
 	.is-style-print > &__link {
 		&::before {
 			mask-image: url(../img/static/print.svg);
+		}
+	}
+
+	.is-style-link > &__link {
+		padding: 0;
+		font-weight: 500;
+		color: inherit;
+		text-decoration: underline;
+		background: transparent;
+		border: none;
+
+		@include hover {
+			text-decoration: none;
 		}
 	}
 }
