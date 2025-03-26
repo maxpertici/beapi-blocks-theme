@@ -1,0 +1,54 @@
+/**
+ * Button
+ */
+
+@use "../01-mixins/hover" as *;
+
+@mixin button($style: fill) {
+
+	@if ($style == fill) {
+		// Fill button
+	} @else if ($style == outline) {
+		// Outline button
+	} @else if ($style == email or $style == print) {
+		position: relative;
+		width: 36px;
+		height: 36px;
+		padding: 0;
+		overflow: hidden;
+		line-height: 36px;
+		text-indent: -1000px;
+		vertical-align: middle;
+		background: transparent;
+		border-radius: 0;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 32px;
+			height: 32px;
+			margin: -16px 0 0 -16px;
+			vertical-align: middle;
+			content: "";
+			mask-image: url(../img/static/#{$style}.svg);
+			mask-size: 100%;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			background-color: var(--wp--preset--color--gray-100);
+		}
+	} @else if ($style == link) {
+		padding: 0;
+		font-weight: 500;
+		color: inherit;
+		text-decoration: underline;
+		background: transparent;
+		border: none;
+
+		@include hover {
+			text-decoration: none;
+		}
+	} @else {
+		@debug "$style:" + $style + "is not a valid argument for button mixin.";
+	}
+}

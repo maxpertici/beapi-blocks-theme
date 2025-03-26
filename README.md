@@ -49,8 +49,8 @@ Le plugin `WebpakThemeJsonPlugin` dans le dossier `config/` qui se charge de la 
 			"h1": {
 				"lineHeight": "1.11"
 			},
-        }
-    }
+		}
+	}
 }
 ```
 

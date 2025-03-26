@@ -169,7 +169,7 @@ class Editor implements Service {
 		foreach (
 			[
 				'icon',
-        'link'
+				'link',
 			]
 			as
 			$style_name
