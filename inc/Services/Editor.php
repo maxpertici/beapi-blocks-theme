@@ -302,7 +302,7 @@ class Editor implements Service {
 					'icon-theme',
 					$sprite_file,
 					[
-						'label' => __( 'Thème', 'beapi-frontend-framework' ),
+						'label' => __( 'Theme', 'beapi-frontend-framework' ),
 					]
 				);
 
@@ -320,7 +320,7 @@ class Editor implements Service {
 					'icon-social',
 					$social_file,
 					[
-						'label' => __( 'Réseaux sociaux', 'beapi-frontend-framework' ),
+						'label' => __( 'Social', 'beapi-frontend-framework' ),
 					]
 				);
 
@@ -340,7 +340,7 @@ class Editor implements Service {
 			]
 		);
 		if ( $query->have_posts() ) {
-			$media_collection = new Collection( 'mediatheque', __( 'Médiathèque', 'beapi-frontend-framework' ) );
+			$media_collection = new Collection( 'mediatheque', __( 'Media library', 'beapi-frontend-framework' ) );
 			foreach ( $query->posts as $svg ) {
 				$path = get_attached_file( $svg->ID );
 
