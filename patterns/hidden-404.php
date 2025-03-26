@@ -33,16 +33,16 @@
 						<!-- /wp:paragraph -->
 
 						<!-- wp:buttons {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
-						<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-icon"} -->
-							<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url() ); ?>"><?php esc_html_e( 'Back to home', 'beapi-blocks-theme' ); ?></a></div>
+						<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-link-arrow-right"} -->
+							<div class="wp-block-button is-style-link-arrow-right"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url() ); ?>"><?php esc_html_e( 'Back to home', 'beapi-blocks-theme' ); ?></a></div>
 							<!-- /wp:button -->
 
-							<!-- wp:button {"className":"is-style-icon"} -->
-							<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Link', 'beapi-blocks-theme' ); ?></a></div>
+							<!-- wp:button {"className":"is-style-link-arrow-right"} -->
+							<div class="wp-block-button is-style-link-arrow-right"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Link', 'beapi-blocks-theme' ); ?></a></div>
 							<!-- /wp:button -->
 
-							<!-- wp:button {"className":"is-style-icon"} -->
-							<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Link', 'beapi-blocks-theme' ); ?></a></div>
+							<!-- wp:button {"className":"is-style-link-arrow-right"} -->
+							<div class="wp-block-button is-style-link-arrow-right"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Link', 'beapi-blocks-theme' ); ?></a></div>
 							<!-- /wp:button -->
 						</div>
 						<!-- /wp:buttons -->

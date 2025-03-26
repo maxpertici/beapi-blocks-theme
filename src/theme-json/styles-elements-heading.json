@@ -42,6 +42,7 @@
 			"h6": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--h-6)",
+					"fontWeight": "var(--wp--custom--h-6--font-weight)",
 					"lineHeight": "var(--wp--custom--h-6--line-height)"
 				}
 			}

@@ -20,7 +20,7 @@
 	@debug string.insert($name, "-", 2);
 
 	@if list.index(h1 h2 h3 h4 h5 h6, $name) != null {
-		font: var(--wp--custom--heading--font-weight) var(--wp--preset--font-size--#{string.insert($name, "-", 2)})/var(--wp--custom--#{string.insert($name, "-", 2)}--line-height) var(--wp--preset--font-family--heading);
+		font: var(--wp--custom--#{string.insert($name, "-", 2)}--font-weight) var(--wp--preset--font-size--#{string.insert($name, "-", 2)})/var(--wp--custom--#{string.insert($name, "-", 2)}--line-height) var(--wp--preset--font-family--heading);
 	} @else {
 		@debug "$name:" + $name + "is not a valid argument for heading mixin.";
 	}
