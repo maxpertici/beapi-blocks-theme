@@ -75,6 +75,11 @@ class Editor implements Service {
 		 * White list of gutenberg blocks
 		 */
 		add_filter( 'allowed_block_types_all', [ $this, 'gutenberg_blocks_allowed' ], 10, 2 );
+
+		/**
+		 * Setup icon block collections
+		 */
+		add_action( 'init', [ $this, 'register_icon_block_collections' ], 11 );
 	}
 
 	/**
@@ -152,6 +157,7 @@ class Editor implements Service {
 			);
 		}
 
+		// post-terms
 		register_block_style(
 			'core/post-terms',
 			[
@@ -160,13 +166,23 @@ class Editor implements Service {
 			]
 		);
 
-		register_block_style(
-			'core/button',
+		foreach (
 			[
-				'name'  => 'Link',
-				'label' => __( 'Link', 'beapi-frontend-framework' ),
+				'icon',
+        'link'
 			]
-		);
+			as
+			$style_name
+		) {
+			// button
+			register_block_style(
+				'core/button',
+				[
+					'name'  => $style_name,
+					'label' => str_replace( '-', ' ', ucfirst( $style_name ) ),
+				]
+			);
+		}
 	}
 
 	/**
@@ -272,5 +288,86 @@ class Editor implements Service {
 		}
 
 		return array_values( $allowed_blocks );
+	}
+
+	/**
+	 * Register icon block collections
+	 *
+	 * @return void
+	 */
+	public function register_icon_block_collections(): void {
+		if ( ! defined( 'BEAPI_ICON_DIR' ) ) {
+			return;
+		}
+
+		// Register icon theme.
+		$sprite_file = get_theme_file_path( '/dist/icons/sprite.svg' );
+
+		if ( is_readable( $sprite_file ) ) {
+			try {
+				$theme_collection = \Beapi\IconBlock\Icon\Collection::from_sprite(
+					'icon-theme',
+					$sprite_file,
+					[
+						'label' => __( 'Theme', 'beapi-frontend-framework' ),
+					]
+				);
+
+				\Beapi\IconBlock\register_icon_collection( $theme_collection );
+			} catch ( \Exception $e ) { // phpcs:ignore
+			}
+		}
+
+		// Register icon theme.
+		$social_file = get_theme_file_path( '/dist/icons/social.svg' );
+
+		if ( is_readable( $social_file ) ) {
+			try {
+				$theme_collection = \Beapi\IconBlock\Icon\Collection::from_sprite(
+					'icon-social',
+					$social_file,
+					[
+						'label' => __( 'Social', 'beapi-frontend-framework' ),
+					]
+				);
+
+				\Beapi\IconBlock\register_icon_collection( $theme_collection );
+			} catch ( \Exception $e ) { // phpcs:ignore
+			}
+		}
+
+		// Register collections with icons from media library.
+		$query = new \WP_Query(
+			[
+				'post_type'      => 'attachment',
+				'post_status'    => 'inherit',
+				'post_mime_type' => 'image/svg+xml',
+				'posts_per_page' => 500, //phpcs:ignore WordPress.WP.PostsPerPage.posts_per_page_posts_per_page
+				'no_found_rows'  => true,
+			]
+		);
+		if ( $query->have_posts() ) {
+			$media_collection = new Collection( 'mediatheque', __( 'Media library', 'beapi-frontend-framework' ) );
+			foreach ( $query->posts as $svg ) {
+				$path = get_attached_file( $svg->ID );
+
+				if ( empty( $path ) ) {
+					continue;
+				}
+
+				try {
+					$items = CollectionItemsFactory::from_file(
+						$path,
+						[
+							'name'  => $svg->post_name,
+							'label' => get_the_title( $svg ),
+						]
+					);
+					array_map( [ $media_collection, 'add' ], $items );
+				} catch ( \Exception $e ) { // phpcs:ignore
+				}
+			}
+			register_icon_collection( $media_collection );
+		}
 	}
 }
