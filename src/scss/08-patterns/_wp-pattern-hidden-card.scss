@@ -1,0 +1,19 @@
+/**
+ * WP Pattern: Hidden card
+ */
+
+@use "../04-utilities/seo" as *;
+
+.wp-pattern-hidden-card {
+	@extend %seo-container;
+
+	.wp-block-post-title {
+		a {
+			@extend %seo-target;
+		}
+	}
+
+	.wp-block-post-terms {
+		@extend %seo-over-overlay;
+	}
+}
