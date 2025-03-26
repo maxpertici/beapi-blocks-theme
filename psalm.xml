@@ -6,52 +6,21 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
-        <directory name="web" />
+        <directory name="." />
         <ignoreFiles>
+            <directory name=".github" />
+            <directory name=".wp-env/" />
+            <directory name=".yarn/" />
+            <directory name="assets/" />
+            <directory name="config/" />
+            <directory name="dist/" />
+            <directory name="node_modules/" />
             <directory name="vendor" />
-            <directory name="docs" />
-            <directory name="tools" />
-            <directory name="web/wp" />
-            <directory name="web/app/languages/" />
-            <directory name="web/app/plugins/advanced-custom-fields-pro/" />
-            <directory name="web/app/plugins/advanced-responsive-images/" />
-            <directory name="web/app/plugins/bbq-pro/" />
-            <directory name="web/app/plugins/beapi-maintenance-mode/" />
-            <directory name="web/app/plugins/delete-expired-transients/" />
-            <directory name="web/app/plugins/disable-block-editor-fullscreen-mode/" />
-            <directory name="web/app/plugins/disable-comments/" />
-            <directory name="web/app/plugins/disable-embeds/" />
-            <directory name="web/app/plugins/disable-emojis/" />
-            <directory name="web/app/plugins/disable-wordpress-updates/" />
-            <directory name="web/app/plugins/duracelltomi-google-tag-manager/" />
-            <directory name="web/app/plugins/optimus/" />
-            <directory name="web/app/plugins/query-monitor/" />
-            <directory name="web/app/plugins/redirection/" />
-            <directory name="web/app/plugins/rewrite-rules-inspector/" />
-            <directory name="web/app/plugins/safe-svg/" />
-            <directory name="web/app/plugins/user-switching/" />
-            <directory name="web/app/plugins/wordpress-seo/" />
-            <directory name="web/app/plugins/wp-cerber/" />
-            <directory name="web/app/plugins/wp-http-blocklist/" />
-            <directory name="web/app/plugins/wp-sentry-integration/" />
-            <directory name="web/app/plugins/wp-thumb/" />
-            <directory name="web/app/mu-plugins/bea-wp-thumb/" />
-            <directory name="web/app/mu-plugins/bedrock-disallow-indexing/" />
-            <directory name="web/app/mu-plugins/disable-xmlrpc/" />
-            <directory name="web/app/mu-plugins/missed-schedule/" />
-            <directory name="web/app/mu-plugins/multisite-url-fixer/" />
-            <directory name="web/app/mu-plugins/plugin-redirection/" />
-            <directory name="web/app/mu-plugins/prod-images/" />
-            <directory name="web/app/mu-plugins/redirect-loop-detector/" />
-            <directory name="web/app/mu-plugins/sanitize-filename/" />
-            <directory name="web/app/mu-plugins/wp-login-page/" />
+            <directory name="languages/" />
 
-            <!-- BFF themes src folder is not for the real theme, ignore them -->
-            <!-- UNCOMMENT ME AFTER SCAFFOLD <directory name="web/app/themes/*/src/" /> -->
-
-            <file name="web/app/db-error.php" />
-            <file name="web/app/maintenance.php" />
-            <file name="web/app/mu-plugins/bedrock-autoloader.php" />
+            <file name="db-error.php" />
+            <file name="maintenance.php" />
+            <file name="theme.json" />
         </ignoreFiles>
     </projectFiles>
 
