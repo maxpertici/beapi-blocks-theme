@@ -5,16 +5,8 @@
 @use "../01-mixins/breakpoints" as *;
 
 .wp-pattern-more-posts {
-	--more-posts--cards-by-row: 1;
-
-	.wp-block-post-template {
-		display: grid;
-		grid-template-columns: repeat(var(--more-posts--cards-by-row), 1fr);
-		gap: var(--wp--preset--spacing--2-xl);
-	}
-
-	@include breakpoints(4xs) {
-		--more-posts--cards-by-row: 2;
+	.wp-block-post-template.is-layout-grid {
+		grid-gap: var(--wp--preset--spacing--2-xl);
 	}
 
 	@include breakpoints(2xs) {
@@ -22,9 +14,5 @@
 			justify-content: flex-end;
 			margin-bottom: 5px;
 		}
-	}
-
-	@include breakpoints(md) {
-		--more-posts--cards-by-row: 4;
 	}
 }
