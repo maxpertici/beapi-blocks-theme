@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Hero single 2
- * Slug: beapi-blocks-theme/hero-single-2
+ * Slug: beapi-blocks-theme/hidden-hero-single-2
  * Inserter: no
  *
  * @package WordPress
@@ -10,8 +10,8 @@
  */
 
 ?>
-<!-- wp:group {"tagName":"header","align":"full","className":"wp-pattern-hero-single wp-pattern-hero-single-2","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3-xl"}}},"layout":{"type":"constrained"}} -->
-<header class="wp-block-group alignfull wp-pattern-hero-single wp-pattern-hero-single-2" style="margin-bottom:var(--wp--preset--spacing--3-xl)">
+<!-- wp:group {"tagName":"header","align":"full","className":"wp-pattern-hidden-hero-single wp-pattern-hidden-hero-single-2","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3-xl"}}},"layout":{"type":"constrained"}} -->
+<header class="wp-block-group alignfull wp-pattern-hidden-hero-single wp-pattern-hidden-hero-single-2" style="margin-bottom:var(--wp--preset--spacing--3-xl)">
 	<!-- wp:post-featured-image {"align":"full"} /-->
 
 	<!-- wp:group {"backgroundColor":"white","layout":{"type":"constrained"}} -->

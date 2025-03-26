@@ -9,7 +9,7 @@
 @use "../02-functions/context-selector" as *;
 @use "../02-functions/fluid-size" as *;
 
-.wp-pattern-hero-single {
+.wp-pattern-hidden-hero-single {
 	$base: ".wp-block-group";
 
 	@if (list.index($hero-single-variations, 1) != null) {
@@ -42,7 +42,7 @@
 					margin-left: calc(-1 * var(--wp--custom--layout--fluid-external-gutter));
 				}
 
-				.wp-pattern-share {
+				.wp-pattern-hidden-share {
 					justify-content: flex-end;
 					margin: 0 0 var(--wp--preset--spacing--s);
 				}
@@ -110,7 +110,7 @@
 			}
 
 			@include breakpoints(2xs) {
-				.wp-pattern-share {
+				.wp-pattern-hidden-share {
 					justify-content: flex-end;
 				}
 			}
@@ -137,7 +137,7 @@
 				position: relative;
 				padding-bottom: 76px;
 
-				.wp-pattern-share {
+				.wp-pattern-hidden-share {
 					position: absolute;
 					bottom: 0;
 					left: 0;

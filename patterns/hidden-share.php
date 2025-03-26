@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Share
- * Slug: beapi-blocks-theme/share
+ * Slug: beapi-blocks-theme/hidden-share
  * Inserter: no
  *
  * @package WordPress
@@ -22,8 +22,8 @@ $mail_to_message .= rawurlencode( _x( "\n\nEnjoy !", 'Share an article by mail -
 $mail_to_title    = rawurlencode( _x( 'Discover an article:', 'Share an article by mail - Title of the mail', 'beapi-blocks-theme' ) );
 
 ?>
-<!-- wp:group {"className":"wp-pattern-share","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group wp-pattern-share">
+<!-- wp:group {"className":"wp-pattern-hidden-share","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group wp-pattern-hidden-share">
 	<!-- wp:paragraph {"className":"is-style-label"} -->
 	<p class="is-style-label"><?php esc_html_e( 'Share', 'beapi-blocks-theme' ); ?></p>
 	<!-- /wp:paragraph -->
