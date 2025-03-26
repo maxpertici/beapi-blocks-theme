@@ -19,28 +19,28 @@ $template_icons_uri = get_template_directory_uri() . '/dist/icons/sprite.svg';
 		<div class="wp-block-column is-vertically-aligned-bottom"><!-- wp:group {"layout":{"type":"default"}} -->
 			<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|xl"}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group"><!-- wp:heading {"level":1} -->
-					<h1 class="wp-block-heading"><?php esc_html_e( 'Oups...', 'beapi-blocks-theme' ); ?></h1>
+					<h1 class="wp-block-heading"><?php esc_html_e( 'Oops...', 'beapi-blocks-theme' ); ?></h1>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"className":"is-style-large"} -->
-					<p class="is-style-large"><?php esc_html_e( 'La page que vous recherchez semble introuvable', 'beapi-blocks-theme' ); ?></p>
+					<p class="is-style-large"><?php esc_html_e( 'The page you are looking for does not exist', 'beapi-blocks-theme' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph -->
-					<p><?php esc_html_e( 'code erreur : 404', 'beapi-blocks-theme' ); ?><br><?php esc_html_e( 'Voici quelques liens utiles à la place :', 'beapi-blocks-theme' ); ?></p>
+					<p><?php esc_html_e( 'Error code : 404', 'beapi-blocks-theme' ); ?><br><?php esc_html_e( 'Here are some useful links instead :', 'beapi-blocks-theme' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:buttons {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-icon"} -->
-					<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Retour à l\'accueil', 'beapi-blocks-theme' ); ?></a></div>
+					<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Back to home', 'beapi-blocks-theme' ); ?></a></div>
 					<!-- /wp:button -->
 
 					<!-- wp:button {"className":"is-style-icon"} -->
-					<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Lien', 'beapi-blocks-theme' ); ?></a></div>
+					<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Link', 'beapi-blocks-theme' ); ?></a></div>
 					<!-- /wp:button -->
 
 					<!-- wp:button {"className":"is-style-icon"} -->
-					<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Lien', 'beapi-blocks-theme' ); ?></a></div>
+					<div class="wp-block-button is-style-icon"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Link', 'beapi-blocks-theme' ); ?></a></div>
 					<!-- /wp:button --></div>
 					<!-- /wp:buttons -->
 
