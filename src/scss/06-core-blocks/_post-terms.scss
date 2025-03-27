@@ -20,14 +20,18 @@
 
 	&.is-style-tag {
 		display: flex;
+		flex-wrap: wrap;
 		gap: var(--wp--preset--spacing--s);
 		align-items: center;
 
 		#{context-selector("a", "a, > span:not([class])")} {
 			display: inline-block;
 			padding: 4px 8px;
+			overflow: hidden;
 			color: inherit;
 			text-decoration: none;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 			border: 1px solid var(--wp--preset--color--gray-75);
 			border-radius: 9999px;
 

@@ -1,0 +1,52 @@
+/**
+ * Post template
+ */
+@use "sass:list";
+@use "../00-variables/config" as *;
+@use "../01-mixins/breakpoints" as *;
+@use "../08-patterns/wp-pattern-hidden-card" as *;
+
+.wp-block-post-template {
+	@if (list.index($post-archive-variations, 1) != null) {
+		&.grid-post-1 {
+			gap: var(--wp--preset--spacing--2-xl) var(--wp--custom--layout--fluid-block-horizontal-gap);
+
+			> li {
+				&:nth-child(8n+8) {
+					> * {
+						@extend %wp-pattern-hidden-card-post-2;
+					}
+				}
+			}
+
+			@include breakpoints(4xs) {
+				grid-template-columns: repeat(12, 1fr);
+
+				> li {
+					grid-column: span 6;
+
+					&:nth-child(8n + 1),
+					&:nth-child(8n + 2),
+					&:nth-child(8n + 3) {
+						grid-column: span 4;
+					}
+
+					&:nth-child(8n+8) {
+						grid-column: span 12;
+					}
+				}
+			}
+
+			@include breakpoints(md) {
+				> li {
+					&:nth-child(8n+4),
+					&:nth-child(8n+5),
+					&:nth-child(8n+6),
+					&:nth-child(8n+7) {
+						grid-column: span 3;
+					}
+				}
+			}
+		}
+	}
+}
