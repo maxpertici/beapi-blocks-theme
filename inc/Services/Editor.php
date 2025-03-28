@@ -7,6 +7,10 @@ use BEA\Theme\Framework\Service;
 use BEA\Theme\Framework\Service_Container;
 use BEA\Theme\Framework\Tools\Assets as Assets_Tools;
 
+use Beapi\IconBlock\Icon\Collection;
+use Beapi\IconBlock\Icon\CollectionItemsFactory;
+use function Beapi\IconBlock\register_icon_collection;
+
 /**
  * The editor service
  */
@@ -305,7 +309,7 @@ class Editor implements Service {
 
 		if ( is_readable( $sprite_file ) ) {
 			try {
-				$theme_collection = \Beapi\IconBlock\Icon\Collection::from_sprite(
+				$theme_collection = Collection::from_sprite(
 					'icon-theme',
 					$sprite_file,
 					[
@@ -313,7 +317,7 @@ class Editor implements Service {
 					]
 				);
 
-				\Beapi\IconBlock\register_icon_collection( $theme_collection );
+				register_icon_collection( $theme_collection );
 			} catch ( \Exception $e ) { // phpcs:ignore
 			}
 		}
@@ -323,7 +327,7 @@ class Editor implements Service {
 
 		if ( is_readable( $social_file ) ) {
 			try {
-				$theme_collection = \Beapi\IconBlock\Icon\Collection::from_sprite(
+				$theme_collection = Collection::from_sprite(
 					'icon-social',
 					$social_file,
 					[
@@ -331,7 +335,7 @@ class Editor implements Service {
 					]
 				);
 
-				\Beapi\IconBlock\register_icon_collection( $theme_collection );
+				register_icon_collection( $theme_collection );
 			} catch ( \Exception $e ) { // phpcs:ignore
 			}
 		}
