@@ -1,0 +1,21 @@
+@use "../01-mixins/heading" as *;
+.wpgb {
+	$el: &;
+
+	body &-facet {
+		#{$el}-facet-title {
+			@include heading(h6);
+			margin-bottom: 4px;
+		}
+
+		#{$el}-result-count {
+			@include heading(h6);
+		}
+
+		#{$el}-select {
+			--wpgb-border-width: 1px;
+
+			border-color: var(--wp--preset--color--gray-50);
+		}
+	}
+}

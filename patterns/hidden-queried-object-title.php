@@ -11,6 +11,6 @@
  */
 
 ?>
-<!-- wp:heading {"level":1,"align":"wide"} -->
-<h1 class="wp-block-heading alignwide"><?php echo esc_html( get_the_title( get_queried_object_id() ) ); ?></h1>
+<!-- wp:heading {"level":1,"align":"wide","className":"is-style-h2"} -->
+<h1 class="wp-block-heading alignwide is-style-h2"><?php echo esc_html( get_the_title( get_queried_object_id() ) ); ?></h1>
 <!-- /wp:heading -->

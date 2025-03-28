@@ -11,6 +11,7 @@ use BEA\Theme\Framework\Services\Gravity_Forms;
 use BEA\Theme\Framework\Services\Menu;
 use BEA\Theme\Framework\Services\Svg;
 use BEA\Theme\Framework\Services\Theme;
+use BEA\Theme\Framework\Services\WP_Grid_Builder;
 use BEA\Theme\Framework\Tools\Body_Class;
 use BEA\Theme\Framework\Tools\Template_Parts;
 
@@ -39,6 +40,7 @@ class Framework {
 		Svg::class,
 		Acf::class,
 		Menu::class,
+		WP_Grid_Builder::class,
 
 		// Services as Tools
 		Body_Class::class,

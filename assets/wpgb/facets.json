@@ -1,0 +1,70 @@
+{
+	"facets": [
+		{
+			"id": "6",
+			"slug": "counter",
+			"name": "counter",
+			"date": "2025-03-28 10:54:37",
+			"modified_date": "2025-03-28 10:54:37",
+			"favorite": "0",
+			"type": "result_count",
+			"source": "",
+			"settings": "{\"name\":\"counter\",\"title\":\"\",\"slug\":\"counter\",\"action\":\"load\",\"load_type\":\"result_count\",\"result_count_singular\":\"1 post found\",\"result_count_plural\":\"[from] - [to] of [total] posts\",\"actions\":[],\"source\":\"metadata\",\"field_type\":\"post\"}"
+		},
+		{
+			"id": "5",
+			"slug": "sort_date",
+			"name": "sort_date",
+			"date": "2025-03-28 10:50:13",
+			"modified_date": "2025-03-28 15:49:09",
+			"favorite": "0",
+			"type": "sort",
+			"source": "",
+			"settings": "{\"name\":\"sort_date\",\"title\":\"Sort by\",\"slug\":\"sort_date\",\"action\":\"sort\",\"combobox\":true,\"clearable\":false,\"searchable\":false,\"no_results\":\"No Results Found.\",\"sort_options\":[{\"order\":\"desc\",\"orderby\":\"date\",\"label\":\"Date - desc\"},{\"order\":\"asc\",\"label\":\"Date - asc\",\"orderby\":\"date\"}],\"actions\":[],\"source\":\"metadata\",\"field_type\":\"post\"}"
+		},
+		{
+			"id": "4",
+			"slug": "pagination",
+			"name": "pagination",
+			"date": "2025-03-28 10:44:35",
+			"modified_date": "2025-03-28 10:44:35",
+			"favorite": "0",
+			"type": "pagination",
+			"source": "",
+			"settings": "{\"name\":\"pagination\",\"title\":\"\",\"slug\":\"pagination\",\"action\":\"load\",\"load_type\":\"pagination\",\"pagination\":\"numbered\",\"show_all\":false,\"mid_size\":2,\"end_size\":2,\"prev_text\":\"\\u00ab Previous\",\"next_text\":\"Next \\u00bb\",\"dots_page\":\"\\u2026\",\"scroll_to_top\":true,\"scroll_to_top_offset\":0,\"actions\":[],\"source\":\"metadata\",\"field_type\":\"post\"}"
+		},
+		{
+			"id": "3",
+			"slug": "post_date",
+			"name": "post_date",
+			"date": "2025-03-28 08:56:34",
+			"modified_date": "2025-03-28 15:48:08",
+			"favorite": "0",
+			"type": "select",
+			"source": "post_field/post_date",
+			"settings": "{\"name\":\"post_date\",\"title\":\"Date\",\"slug\":\"post_date\",\"action\":\"filter\",\"filter_type\":\"select\",\"source\":\"field\",\"include_choices\":[],\"exclude_choices\":[],\"show_empty\":true,\"show_count\":true,\"logic\":\"OR\",\"limit\":99,\"orderby\":\"count\",\"order\":\"DESC\",\"combobox\":true,\"clearable\":false,\"searchable\":false,\"no_results\":\"No Results Found.\",\"multiple\":false,\"select_placeholder\":\"None\",\"actions\":[],\"post_field\":\"post_date\",\"field_type\":\"post\"}"
+		},
+		{
+			"id": "2",
+			"slug": "post_tag",
+			"name": "post_tag",
+			"date": "2025-03-28 08:54:38",
+			"modified_date": "2025-03-28 15:49:42",
+			"favorite": "0",
+			"type": "select",
+			"source": "taxonomy/post_tag",
+			"settings": "{\"name\":\"post_tag\",\"title\":\"Tag\",\"slug\":\"post_tag\",\"action\":\"filter\",\"filter_type\":\"select\",\"source\":\"taxonomy\",\"include\":[],\"exclude\":[],\"depth\":\"\",\"child_of\":\"\",\"parent\":\"\",\"hierarchical\":true,\"children\":true,\"show_empty\":true,\"show_count\":true,\"current_terms\":false,\"logic\":\"OR\",\"limit\":99,\"orderby\":\"count\",\"order\":\"DESC\",\"combobox\":true,\"clearable\":false,\"searchable\":false,\"no_results\":\"No Results Found.\",\"multiple\":true,\"select_placeholder\":\"None\",\"actions\":[],\"taxonomy\":\"post_tag\",\"field_type\":\"post\"}"
+		},
+		{
+			"id": "1",
+			"slug": "post_categories",
+			"name": "post_categories",
+			"date": "2025-03-27 08:06:17",
+			"modified_date": "2025-03-28 15:50:03",
+			"favorite": "0",
+			"type": "select",
+			"source": "taxonomy/category",
+			"settings": "{\"name\":\"post_categories\",\"title\":\"Category\",\"slug\":\"post_categories\",\"action\":\"filter\",\"filter_type\":\"select\",\"source\":\"taxonomy\",\"include\":[],\"exclude\":[],\"depth\":\"\",\"child_of\":\"\",\"parent\":\"\",\"hierarchical\":true,\"children\":true,\"show_empty\":true,\"show_count\":true,\"current_terms\":false,\"logic\":\"OR\",\"limit\":99,\"orderby\":\"facet_name\",\"order\":\"DESC\",\"combobox\":true,\"clearable\":false,\"searchable\":false,\"no_results\":\"No Results Found.\",\"multiple\":true,\"select_placeholder\":\"None\",\"actions\":[],\"taxonomy\":\"category\",\"field_type\":\"post\"}"
+		}
+	]
+}
