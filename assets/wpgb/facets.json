@@ -31,7 +31,7 @@
 			"favorite": "0",
 			"type": "pagination",
 			"source": "",
-			"settings": "{\"name\":\"pagination\",\"title\":\"\",\"slug\":\"pagination\",\"action\":\"load\",\"load_type\":\"pagination\",\"pagination\":\"numbered\",\"show_all\":false,\"mid_size\":2,\"end_size\":2,\"prev_text\":\"\\u00ab Previous\",\"next_text\":\"Next \\u00bb\",\"dots_page\":\"\\u2026\",\"scroll_to_top\":true,\"scroll_to_top_offset\":0,\"actions\":[],\"source\":\"metadata\",\"field_type\":\"post\"}"
+			"settings": "{\"name\":\"pagination\",\"title\":\"\",\"slug\":\"pagination\",\"action\":\"load\",\"load_type\":\"pagination\",\"pagination\":\"numbered\",\"show_all\":false,\"mid_size\":2,\"end_size\":2,\"prev_text\":\"Previous\",\"next_text\":\"Next\",\"dots_page\":\"\\u2026\",\"scroll_to_top\":true,\"scroll_to_top_offset\":0,\"actions\":[],\"source\":\"metadata\",\"field_type\":\"post\"}"
 		},
 		{
 			"id": "3",

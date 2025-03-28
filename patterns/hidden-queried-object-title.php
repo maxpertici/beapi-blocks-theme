@@ -11,6 +11,8 @@
  */
 
 ?>
-<!-- wp:heading {"level":1,"align":"wide","className":"is-style-h2"} -->
-<h1 class="wp-block-heading alignwide is-style-h2"><?php echo esc_html( get_the_title( get_queried_object_id() ) ); ?></h1>
+<!-- wp:heading {"level":1,"align":"wide","className":"is-style-h2","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xl"}}}} -->
+<h1 class="wp-block-heading alignwide is-style-h2" style="margin-bottom:var(--wp--preset--spacing--xl)">
+	<?php echo esc_html( get_the_title( get_queried_object_id() ) ); ?>
+</h1>
 <!-- /wp:heading -->
