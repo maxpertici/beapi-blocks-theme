@@ -74,7 +74,7 @@ $home-variations: (2);
 
 ## Single
 
-4 heros sont disponibles pour les singles, `patterns/hidden-hero-single-[1-4].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/single.html`. Puis sélectionner le numéro correspondant de le fichier `00-variables/_config.scss`
+4 heros sont disponibles pour les singles, `patterns/hidden-hero-single-[1-4].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/single.html`. Puis sélectionner le numéro correspondant dans le fichier `00-variables/_config.scss`
 
 ```html
 <!-- wp:pattern {"slug":"beapi-blocks-theme/hero-single-3"} /-->
