@@ -4,11 +4,16 @@
 
 @use "../01-mixins/button" as *;
 @use "../01-mixins/heading" as *;
+@use "../01-mixins/text" as *;
 
 .wpgb {
 	$el: &;
 
 	body &-facet {
+		--wpgb-border-width: 1px;
+		--wpgb-grey-700: var(--wp--preset--color--gray-75);
+		--wpgb-grey-500: var(--wp--preset--color--gray-50);
+
 		> fieldset {
 			&:last-child {
 				margin-bottom: 0;
@@ -22,12 +27,6 @@
 
 		#{$el}-result-count {
 			@include heading(h6);
-		}
-
-		#{$el}-select {
-			--wpgb-border-width: 1px;
-
-			border-color: var(--wp--preset--color--gray-50);
 		}
 
 		#{$el}-pagination {
@@ -57,6 +56,15 @@
 			}
 
 
+		}
+
+		#{$el}-button#{$el}-reset {
+			@include text(default);
+			@include button(link);
+
+			padding: 0;
+			margin: 0;
+			opacity: 1;
 		}
 	}
 }

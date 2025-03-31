@@ -3,26 +3,27 @@
  */
 
 @use "../01-mixins/breakpoints" as *;
+@use "../04-utilities/sr-only" as *;
 
 .wp-pattern-hidden-filters {
 	$el: &;
 	$base: ".wp-block-group";
 
-	@include breakpoints(6xs, max) {
-		.wpgb-facet {
-			width: 100%;
+	.wpgb-facet {
+		flex-grow: 1;
+	}
+
+	.wpgb-facet:has(.wpgb-reset) {
+		width: 100%;
+
+		.wpgb-facet-title {
+			@extend %sr-only;
 		}
 	}
 
-	@include breakpoints(6xs) {
-		.wp-block-group {
-			flex-wrap: nowrap;
-		}
-
-		.wpgb-facet:has(.wpgb-sort-facet) {
-			display: flex;
-			gap: var(--wp--preset--spacing--s);
-			align-items: center;
+	@include breakpoints(6xs, max) {
+		.wpgb-facet {
+			width: 100%;
 		}
 	}
 }

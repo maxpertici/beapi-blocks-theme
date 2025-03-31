@@ -22,6 +22,10 @@
 			max-width: none;
 		}
 
+		.wp-block-post-featured-image {
+			margin-bottom: 0 !important;
+		}
+
 		.wp-block-post-title {
 			@include heading(h3);
 		}
