@@ -72,9 +72,9 @@ $settings-custom-h1-line-height: 1.11
 $home-variations: (2);
 ```
 
-## Single news
+## Single
 
-4 heros sont disponibles pour la single news, `patterns/hidden-hero-single-[1-4].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/single.html`. Puis sélectionner le numéro correspondant de le fichier `00-variables/_config.scss`
+4 heros sont disponibles pour les singles, `patterns/hidden-hero-single-[1-4].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/single.html`. Puis sélectionner le numéro correspondant de le fichier `00-variables/_config.scss`
 
 ```html
 <!-- wp:pattern {"slug":"beapi-blocks-theme/hero-single-3"} /-->

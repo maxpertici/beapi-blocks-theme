@@ -134,7 +134,7 @@
 				z-index: 1;
 				width: 100%;
 				max-width: none;
-				padding: 32px;
+				padding: var(--wp--preset--spacing--md);
 				color: var(--wp--preset--color--white);
 
 				> * {
