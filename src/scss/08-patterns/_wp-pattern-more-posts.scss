@@ -5,8 +5,11 @@
 @use "../01-mixins/breakpoints" as *;
 
 .wp-pattern-more-posts {
+	$el: &;
+	$base: ".wp-block-group";
+
 	.wp-block-post-template.is-layout-grid {
-		grid-gap: var(--wp--preset--spacing--2-xl);
+		gap: var(--wp--preset--spacing--2-xl) var(--wp--custom--layout--fluid-block-horizontal-gap);
 	}
 
 	@include breakpoints(2xs) {

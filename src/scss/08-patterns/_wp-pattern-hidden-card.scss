@@ -2,9 +2,33 @@
  * WP Pattern: Hidden card
  */
 
+@use "sass:list";
+@use "../00-variables/config" as *;
+@use "../01-mixins/breakpoints" as *;
+@use "../01-mixins/heading" as *;
 @use "../04-utilities/seo" as *;
 
+%wp-pattern-hidden-card-post-2 {
+	@include breakpoints(4xs) {
+		display: flex;
+		gap: var(--wp--preset--spacing--md) var(--wp--custom--layout--fluid-block-horizontal-gap);
+		width: 100%;
+
+		> * {
+			flex-basis: 50%;
+			max-width: none;
+		}
+
+		.wp-block-post-title {
+			@include heading(h3);
+		}
+	}
+}
+
 .wp-pattern-hidden-card {
+	$el: &;
+	$base: ".wp-block-group";
+
 	@extend %seo-container;
 
 	.wp-block-post-title {
@@ -15,5 +39,11 @@
 
 	.wp-block-post-terms {
 		@extend %seo-over-overlay;
+	}
+
+	@if (list.index($home-variations, 1) != null) {
+		&-post-2 {
+			@extend %wp-pattern-hidden-card-post-2;
+		}
 	}
 }

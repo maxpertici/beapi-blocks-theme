@@ -10,14 +10,18 @@
 @use "06-core-blocks/navigation";
 @use "06-core-blocks/paragraph";
 @use "06-core-blocks/post-excerpt";
+@use "06-core-blocks/post-template";
 @use "06-core-blocks/post-terms";
 
 @use "07-custom-blocks/beapi-mega-menu";
 
 @use "08-patterns/wp-pattern-comments";
 @use "08-patterns/wp-pattern-hidden-card";
+@use "08-patterns/wp-pattern-hidden-filters";
 @use "08-patterns/wp-pattern-hidden-hero-single";
 @use "08-patterns/wp-pattern-hidden-share";
 @use "08-patterns/wp-pattern-more-posts";
 
 @use "09-template-parts/header";
+
+@use "11-vendor/wpgb";

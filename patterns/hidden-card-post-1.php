@@ -10,12 +10,19 @@
  * @since BeAPI Blocks Theme 1.0
  */
 
+$card_additional_class = ! empty( $args['card_additional_classes'] ) ? $args['card_additional_classes'] : 'wp-pattern-hidden-card-post-1';
+$heading_level         = ! empty( $args['heading_level'] ) ? $args['heading_level'] : 3;
+$heading_class         = ! empty( $args['heading_class'] ) ? $args['heading_class'] : 'is-style-h4';
 ?>
-<!-- wp:group {"tagName":"article","className":"wp-pattern-hidden-card wp-pattern-hidden-card-post wp-pattern-hidden-card-post-1","layout":{"type":"constrained"},"metadata":{"patternName":"beapi-blocks-theme/hidden-card-post-1","name":"Hidden card post 1"}} -->
-<article class="wp-block-group wp-pattern-hidden-card wp-pattern-hidden-card-post wp-pattern-hidden-card-post-1">
+<!-- wp:group {"tagName":"article","className":"wp-pattern-hidden-card wp-pattern-hidden-card-post <?php echo esc_attr( $card_additional_class ); ?>","layout":{"type":"constrained"},"metadata":{"patternName":"beapi-blocks-theme/hidden-card-post-1","name":"Hidden card post 1"}} -->
+<article class="wp-block-group wp-pattern-hidden-card wp-pattern-hidden-card-post <?php echo esc_attr( $card_additional_class ); ?>">
 	<!-- wp:post-featured-image {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}}} /-->
-	<!-- wp:post-date {"className":"is-style-label","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}}} /-->
-	<!-- wp:post-title {"isLink":true,"level":3,"className":"is-style-h4","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}}} /-->
-	<!-- wp:post-terms {"term":"category","className":"is-style-tag"} /-->
+	<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}}} -->
+	<div class="wp-block-group" style="margin-top:0">
+		<!-- wp:post-date {"className":"is-style-label","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}}} /-->
+		<!-- wp:post-title {"isLink":true,"level":<?php echo esc_attr( $heading_level ); ?>,"className":"<?php echo esc_attr( $heading_class ); ?>","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}}} /-->
+		<!-- wp:post-terms {"term":"category","className":"is-style-tag"} /-->
+	</div>
+	<!-- /wp:group -->
 </article>
 <!-- /wp:group -->

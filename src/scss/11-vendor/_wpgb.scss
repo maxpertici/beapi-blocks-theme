@@ -1,0 +1,62 @@
+/**
+ * WP Grid Builder
+ */
+
+@use "../01-mixins/button" as *;
+@use "../01-mixins/heading" as *;
+
+.wpgb {
+	$el: &;
+
+	body &-facet {
+		> fieldset {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		#{$el}-facet-title {
+			@include heading(h6);
+			margin-bottom: 4px;
+		}
+
+		#{$el}-result-count {
+			@include heading(h6);
+		}
+
+		#{$el}-select {
+			--wpgb-border-width: 1px;
+
+			border-color: var(--wp--preset--color--gray-50);
+		}
+
+		#{$el}-pagination {
+			li#{$el}-page {
+				a {
+					font-weight: 500 !important;
+
+					&[aria-current="true"] {
+						font-weight: 400 !important;
+						color: inherit;
+					}
+				}
+
+				&#{$el}-page-prev {
+					a {
+						@include button(link-arrow-left);
+						vertical-align: middle;
+					}
+				}
+
+				&#{$el}-page-next {
+					a {
+						@include button(link-arrow-right);
+						vertical-align: middle;
+					}
+				}
+			}
+
+
+		}
+	}
+}

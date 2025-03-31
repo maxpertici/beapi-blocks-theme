@@ -40,7 +40,11 @@
 				"mobileExternalGutter": "20px",
 				"desktopExternalGutter": "75px",
 				"externalGutterDelta": "55",
-				"fluidExternalGutter": "clamp(var(--wp--custom--layout--mobile-external-gutter), var(--wp--custom--layout--mobile-external-gutter) + (100vw - 480px) / (1024 - 480) * var(--wp--custom--layout--external-gutter-delta), var(--wp--custom--layout--desktop-external-gutter))"
+				"fluidExternalGutter": "clamp(var(--wp--custom--layout--mobile-external-gutter), var(--wp--custom--layout--mobile-external-gutter) + (100vw - 480px) / (1024 - 480) * var(--wp--custom--layout--external-gutter-delta), var(--wp--custom--layout--desktop-external-gutter))",
+				"mobileBlockHorizontalGap": "var(--wp--preset--spacing--md)",
+				"desktopBlockHorizontalGap": "var(--wp--preset--spacing--2-xl)",
+				"blockHorizontalGapDelta": "48",
+				"fluidBlockHorizontalGap": "clamp(var(--wp--custom--layout--mobile-block-horizontal-gap), var(--wp--custom--layout--mobile-block-horizontal-gap) + (100vw - 480px) / (1024 - 480) * var(--wp--custom--layout--block-horizontal-gap-delta), var(--wp--custom--layout--desktop-block-horizontal-gap))"
 			}
 		}
 	}
