@@ -4,11 +4,15 @@
 @use "sass:list";
 @use "../00-variables/config" as *;
 @use "../01-mixins/breakpoints" as *;
+@use "../01-mixins/heading" as *;
 @use "../08-patterns/wp-pattern-hidden-card" as *;
 
 .wp-block-post-template {
 	@if (list.index($home-variations, 1) != null) {
-		&.grid-post-1 {
+		// ---
+		// Home variation 1
+		// ---
+		&.grid-home-1 {
 			gap: var(--wp--preset--spacing--2-xl) var(--wp--custom--layout--fluid-block-horizontal-gap);
 
 			> li {
@@ -44,6 +48,52 @@
 					&:nth-child(8n+6),
 					&:nth-child(8n+7) {
 						grid-column: span 3;
+					}
+				}
+			}
+		}
+	}
+
+	@if (list.index($home-variations, 2) != null) {
+		// ---
+		// Home variation 2
+		// ---
+		&.grid-home-2 {
+			gap: var(--wp--preset--spacing--xl);
+
+			> li {
+				&:nth-child(6n + 6) {
+					> * {
+						@extend %wp-pattern-hidden-card-post-4;
+					}
+				}
+			}
+
+			@include breakpoints(4xs) {
+				grid-template-columns: repeat(12, 1fr);
+
+				> li {
+					grid-column: span 6;
+
+					&:nth-child(6n + 1),
+					&:nth-child(6n + 6) {
+						grid-column: span 12;
+					}
+
+					&:nth-child(6n + 1) {
+						.wp-block-post-title {
+							@include heading(h4);
+						}
+					}
+				}
+			}
+
+			@include breakpoints(md) {
+				> li {
+					grid-column: span 4;
+
+					&:nth-child(6n + 1) {
+						grid-column: span 8;
 					}
 				}
 			}

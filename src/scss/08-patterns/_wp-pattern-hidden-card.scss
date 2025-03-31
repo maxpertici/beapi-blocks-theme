@@ -3,9 +3,12 @@
  */
 
 @use "sass:list";
+@use "../00-variables/easings" as *;
 @use "../00-variables/config" as *;
+@use "../00-variables/theme-json" as *;
 @use "../01-mixins/breakpoints" as *;
 @use "../01-mixins/heading" as *;
+@use "../01-mixins/hover" as *;
 @use "../04-utilities/seo" as *;
 
 %wp-pattern-hidden-card-post-2 {
@@ -25,11 +28,40 @@
 	}
 }
 
+%wp-pattern-hidden-card-post-4 {
+	@include breakpoints(4xs) {
+		min-height: 480px;
+
+		.wp-block-post-title {
+			@include heading(h3);
+		}
+	}
+}
+
 .wp-pattern-hidden-card {
 	$el: &;
 	$base: ".wp-block-group";
 
 	@extend %seo-container;
+
+	.wp-block-post-featured-image {
+		overflow: hidden;
+
+		img {
+			transition: transform 4s $ease-out-expo;
+		}
+	}
+
+	.wp-block-group {
+		> * {
+			margin-top: 0;
+			margin-bottom: var(--wp--preset--spacing--s);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 
 	.wp-block-post-title {
 		a {
@@ -41,9 +73,84 @@
 		@extend %seo-over-overlay;
 	}
 
+	@include hover {
+		.wp-block-post-featured-image {
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
+
+	/*
+	// Card post 1 should be included even if home variation 1 is disabled
+	// because it's used on single post page in the more post section
+	&-post-1 {
+
+	}
+	*/
+
 	@if (list.index($home-variations, 1) != null) {
+		// ---
+		// Card for home variation 1
+		// ---
 		&-post-2 {
 			@extend %wp-pattern-hidden-card-post-2;
+		}
+	}
+
+	@if (list.index($home-variations, 2) != null) {
+		// ---
+		// Card for home variation 2
+		// ---
+		&-post-3,
+		&-post-4 {
+			position: relative;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-end;
+			min-height: 368px;
+
+			.wp-block-post-featured-image {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				max-width: none;
+				height: 100%;
+				background: $settings-color-black;
+
+				img {
+					width: 100%;
+					height: 100%;
+					opacity: .5;
+					object-fit: cover;
+				}
+			}
+
+			.wp-block-group {
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				max-width: none;
+				padding: 32px;
+				color: var(--wp--preset--color--white);
+
+				> * {
+					margin-bottom: var(--wp--preset--spacing--2-xs);
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		&-post-4 {
+			min-height: 480px;
+
+			@extend %wp-pattern-hidden-card-post-4;
 		}
 	}
 }
