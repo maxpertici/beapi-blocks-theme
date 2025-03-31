@@ -62,7 +62,7 @@ $settings-custom-h1-line-height: 1.11
 
 ## Archive news
 
-2 mises en formes sont disponibles pour l'archive news, `patterns/hidden-home-content-[1-2].php`. Pour la modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/home.html`. Puis sélectionner le numéro correspondant de le fichier `00-variables/_config.scss`
+2 mises en formes sont disponibles pour l'archive news, `patterns/hidden-home-content-[1-2].php`. Pour la modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/home.html`. Puis sélectionner le numéro correspondant dans le fichier `00-variables/_config.scss`
 
 ```html
 <!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-home-content-2"} /-->
