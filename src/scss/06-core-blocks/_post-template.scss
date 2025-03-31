@@ -7,7 +7,7 @@
 @use "../08-patterns/wp-pattern-hidden-card" as *;
 
 .wp-block-post-template {
-	@if (list.index($post-archive-variations, 1) != null) {
+	@if (list.index($home-variations, 1) != null) {
 		&.grid-post-1 {
 			gap: var(--wp--preset--spacing--2-xl) var(--wp--custom--layout--fluid-block-horizontal-gap);
 
