@@ -10,6 +10,7 @@ $entry-file-name: editor;
 @use "03-base/reset";
 
 @use "06-core-blocks/buttons";
+@use "06-core-blocks/columns";
 @use "06-core-blocks/heading";
 @use "06-core-blocks/navigation";
 @use "06-core-blocks/paragraph";
@@ -19,6 +20,7 @@ $entry-file-name: editor;
 
 @use "07-custom-blocks/beapi-mega-menu";
 
+@use "08-patterns/wp-pattern-archive-columns";
 @use "08-patterns/wp-pattern-comments";
 @use "08-patterns/wp-pattern-hidden-card";
 @use "08-patterns/wp-pattern-hidden-filters";

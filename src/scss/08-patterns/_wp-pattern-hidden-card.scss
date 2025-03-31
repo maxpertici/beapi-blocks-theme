@@ -22,15 +22,9 @@
 			max-width: none;
 		}
 
-		.wp-block-post-title {
-			@include heading(h3);
+		.wp-block-post-featured-image {
+			margin-bottom: 0 !important;
 		}
-	}
-}
-
-%wp-pattern-hidden-card-post-4 {
-	@include breakpoints(4xs) {
-		min-height: 480px;
 
 		.wp-block-post-title {
 			@include heading(h3);
@@ -53,13 +47,12 @@
 	}
 
 	.wp-block-group {
-		> * {
-			margin-top: 0;
-			margin-bottom: var(--wp--preset--spacing--s);
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--s);
 
-			&:last-child {
-				margin-bottom: 0;
-			}
+		> * {
+			margin: 0;
 		}
 	}
 
@@ -102,55 +95,29 @@
 		// ---
 		// Card for home variation 2
 		// ---
-		&-post-3,
-		&-post-4 {
-			position: relative;
-			z-index: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: flex-end;
-			min-height: 368px;
-
-			.wp-block-post-featured-image {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				max-width: none;
-				height: 100%;
-				background: $settings-color-black;
-
-				img {
-					width: 100%;
-					height: 100%;
-					opacity: .5;
-					object-fit: cover;
-				}
-			}
-
+		&-post-3 {
 			.wp-block-group {
-				position: relative;
-				z-index: 1;
-				width: 100%;
-				max-width: none;
-				padding: var(--wp--preset--spacing--md);
-				color: var(--wp--preset--color--white);
+				flex-direction: column-reverse;
+				gap: var(--wp--preset--spacing--xs);
+				justify-content: flex-end;
+				width: 536px;
+				margin: 0;
+			}
 
-				> * {
-					margin-bottom: var(--wp--preset--spacing--2-xs);
+			@include breakpoints(6xs) {
+				display: flex;
+				gap: 24px;
+				justify-content: space-between;
 
-					&:last-child {
-						margin-bottom: 0;
-					}
+				.wp-block-post-featured-image {
+					width: 200px;
+					margin-bottom: 0 !important;
+				}
+
+				.wp-block-group {
+					width: 536px;
 				}
 			}
-		}
-
-		&-post-4 {
-			min-height: 480px;
-
-			@extend %wp-pattern-hidden-card-post-4;
 		}
 	}
 }
