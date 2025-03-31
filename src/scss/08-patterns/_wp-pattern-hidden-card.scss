@@ -26,6 +26,9 @@
 }
 
 .wp-pattern-hidden-card {
+	$el: &;
+	$base: ".wp-block-group";
+
 	@extend %seo-container;
 
 	.wp-block-post-title {

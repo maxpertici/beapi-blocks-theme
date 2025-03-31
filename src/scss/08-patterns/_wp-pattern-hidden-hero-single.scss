@@ -10,6 +10,7 @@
 @use "../02-functions/fluid-size" as *;
 
 .wp-pattern-hidden-hero-single {
+	$el: &;
 	$base: ".wp-block-group";
 
 	@if (list.index($hero-single-variations, 1) != null) {

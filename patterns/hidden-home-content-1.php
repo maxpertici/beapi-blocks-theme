@@ -18,7 +18,7 @@
 </div>
 <!-- /wp:query -->
 
-<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-home-filters"} /-->
+<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-filters-home"} /-->
 
 <!-- wp:query {"query":{"perPage":23,"pages":0,"offset":"1","postType":"post","order":"asc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]},"align":"wide","layout":{"type":"default"},"metadata":{"wpgb":"wpgb-content-block/5a6df3f810f245aabbcc4c60b511647f"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xl"}}}} -->
 <div class="wp-block-query alignwide" style="margin-bottom:var(--wp--preset--spacing--xl)">

@@ -3,6 +3,9 @@
  */
 
 .wp-pattern-hidden-share {
+	$el: &;
+	$base: ".wp-block-group";
+
 	.wp-block-social-links,
 	.wp-block-buttons {
 		gap: 8px;

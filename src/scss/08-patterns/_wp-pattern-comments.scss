@@ -6,6 +6,9 @@
 @use "../01-mixins/heading" as *;
 
 .wp-pattern-comments {
+	$el: &;
+	$base: ".wp-block-group";
+
 	.wp-block-comment-edit-link,
 	.wp-block-comment-reply-link,
 	.wp-block-comments-pagination {
