@@ -60,9 +60,21 @@ Deviendra dans le fichier `_theme-json.scss` :
 $settings-custom-h1-line-height: 1.11
 ```
 
+## Archive news
+
+2 mises en formes sont disponibles pour l'archive news, `patterns/hidden-home-content-[1-2].php`. Pour la modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/home.html`. Puis sélectionner le numéro correspondant de le fichier `00-variables/_config.scss`
+
+```html
+<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-home-content-2"} /-->
+```
+
+```scss
+$home-variations: (2);
+```
+
 ## Single news
 
-4 heros sont disponibles pour la single news, `parts/hero-single-[1-4].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/single.html`. Puis sélectionner le numéro correspondant de le fichier `00-variables/_config.scss`
+4 heros sont disponibles pour la single news, `patterns/hidden-hero-single-[1-4].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/single.html`. Puis sélectionner le numéro correspondant de le fichier `00-variables/_config.scss`
 
 ```html
 <!-- wp:pattern {"slug":"beapi-blocks-theme/hero-single-3"} /-->
