@@ -21,6 +21,12 @@
 		}
 	}
 
+	.wp-block-column > & {
+		.wpgb-facet {
+			width: 100%;
+		}
+	}
+
 	@include breakpoints(6xs, max) {
 		.wpgb-facet {
 			width: 100%;
