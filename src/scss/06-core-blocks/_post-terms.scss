@@ -18,6 +18,17 @@
 		@include text(label);
 	}
 
+	&:not([class*="is-style-"]),
+	&.is-style-default {
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
 	&.is-style-tag {
 		display: flex;
 		flex-wrap: wrap;
