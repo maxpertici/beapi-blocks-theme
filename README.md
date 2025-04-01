@@ -60,6 +60,30 @@ Deviendra dans le fichier `_theme-json.scss` :
 $settings-custom-h1-line-height: 1.11
 ```
 
+### Convention de nommage
+
+Les fichiers sont nommés suivant la profondeur de l’objet, ainsi le fichier contenant le json suivant :
+
+```json
+{
+    "version": 3,
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "styles": {
+        "blocks": {
+            "core/paragraph": {
+                ...
+            }
+        }
+    }
+}
+```
+
+Sera nommé :
+
+```bash
+styles-blocks-coreParagraph.json
+```
+
 ## Archive news
 
 2 mises en formes sont disponibles pour l'archive news, `patterns/hidden-home-content-[1-2].php`. Pour la modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/home.html`. Puis sélectionner le numéro correspondant dans le fichier `00-variables/_config.scss`
