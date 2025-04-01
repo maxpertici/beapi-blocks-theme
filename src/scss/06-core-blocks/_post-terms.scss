@@ -39,10 +39,10 @@
 			display: inline-block;
 			padding: 4px 8px;
 			overflow: hidden;
-			color: inherit;
-			text-decoration: none;
 			text-overflow: ellipsis;
+			color: inherit;
 			white-space: nowrap;
+			text-decoration: none;
 			border: 1px solid var(--wp--preset--color--gray-75);
 			border-radius: 9999px;
 

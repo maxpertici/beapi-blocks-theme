@@ -19,8 +19,8 @@
 		padding: 0;
 		overflow: hidden;
 		line-height: 36px;
+        vertical-align: middle;
 		text-indent: -1000px;
-		vertical-align: middle;
 		background: transparent;
 		border-radius: 0;
 
@@ -33,11 +33,11 @@
 			margin: -16px 0 0 -16px;
 			vertical-align: middle;
 			content: "";
+			background-color: var(--wp--preset--color--gray-100);
 			mask-image: url(../img/static/#{$style}.svg);
-			mask-size: 100%;
 			mask-repeat: no-repeat;
 			mask-position: center;
-			background-color: var(--wp--preset--color--gray-100);
+			mask-size: 100%;
 		}
 	} @else if ($style == link) {
 		padding: 0;
