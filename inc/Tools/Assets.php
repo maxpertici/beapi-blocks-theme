@@ -22,7 +22,8 @@ class Assets {
 	 * @return bool
 	 */
 	public function register_script( string $handle, string $src, array $deps = [], $ver = false, array $strategy = [] ): bool {
-		return \wp_register_script( $handle, \get_theme_file_uri( $src ), $deps, $ver, $strategy );
+		$src = ! empty( $src ) ? \get_theme_file_uri( $src ) : '';
+		return \wp_register_script( $handle, $src, $deps, $ver, $strategy );
 	}
 
 	/**
