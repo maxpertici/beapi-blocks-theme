@@ -1,26 +1,30 @@
-const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const srcPath = path.resolve(__dirname, '../src')
-const nodeModulesPath = path.resolve(__dirname, '../node_modules')
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const srcPath = path.resolve(__dirname, '../src');
+const nodeModulesPath = path.resolve(__dirname, '../node_modules');
 
 function isEditor(loaderContext) {
-	return loaderContext.resource.indexOf('editor.scss') > -1
+	return loaderContext.resource.indexOf('editor.scss') > -1;
 }
 
 module.exports = {
-	get: function (mode) {
-		const isProduction = mode === 'production'
+	get(mode) {
+		const isProduction = mode === 'production';
 
 		return [
-			/* FontsLoader */ {
+			{
 				test: /\.(woff|woff2)$/,
 				type: 'asset/resource',
-				include: [srcPath + '/fonts', nodeModulesPath + '/@fontsource-variable', nodeModulesPath + '/@fontsource'],
+				include: [
+					srcPath + '/fonts',
+					nodeModulesPath + '/@fontsource-variable',
+					nodeModulesPath + '/@fontsource',
+				],
 				generator: {
 					filename: 'fonts/[name][ext][query]',
 				},
 			},
-			/* ImagesLoader */ {
+			{
 				test: /\.(png|jpe?g|gif|svg|avif|webp)$/,
 				type: 'asset/resource',
 				exclude: /icons/,
@@ -29,7 +33,7 @@ module.exports = {
 					filename: 'images/[name][ext][query]',
 				},
 			},
-			/* JSLoader */ {
+			{
 				test: /\.js$/i,
 				include: srcPath + '/js',
 				use: {
@@ -41,7 +45,7 @@ module.exports = {
 					},
 				},
 			},
-			/* SCSSLoader */ {
+			{
 				test: /\.(scss|css)$/,
 				include: srcPath + '/scss',
 				use: [
@@ -57,12 +61,13 @@ module.exports = {
 					{
 						loader: 'postcss-loader',
 						options: {
-							postcssOptions: function (loaderContext) {
-								let obj = {
+							postcssOptions(loaderContext) {
+								const obj = {
 									plugins: {
 										'postcss-import': {},
 										'postcss-preset-env': {
-											browsers: 'last 2 versions, > 2%, not dead',
+											browsers:
+												'last 2 versions, > 2%, not dead',
 											stage: 2,
 											features: {
 												// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values
@@ -71,39 +76,41 @@ module.exports = {
 												'logical-properties-and-values': false,
 											},
 										},
-										'postcss-pxtorem': { propWhiteList: [] },
+										'postcss-pxtorem': {
+											propWhiteList: [],
+										},
 										'postcss-sort-media-queries': {},
 									},
-								}
+								};
 
 								if (isProduction && !isEditor(loaderContext)) {
-									obj.plugins.cssnano = {}
+									obj.plugins.cssnano = {};
 								}
 
-								return obj
+								return obj;
 							},
 						},
 					},
 					{
 						loader: 'sass-loader',
 						options: {
-							sassOptions: function (loaderContext) {
-								let obj = {
+							sassOptions(loaderContext) {
+								const obj = {
 									quietDeps: true,
 									sourceMap: true,
-								}
+								};
 
 								if (isProduction && isEditor(loaderContext)) {
-									obj.outputStyle = 'expanded'
+									obj.outputStyle = 'expanded';
 								}
 
-								return obj
+								return obj;
 							},
 						},
 					},
 				],
 			},
-			/* SVGLoader */ {
+			{
 				test: /\.svg$/,
 				include: srcPath + '/img/icons',
 				use: [
@@ -112,8 +119,12 @@ module.exports = {
 						options: {
 							extract: true,
 							publicPath: 'icons/',
-							spriteFilename: (svgPath) => `${/icons([\\|/])(.*?)\1/gm.exec(svgPath)[2]}.svg`,
-							symbolId: (filePath) => `icon-${path.basename(filePath).slice(0, -4)}`,
+							spriteFilename: (svgPath) =>
+								`${
+									/icons([\\|/])(.*?)\1/gm.exec(svgPath)[2]
+								}.svg`,
+							symbolId: (filePath) =>
+								`icon-${path.basename(filePath).slice(0, -4)}`,
 						},
 					},
 					{
@@ -121,6 +132,6 @@ module.exports = {
 					},
 				],
 			},
-		]
+		];
 	},
-}
+};
