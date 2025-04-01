@@ -12,6 +12,7 @@
 		"lint:css": "node_modules/.bin/stylelint \"src/scss/**/*.scss\"",
 		"lint:js": "node_modules/.bin/eslint \"src/js/**/*.js\"",
 		"lint": "node_modules/.bin/concurrently \"npx yarn lint:css\" \"npx yarn lint:js\"",
+		"format": "wp-scripts format",
 		"bundle-report": "yarn build && yarn webpack-bundle-analyzer dist/stats.json"
 	},
 	"license": "GPL-2.0",
@@ -25,8 +26,9 @@
 		"@wordpress/dependency-extraction-webpack-plugin": "^4.0.0",
 		"@wordpress/dom-ready": "^3.17.0",
 		"@wordpress/env": "^9.8.0",
+		"@wordpress/eslint-plugin": "^22.7.0",
 		"@wordpress/hooks": "^3.17.0",
-		"@wordpress/stylelint-config": "^21.0.0",
+		"@wordpress/scripts": "^30.14.1",
 		"browser-sync": "^2.27.10",
 		"browser-sync-webpack-plugin": "^2.3.0",
 		"clean-webpack-plugin": "^4.0.0-alpha.0",

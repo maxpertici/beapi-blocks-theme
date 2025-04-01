@@ -1,9 +1,11 @@
 function requireAll(r) {
-	r.keys().forEach(r)
+	r.keys().forEach(r);
 }
 
 // SVG
-requireAll(require.context('../img/icons', true, /\.svg$/))
+requireAll(require.context('../img/icons', true, /\.svg$/));
 
 // STATIC
-requireAll(require.context('../img/static', true, /\.(png|jpe?g|gif|svg|avif|webp)$/))
+requireAll(
+	require.context('../img/static', true, /\.(png|jpe?g|gif|svg|avif|webp)$/)
+);

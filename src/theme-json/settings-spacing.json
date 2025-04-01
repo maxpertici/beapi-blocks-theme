@@ -58,14 +58,7 @@
 					"slug": "4-xl"
 				}
 			],
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			],
+			"units": ["%", "px", "em", "rem", "vh", "vw"],
 			"blockGap": true
 		}
 	}

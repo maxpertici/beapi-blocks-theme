@@ -4,9 +4,7 @@
 	"customTemplates": [
 		{
 			"name": "page-no-title",
-			"postTypes": [
-				"page"
-			],
+			"postTypes": ["page"],
 			"title": "Page No Title"
 		}
 	]
