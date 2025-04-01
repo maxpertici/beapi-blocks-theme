@@ -4,7 +4,7 @@
 	"settings": {
 		"typography": {
 			"customFontSize": false,
-			"defaultFontSizes": true,
+			"defaultFontSizes": false,
 			"dropCap": true,
 			"fluid": false,
 			"fontFamilies": [
