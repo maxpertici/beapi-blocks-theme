@@ -3,5 +3,5 @@ export default function openUrlInNewTab(url) {
 		target: '_blank',
 		rel: 'noopener',
 		href: url,
-	}).click()
+	}).click();
 }

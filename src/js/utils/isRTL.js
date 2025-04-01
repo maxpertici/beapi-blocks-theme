@@ -11,7 +11,7 @@ export default function isRTL(container = document.documentElement) {
 		'dv', // Divehi (Maldivian)
 		'ku', // Kurdish (Sorani)
 		'yi', // Yiddish
-	]
+	];
 
-	return container.dir === 'rtl' || rtlLanguages.includes(container.lang)
+	return container.dir === 'rtl' || rtlLanguages.includes(container.lang);
 }

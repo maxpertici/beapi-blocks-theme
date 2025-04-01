@@ -24,8 +24,8 @@
 
 			.wp-block-post-featured-image {
 				#{context-selector("img", "img, .components-placeholder")} {
-					object-fit: cover;
 					aspect-ratio: 760/428;
+					object-fit: cover;
 				}
 			}
 
@@ -58,8 +58,8 @@
 		&-2 {
 			.wp-block-post-featured-image {
 				#{context-selector("img", "img, .components-placeholder")} {
-					object-fit: cover;
 					aspect-ratio: 375/280;
+					object-fit: cover;
 				}
 
 				+ .wp-block-group {
@@ -98,8 +98,8 @@
 		&-3 {
 			.wp-block-post-featured-image {
 				#{context-selector("img", "img, .components-placeholder")} {
-					object-fit: cover;
 					aspect-ratio: 1200/675;
+					object-fit: cover;
 				}
 			}
 
@@ -129,8 +129,8 @@
 
 			.wp-block-post-featured-image {
 				#{context-selector("img", "img, .components-placeholder")} {
-					object-fit: cover;
 					aspect-ratio: 540/404;
+					object-fit: cover;
 				}
 			}
 

@@ -1,12 +1,12 @@
-const path = require('path')
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common.js')
-const plugins = require('./plugins')
-const loaders = require('./loaders')
-const mode = 'development'
+const path = require('path');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
+const plugins = require('./plugins');
+const loaders = require('./loaders');
+const mode = 'development';
 
 module.exports = merge(common, {
-	mode: mode,
+	mode,
 	stats: 'errors-only',
 	devtool: 'inline-source-map',
 	devServer: {
@@ -16,4 +16,4 @@ module.exports = merge(common, {
 	module: {
 		rules: loaders.get(mode),
 	},
-})
+});

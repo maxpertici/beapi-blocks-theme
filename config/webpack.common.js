@@ -1,8 +1,8 @@
-const path = require('path')
-const entries = require('./entries')
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
-const svgoconfig = require('./svgo.config')
+const path = require('path');
+const entries = require('./entries');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const svgoconfig = require('./svgo.config');
 
 module.exports = {
 	entry: entries,
@@ -50,4 +50,4 @@ module.exports = {
 	externals: {
 		jquery: 'window.jQuery',
 	},
-}
+};

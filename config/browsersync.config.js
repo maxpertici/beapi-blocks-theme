@@ -1,20 +1,21 @@
-const fs = require('fs')
-const yaml = require('js-yaml')
-const portfinder = require('portfinder')
+const fs = require('fs');
+const yaml = require('js-yaml');
+const portfinder = require('portfinder');
 
-let landoProjectName = 'sample'
+let landoProjectName = 'sample';
 
 try {
 	if (fs.existsSync('../../../../.lando.yml')) {
-		let fileContents = fs.readFileSync('../../../../.lando.yml', 'utf8')
-		let data = yaml.load(fileContents)
+		const fileContents = fs.readFileSync('../../../../.lando.yml', 'utf8');
+		const data = yaml.load(fileContents);
 
 		if (data.name) {
-			landoProjectName = data.name
+			landoProjectName = data.name;
 		}
 	}
 } catch (e) {
-	console.log(e)
+	// eslint-disable-next-line no-console
+	console.log(e);
 }
 
 // BrowserSync options
@@ -27,12 +28,12 @@ const browserSyncOptions = {
 	startPath: '/',
 	notify: true,
 	open: false,
-}
+};
 
 // Plugin options
 const pluginOptions = {
 	injectCss: true,
-}
+};
 
 portfinder.getPort(
 	{
@@ -40,11 +41,11 @@ portfinder.getPort(
 		stopPort: 3333, // maximum port
 	},
 	function (port) {
-		browserSyncOptions.port = port
+		browserSyncOptions.port = port;
 	}
-)
+);
 
 module.exports = {
 	browserSyncOptions,
 	pluginOptions,
-}
+};

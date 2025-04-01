@@ -35,4 +35,4 @@ module.exports = {
 		{ prefixIds: true },
 		{ removeViewBox: false },
 	],
-}
+};
