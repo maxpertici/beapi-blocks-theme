@@ -20,6 +20,6 @@ p {
 
 	.has-#{$size}-font-size {
 		font-size: var(--wp--preset--font-size--#{$size});
-		line-height: var(--wp--custom--#{$size}--line-height);
+		line-height: var(--wp--custom--default--line-height);
 	}
 }
