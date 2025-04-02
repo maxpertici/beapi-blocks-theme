@@ -2,6 +2,7 @@
 /**
  * Title: Hero single event 1
  * Slug: beapi-blocks-theme/hidden-hero-single-event-1
+ * Inserter: no
  *
  * @package WordPress
  * @subpackage BeAPI Blocks Theme

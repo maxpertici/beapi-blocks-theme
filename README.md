@@ -107,3 +107,11 @@ $home-variations: (2);
 ```scss
 $hero-single-variations: (3);
 ```
+
+## Single Event
+
+2 heros sont disponibles pour les singles, `patterns/hidden-hero-single-event-[1-2].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/single-sc_event.html`.
+
+```html
+<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-hero-single-event-1"} /-->
+```
