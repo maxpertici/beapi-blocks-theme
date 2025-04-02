@@ -18,8 +18,6 @@
             <directory name="vendor" />
             <directory name="languages/" />
 
-            <file name="db-error.php" />
-            <file name="maintenance.php" />
             <file name="theme.json" />
         </ignoreFiles>
     </projectFiles>
