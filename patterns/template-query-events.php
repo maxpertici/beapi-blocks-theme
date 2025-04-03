@@ -12,7 +12,6 @@
  */
 
 ?>
-
 <!-- wp:query {"queryId":27,"query":{"perPage":7,"pages":0,"offset":"0","postType":"sc_event","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]},"metadata":{"wpgb":"wpgb-content-block/8aea04cc87d94d57ad885cb8533b55b8"},"align":"wide","layout":{"type":"default"}} -->
 <div class="wp-block-query alignwide">
 <!-- wp:post-template {"align":"full","className":"grid-events-1","layout":{"type":"grid","columnCount":null,"minimumColumnWidth":"17rem"}} -->

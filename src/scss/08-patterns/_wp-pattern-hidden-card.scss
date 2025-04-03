@@ -33,7 +33,8 @@
 	}
 }
 
-%wp-pattern-hidden-card-event-2 {
+%wp-pattern-hidden-card-event-2,
+%wp-pattern-hidden-card-event-4 {
 	--card-event-date-direction: row;
 	--card-event-date-size: 80px;
 	--card-event-date-padding: var(--wp--preset--spacing--2-xs) var(--wp--preset--spacing--xs);
@@ -52,6 +53,23 @@
 		.wp-block-post-title {
 			@include heading(h3);
 		}
+	}
+}
+
+%wp-pattern-hidden-card-event-3 {
+	.wp-block-post-featured-image {
+		display: none;
+	}
+}
+
+%wp-pattern-hidden-card-event-4 {
+	.wp-block-post-featured-image {
+		display: block;
+	}
+
+	@include breakpoints(s) {
+		grid-template-columns: 1fr 2fr;
+		grid-gap: var(--wp--preset--spacing--2-xl);
 	}
 }
 

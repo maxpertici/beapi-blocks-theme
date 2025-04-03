@@ -35,6 +35,25 @@
 		}
 	}
 
+	@if (list.index($archive-events-variations, 2) != null) {
+		// ---
+		// Archive events variation 2
+		// ---
+		&.grid-events-2 {
+			> li {
+				.wp-pattern-hidden-card-event {
+					@extend %wp-pattern-hidden-card-event-3;
+				}
+
+				&:first-child {	
+					.wp-pattern-hidden-card-event {
+						@extend %wp-pattern-hidden-card-event-4;
+					}
+				}
+			}
+		}
+	}
+
 	&.grid-events-1 {
 		gap: var(--wp--preset--spacing--xl);
 
