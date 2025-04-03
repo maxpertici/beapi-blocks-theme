@@ -79,6 +79,25 @@
 			mask-image: url(../img/static/#{$icon}.svg);
 			mask-size: contain;
 		}
+
+	} @else if ($style == plus) {
+		display: inline-flex;
+		gap: .5rem;
+		align-items: center;
+		font-weight: 600;
+		color: var(--wp--preset--color--gray-100);
+		text-transform: uppercase;
+		background-color: var(--wp--preset--color--white);
+
+		&::before {
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			content: "";
+			background-color: currentColor;
+			mask-image: url(../img/static/plus.svg);
+			mask-size: contain;
+		}
 	} @else {
 		@debug "$style:" + $style + "is not a valid argument for button mixin.";
 	}

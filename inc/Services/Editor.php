@@ -169,6 +169,13 @@ class Editor implements Service {
 				'label' => __( 'Tag', 'beapi-frontend-framework' ),
 			]
 		);
+		register_block_style(
+			'core/post-terms',
+			[
+				'name'  => 'label',
+				'label' => __( 'Label', 'beapi-frontend-framework' ),
+			]
+		);
 
 		foreach (
 			[

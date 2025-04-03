@@ -17,6 +17,7 @@
 	},
 	"license": "GPL-2.0",
 	"dependencies": {
+		"@beapi/be-a11y": "^1.6.2",
 		"@fontsource/poppins": "^5.0.5",
 		"lazysizes": "^5.3.2",
 		"oneloop.js": "^5.2.1"

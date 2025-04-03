@@ -70,7 +70,7 @@ class Theme implements Service {
 	 * i18n
 	 */
 	private function i18n(): void {
-		// Load theme texdomain
-		load_theme_textdomain( 'framework-textdomain', \get_theme_file_path( '/languages' ) );
+		// Load theme textdomain
+		load_theme_textdomain( 'beapi-blocks-theme', \get_theme_file_path( '/languages' ) );
 	}
 }
