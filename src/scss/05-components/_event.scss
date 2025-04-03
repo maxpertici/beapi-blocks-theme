@@ -1,0 +1,7 @@
+.event {
+    &__meta {
+        &:has(p:empty) {
+            display: none;
+        }
+    }
+}

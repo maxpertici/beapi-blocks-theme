@@ -42,7 +42,7 @@
 			&:first-child {
 				grid-column: 1/-1;
 
-				.wp-pattern-hidden-card {
+				.wp-pattern-hidden-card-event {
 					@extend %wp-pattern-hidden-card-event-2;
 				}
 			}
