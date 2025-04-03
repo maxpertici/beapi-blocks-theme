@@ -9,6 +9,8 @@
 	"scripts": {
 		"start": "yarn webpack --watch --config config/webpack.dev.js",
 		"build": "yarn webpack --config config/webpack.prod.js",
+		"env:start": "wp-env start",
+		"env:stop": "wp-env stop",
 		"lint:css": "node_modules/.bin/stylelint \"src/scss/**/*.scss\"",
 		"lint:js": "node_modules/.bin/eslint \"src/js/**/*.js\"",
 		"lint": "node_modules/.bin/concurrently \"npx yarn lint:css\" \"npx yarn lint:js\"",

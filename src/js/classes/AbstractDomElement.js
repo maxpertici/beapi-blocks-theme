@@ -20,7 +20,7 @@ import extend from '../utils/extend.js';
  * // loop on each preset
  * MyClass.initFromPreset()
  */
-class AbstractDomElement {
+export default class AbstractDomElement {
 	constructor(element, options) {
 		// provide an explicit spaceName to prevent conflict after minification
 		// MaClass.nameSpace = 'MaClass'
@@ -52,15 +52,32 @@ class AbstractDomElement {
 		this._isNewInstance = true;
 	}
 
+	/**
+	 * Check if the instance is new
+	 *
+	 * @returns {boolean}
+	 */
 	isNewInstance() {
 		return this._isNewInstance;
 	}
 
+  /**
+	 * Destroy the instance
+	 *
+	 * @returns {AbstractDomElement}
+	 */
 	destroy() {
 		this._element.beapi[this.constructor.nameSpace] = undefined;
 		return this;
 	}
 
+	/**
+	 * Initialize the instance
+	 *
+	 * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to initialize the instance on
+	 * @param {Object} options - Options for the instance
+	 * @returns {AbstractDomElement}
+	 */
 	static init(element, options) {
 		foreach(element, (el) => {
 			new this(el, options);
@@ -69,16 +86,34 @@ class AbstractDomElement {
 		return this;
 	}
 
+	/**
+	 * Check if the instance has an instance on the element
+	 *
+	 * @param {string|HTMLElement} element - The element to check the instance on
+	 * @returns {boolean}
+	 */
 	static hasInstance(element) {
 		const el = getDomElement(element);
 		return el && el.beapi && !!el.beapi[this.nameSpace];
 	}
 
+	/**
+	 * Get the instance on the element
+	 *
+	 * @param {string|HTMLElement} element - The element to get the instance on
+	 * @returns {AbstractDomElement}
+	 */
 	static getInstance(element) {
 		const el = getDomElement(element);
 		return el && el.beapi ? el.beapi[this.nameSpace] : undefined;
 	}
 
+	/**
+	 * Destroy the instance on the element
+	 *
+	 * @param {string|HTMLElement} element - The element to destroy the instance on
+	 * @returns {AbstractDomElement}
+	 */
 	static destroy(element) {
 		this.foreach(element, (el) => {
 			if (el.beapi && el.beapi[this.nameSpace]) {
@@ -89,6 +124,13 @@ class AbstractDomElement {
 		return this;
 	}
 
+	/**
+	 * Loop through the elements
+	 *
+	 * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to loop through
+	 * @param {Function} callback - The callback to call for each element
+	 * @returns {AbstractDomElement}
+	 */
 	static foreach(element, callback) {
 		foreach(element, (el) => {
 			if (el.beapi && el.beapi[this.nameSpace]) {
@@ -99,6 +141,11 @@ class AbstractDomElement {
 		return this;
 	}
 
+	/**
+	 * Initialize the instance from the preset
+	 *
+	 * @returns {AbstractDomElement}
+	 */
 	static initFromPreset() {
 		const preset = this.preset;
 		let selector;
@@ -110,6 +157,11 @@ class AbstractDomElement {
 		return this;
 	}
 
+	/**
+	 * Destroy the instance from the preset
+	 *
+	 * @returns {AbstractDomElement}
+	 */
 	static destroyFromPreset() {
 		const preset = this.preset;
 		let selector;
@@ -125,6 +177,13 @@ class AbstractDomElement {
 // ----
 // utils
 // ----
+
+/**
+ * Loop through the elements
+ *
+ * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to loop through
+ * @param {Function} callback - The callback to call for each element
+ */
 function foreach(element, callback) {
 	const el = getDomElements(element);
 	let i;
@@ -136,6 +195,12 @@ function foreach(element, callback) {
 	}
 }
 
+/**
+ * Get the DOM elements
+ *
+ * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to get the DOM elements on
+ * @returns {Array<HTMLElement>}
+ */
 function getDomElements(element) {
 	if (typeof element === 'string') {
 		return document.querySelectorAll(element);
@@ -148,11 +213,12 @@ function getDomElements(element) {
 	return [element];
 }
 
+/**
+ * Get the DOM element
+ *
+ * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to get the DOM element on
+ * @returns {HTMLElement}
+ */
 function getDomElement(element) {
 	return getDomElements(element)[0];
 }
-
-// ----
-// export
-// ----
-export default AbstractDomElement;
