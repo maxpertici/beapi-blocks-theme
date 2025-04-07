@@ -55,16 +55,16 @@ export default class AbstractDomElement {
 	/**
 	 * Check if the instance is new
 	 *
-	 * @returns {boolean}
+	 * @return {boolean} - True if the instance is new, false otherwise
 	 */
 	isNewInstance() {
 		return this._isNewInstance;
 	}
 
-  /**
+	/**
 	 * Destroy the instance
 	 *
-	 * @returns {AbstractDomElement}
+	 * @return {AbstractDomElement} - The instance
 	 */
 	destroy() {
 		this._element.beapi[this.constructor.nameSpace] = undefined;
@@ -75,8 +75,8 @@ export default class AbstractDomElement {
 	 * Initialize the instance
 	 *
 	 * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to initialize the instance on
-	 * @param {Object} options - Options for the instance
-	 * @returns {AbstractDomElement}
+	 * @param {Object}                                       options - Options for the instance
+	 * @return {AbstractDomElement} - The instance
 	 */
 	static init(element, options) {
 		foreach(element, (el) => {
@@ -90,7 +90,7 @@ export default class AbstractDomElement {
 	 * Check if the instance has an instance on the element
 	 *
 	 * @param {string|HTMLElement} element - The element to check the instance on
-	 * @returns {boolean}
+	 * @return {boolean} - True if the instance has an instance on the element, false otherwise
 	 */
 	static hasInstance(element) {
 		const el = getDomElement(element);
@@ -101,7 +101,7 @@ export default class AbstractDomElement {
 	 * Get the instance on the element
 	 *
 	 * @param {string|HTMLElement} element - The element to get the instance on
-	 * @returns {AbstractDomElement}
+	 * @return {AbstractDomElement} - The instance
 	 */
 	static getInstance(element) {
 		const el = getDomElement(element);
@@ -112,7 +112,7 @@ export default class AbstractDomElement {
 	 * Destroy the instance on the element
 	 *
 	 * @param {string|HTMLElement} element - The element to destroy the instance on
-	 * @returns {AbstractDomElement}
+	 * @return {AbstractDomElement} - The instance
 	 */
 	static destroy(element) {
 		this.foreach(element, (el) => {
@@ -127,9 +127,9 @@ export default class AbstractDomElement {
 	/**
 	 * Loop through the elements
 	 *
-	 * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to loop through
-	 * @param {Function} callback - The callback to call for each element
-	 * @returns {AbstractDomElement}
+	 * @param {string|HTMLElement|Array<string|HTMLElement>} element  - The element to loop through
+	 * @param {Function}                                     callback - The callback to call for each element
+	 * @return {AbstractDomElement} - The instance
 	 */
 	static foreach(element, callback) {
 		foreach(element, (el) => {
@@ -144,7 +144,7 @@ export default class AbstractDomElement {
 	/**
 	 * Initialize the instance from the preset
 	 *
-	 * @returns {AbstractDomElement}
+	 * @return {AbstractDomElement} - The instance
 	 */
 	static initFromPreset() {
 		const preset = this.preset;
@@ -160,7 +160,7 @@ export default class AbstractDomElement {
 	/**
 	 * Destroy the instance from the preset
 	 *
-	 * @returns {AbstractDomElement}
+	 * @return {AbstractDomElement} - The instance
 	 */
 	static destroyFromPreset() {
 		const preset = this.preset;
@@ -181,8 +181,8 @@ export default class AbstractDomElement {
 /**
  * Loop through the elements
  *
- * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to loop through
- * @param {Function} callback - The callback to call for each element
+ * @param {string|HTMLElement|Array<string|HTMLElement>} element  - The element to loop through
+ * @param {Function}                                     callback - The callback to call for each element
  */
 function foreach(element, callback) {
 	const el = getDomElements(element);
@@ -199,7 +199,7 @@ function foreach(element, callback) {
  * Get the DOM elements
  *
  * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to get the DOM elements on
- * @returns {Array<HTMLElement>}
+ * @return {Array<HTMLElement>} - The DOM elements
  */
 function getDomElements(element) {
 	if (typeof element === 'string') {
@@ -217,7 +217,7 @@ function getDomElements(element) {
  * Get the DOM element
  *
  * @param {string|HTMLElement|Array<string|HTMLElement>} element - The element to get the DOM element on
- * @returns {HTMLElement}
+ * @return {HTMLElement} - The DOM element
  */
 function getDomElement(element) {
 	return getDomElements(element)[0];
