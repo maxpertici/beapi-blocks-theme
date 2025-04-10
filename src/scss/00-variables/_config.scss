@@ -19,11 +19,15 @@ $mobile-to-desktop-nav-breakpoint: md;
 // paragraph sizes
 $paragraph-sizes: (default, small, large, huge);
 
+// home variations, by default the two styles are enabled
+$home-variations: (1, 2);
+
 // hero single variations, by default the four styles are enabled
 $hero-single-variations: (1, 2, 3, 4);
 
-// home variations, by default the two styles are enabled
-$home-variations: (1, 2);
+// has sugar calendar enabled
+$has-sugar-calendar-enabled: true;
+
 
 // ----
 // Breakpoints
