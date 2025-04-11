@@ -10,7 +10,6 @@ const DependencyExtractionWebpackPlugin = require('@wordpress/dependency-extract
 const BundleAnalyzerPlugin =
 	require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const WebpackImageSizesPlugin = require('./WebpackImageSizesPlugin');
 const WebpackThemeJsonPlugin = require('./WebpackThemeJsonPlugin');
 
 module.exports = {
@@ -37,9 +36,6 @@ module.exports = {
 				color: '#ffe600',
 			}),
 			new DependencyExtractionWebpackPlugin(),
-			new WebpackImageSizesPlugin({
-				watch: mode !== 'production',
-			}),
 		];
 
 		if (mode === 'production') {
