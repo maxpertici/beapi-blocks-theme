@@ -79,6 +79,7 @@ class Assets implements Service {
 					'themeUri' => get_template_directory_uri(),
 				]
 			),
+			'before'
 		);
 
 		// CSS
