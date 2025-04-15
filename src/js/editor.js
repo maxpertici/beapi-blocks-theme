@@ -1,10 +1,6 @@
 /* global BFFEditorSettings */
 
 /* Customize BFFEditorSettings in inc/Services/Editor.php or with `bff_editor_custom_settings` filter (see readme). */
-
-import lazySizes from 'lazysizes';
-import 'lazysizes/plugins/native-loading/ls.native-loading';
-import 'lazysizes/plugins/object-fit/ls.object-fit';
 import domReady from '@wordpress/dom-ready';
 import { addFilter } from '@wordpress/hooks';
 import {
@@ -12,14 +8,6 @@ import {
 	getBlockVariations,
 	unregisterBlockVariation,
 } from '@wordpress/blocks';
-
-/**
- * LazySizes configuration
- * https://github.com/aFarkas/lazysizes/#js-api---options
- */
-lazySizes.cfg.nativeLoading = {
-	setLoadingAttribute: false,
-};
 
 // Native Gutenberg
 domReady(() => {
