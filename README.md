@@ -115,3 +115,9 @@ $hero-single-variations: (3);
 ```html
 <!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-hero-single-event-1"} /-->
 ```
+
+Il est possible de désactiver les styles relatifs à sugar calendar en  modifiant la variable dans le fichier `00-variables/_config.scss`
+
+```scss
+$has-sugar-calendar-enabled: false;
+```
