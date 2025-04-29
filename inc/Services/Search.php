@@ -50,9 +50,9 @@ class Search implements Service {
 	/**
 	 * Extend the search to include custom post types
 	 *
-	 * @param WP_Query $query The query object.
+	 * @param \WP_Query $query The query object.
 	 */
-	public function extend_search_to_custom_post_types( $query ): void {
+	public function extend_search_to_custom_post_types( \WP_Query $query ): void {
 		if ( ! $query->is_main_query() && ! $query->is_search() ) {
 			return;
 		}
