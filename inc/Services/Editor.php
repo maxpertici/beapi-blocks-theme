@@ -84,6 +84,11 @@ class Editor implements Service {
 		 * Setup icon block collections
 		 */
 		add_action( 'init', [ $this, 'register_icon_block_collections' ], 11 );
+
+		/**
+		 * Register binding sources
+		 */
+		add_action( 'init', [ $this, 'register_binding_sources' ], 11 );
 	}
 
 	/**
@@ -380,5 +385,28 @@ class Editor implements Service {
 			}
 			register_icon_collection( $media_collection );
 		}
+	}
+
+	/**
+	 * Register binding sources
+	 *
+	 * @return void
+	 */
+	public function register_binding_sources(): void {
+		// Post type label
+		\register_block_bindings_source(
+			'beapi-blocks-theme/post-type',
+			[
+				'label'              => __( 'Post type', 'beapi-blocks-theme' ),
+				'get_value_callback' => function ( array $source_args, $block_instance ) {
+					$post_id          = $block_instance->context['postId'];
+					$post_type_object = \get_post_type_object( \get_post_type( $post_id ) );
+					if ( $post_type_object ) {
+						return \esc_html( $post_type_object->labels->singular_name );
+					}
+				},
+				'uses_context'       => [ 'postId' ],
+			]
+		);
 	}
 }

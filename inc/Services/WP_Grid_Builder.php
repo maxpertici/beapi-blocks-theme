@@ -13,6 +13,7 @@ class WP_Grid_Builder implements Service {
 	 */
 	public function register( Service_Container $container ): void {
 		add_filter( 'wp_grid_builder/frontend/register_scripts', [ $this, 'wpgb_register_scripts' ], 10, 1 );
+		add_filter( 'wp_grid_builder/facet/title_tag', [ $this, 'facet_title_tag' ], 10, 1 );
 	}
 
 	/**
@@ -60,5 +61,15 @@ class WP_Grid_Builder implements Service {
 		];
 
 		return $scripts;
+	}
+
+	/**
+	 * Change the title tag of the facet
+	 *
+	 * @param string $title_tag
+	 * @return string
+	 */
+	public function facet_title_tag( $title_tag ): string {
+		return 'p';
 	}
 }
