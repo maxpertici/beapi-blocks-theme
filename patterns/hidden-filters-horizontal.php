@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Hidden filters horizontal
  * Slug: beapi-blocks-theme/hidden-filters-horizontal

@@ -393,7 +393,7 @@ class Editor implements Service {
 	 * @return void
 	 */
 	public function register_binding_sources(): void {
-		// Post type label
+		// Post type label.
 		\register_block_bindings_source(
 			'beapi-blocks-theme/post-type',
 			[

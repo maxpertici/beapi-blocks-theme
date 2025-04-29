@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Search results 2
  * Slug: beapi-blocks-theme/hidden-search-results-2

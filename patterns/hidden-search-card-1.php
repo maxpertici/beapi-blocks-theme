@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Hidden search card 1
  * Slug: beapi-blocks-theme/hidden-search-card-1
@@ -10,6 +9,7 @@
  * @subpackage BeAPI Blocks Theme
  * @since BeAPI Blocks Theme 1.0
  */
+
 $card_additional_class = ! empty( $args['card_additional_classes'] ) ? $args['card_additional_classes'] : 'wp-pattern-hidden-card--search';
 $heading_level         = ! empty( $args['heading_level'] ) ? $args['heading_level'] : 2;
 $heading_class         = ! empty( $args['heading_class'] ) ? $args['heading_class'] : 'is-style-h5';

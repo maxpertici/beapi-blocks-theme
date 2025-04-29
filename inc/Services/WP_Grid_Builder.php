@@ -37,7 +37,7 @@ class WP_Grid_Builder implements Service {
 	 * @return array
 	 */
 	public function wpgb_register_scripts( $scripts ): array {
-		// return if is gutenberg editor
+		// return if is gutenberg editor.
 		if ( \defined( 'REST_REQUEST' ) && REST_REQUEST ) {
 			return $scripts;
 		}
@@ -64,9 +64,9 @@ class WP_Grid_Builder implements Service {
 	}
 
 	/**
-	 * Change the title tag of the facet
+	 * Change facet's title tag
 	 *
-	 * @param string $title_tag
+	 * @param string $title_tag The title tag.
 	 * @return string
 	 */
 	public function facet_title_tag( $title_tag ): string {
