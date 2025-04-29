@@ -5,11 +5,17 @@ namespace BEA\Theme\Framework\Services;
 use BEA\Theme\Framework\Service;
 use BEA\Theme\Framework\Service_Container;
 
-
+/**
+ * WP Grid Builder service.
+ *
+ * @package BEA\Theme\Framework\Services
+ */
 class WP_Grid_Builder implements Service {
 
 	/**
-	 * @param Service_Container $container
+	 * Register the service.
+	 *
+	 * @param Service_Container $container The service container.
 	 */
 	public function register( Service_Container $container ): void {
 		add_filter( 'wp_grid_builder/frontend/register_scripts', [ $this, 'wpgb_register_scripts' ], 10, 1 );
@@ -17,11 +23,15 @@ class WP_Grid_Builder implements Service {
 	}
 
 	/**
-	 * @param Service_Container $container
+	 * Boot the service.
+	 *
+	 * @param Service_Container $container The service container.
 	 */
 	public function boot( Service_Container $container ): void {}
 
 	/**
+	 * Get the service name.
+	 *
 	 * @return string
 	 */
 	public function get_service_name(): string {
@@ -31,7 +41,7 @@ class WP_Grid_Builder implements Service {
 	/**
 	 * Register scripts
 	 *
-	 * @param array $scripts
+	 * @param array $scripts The scripts.
 	 * @see https://docs.wpgridbuilder.com/resources/js-events/#events-in-external-script
 	 *
 	 * @return array
