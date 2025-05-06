@@ -109,18 +109,6 @@
 		border-bottom: 1px solid var(--wp--preset--color--gray-75);
 	}
 
-	&-post {
-		.wp-block-group {
-			display: flex;
-			flex-direction: column;
-			gap: var(--wp--preset--spacing--s);
-	
-			> * {
-				margin: 0;
-			}
-		}
-	}
-
 	@if ($has-sugar-calendar-enabled) {
 		&-event {
 			--card-event-gap: var(--wp--preset--spacing--s);
