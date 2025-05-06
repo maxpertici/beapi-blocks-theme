@@ -11,7 +11,11 @@
 
 ?>
 <!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-search-form"} /-->
-<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-search-title-1"} /-->
+<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide">
+	<!-- wp:query-title {"type":"search"} /-->
+</div>
+<!-- /wp:group -->
 
 <!-- wp:columns {"align":"wide","className":"wp-pattern-archive-columns","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|3-xl"}}}} -->
 <div class="wp-block-columns wp-pattern-archive-columns alignwide"><!-- wp:column {"width":"26.66%"} -->

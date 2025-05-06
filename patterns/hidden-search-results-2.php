@@ -10,7 +10,13 @@
  */
 
 ?>
-<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-search-title-2"} /-->
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group">
+	<!-- wp:heading {"level":1} -->
+	<h1 class="wp-block-heading"><?php echo esc_html( __( 'Search', 'beapi-blocks-theme' ) ); ?></h1>
+	<!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
 <!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-search-form"} /-->
 <!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-filters-horizontal"} /-->
 
