@@ -10,7 +10,6 @@
  * @subpackage BeAPI Blocks Theme
  * @since BeAPI Blocks Theme 1.0
  */
-
 ?>
 <!-- wp:group {"tagName":"section","className":"wp-pattern-more-publications","align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|4-xl","bottom":"var:preset|spacing|4-xl"}}},"layout":{"type":"constrained"},"metadata":{"patternName":"beapi-blocks-theme/more-publications","name":"More publications"}} -->
 <section class="wp-block-group wp-pattern-more-publications alignwide" style="margin-top:var(--wp--preset--spacing--4-xl);margin-bottom:var(--wp--preset--spacing--4-xl)">
