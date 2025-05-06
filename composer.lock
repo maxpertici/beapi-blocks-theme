@@ -4,7 +4,7 @@
 		"Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
 		"This file is @generated automatically"
 	],
-	"content-hash": "d1b080bac3f1d66271f682fd175c03e0",
+	"content-hash": "3860fca931ea6dbdc5aff21074b68f42",
 	"packages": [
 		{
 			"name": "beapi/blockparty-accordion",
@@ -595,22 +595,22 @@
 			"homepage": "https://wordpress.org/plugins/safe-svg/"
 		},
 		{
-			"name": "wpackagist-plugin/wp-seopress",
-			"version": "8.6.1",
+			"name": "wpackagist-plugin/wordpress-seo",
+			"version": "24.9",
 			"source": {
 				"type": "svn",
-				"url": "https://plugins.svn.wordpress.org/wp-seopress/",
-				"reference": "tags/8.6.1"
+				"url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+				"reference": "tags/24.9"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://downloads.wordpress.org/plugin/wp-seopress.8.6.1.zip"
+				"url": "https://downloads.wordpress.org/plugin/wordpress-seo.24.9.zip"
 			},
 			"require": {
 				"composer/installers": "^1.0 || ^2.0"
 			},
 			"type": "wordpress-plugin",
-			"homepage": "https://wordpress.org/plugins/wp-seopress/"
+			"homepage": "https://wordpress.org/plugins/wordpress-seo/"
 		},
 		{
 			"name": "wpengine/advanced-custom-fields-pro",
@@ -3346,10 +3346,10 @@
 	],
 	"aliases": [],
 	"minimum-stability": "dev",
-	"stability-flags": {},
+	"stability-flags": [],
 	"prefer-stable": true,
 	"prefer-lowest": false,
-	"platform": {},
-	"platform-dev": {},
+	"platform": [],
+	"platform-dev": [],
 	"plugin-api-version": "2.6.0"
 }

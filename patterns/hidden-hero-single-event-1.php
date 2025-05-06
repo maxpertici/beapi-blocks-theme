@@ -12,9 +12,7 @@ $icons_uri = get_template_directory_uri() . '/dist/icons/';
 ?>
 <!-- wp:group {"tagName":"header","align":"wide","className":"wp-pattern-hidden-hero-single-event wp-pattern-hidden-hero-single-event-1","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3-xl"},"blockGap":"var:preset|spacing|xl"}},"layout":{"type":"constrained"}} -->
 <header class="wp-block-group alignwide wp-pattern-hidden-hero-single-event wp-pattern-hidden-hero-single-event-1" style="margin-bottom:var(--wp--preset--spacing--3-xl)">
-<!-- wp:paragraph -->
-<p>TODO : insérer fil d'ariane</p>
-<!-- /wp:paragraph -->
+<!-- wp:yoast-seo/breadcrumbs {"className":"alignfull"} /-->
 <!-- wp:post-featured-image {"aspectRatio":"16/9","style":{"spacing":{"margin":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l"}}}} /-->
 
 <!-- wp:post-terms {"term":"sc_event_category","textAlign":"center","className":"is-style-label"} /-->

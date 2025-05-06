@@ -45,7 +45,7 @@
 		"sandhills/sugar-calendar": "^3.0",
 		"themeone/wp-grid-builder": "^2.1",
 		"wpackagist-plugin/safe-svg": "^2.0",
-		"wpackagist-plugin/wp-seopress": "^8.6",
+		"wpackagist-plugin/wordpress-seo": "^24.6",
 		"wpengine/advanced-custom-fields-pro": "^6.3"
 	},
 	"require-dev": {
