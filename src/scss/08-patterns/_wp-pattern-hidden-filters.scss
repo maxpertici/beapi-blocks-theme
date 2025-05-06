@@ -9,10 +9,6 @@
 	$el: &;
 	$base: ".wp-block-group";
 
-	.wpgb-facet {
-		flex-grow: 1;
-	}
-
 	.wpgb-facet:has(.wpgb-reset) {
 		width: 100%;
 
