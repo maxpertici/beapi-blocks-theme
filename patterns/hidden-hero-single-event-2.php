@@ -11,9 +11,8 @@
 $icons_uri = get_template_directory_uri() . '/dist/icons/';
 ?>
 <!-- wp:group {"tagName":"header","metadata":{"patternName":"beapi-blocks-theme/hidden-hero-single-event-2","name":"Hero single event 2"},"align":"wide","className":"wp-pattern-hidden-hero-single-event wp-pattern-hidden-hero-single-event-2","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3-xl"}}},"layout":{"type":"constrained"}} -->
-<header class="wp-block-group alignwide wp-pattern-hidden-hero-single-event wp-pattern-hidden-hero-single-event-2" style="margin-bottom:var(--wp--preset--spacing--3-xl)"><!-- wp:paragraph -->
-<p>TODO : insérer fil d'ariane</p>
-<!-- /wp:paragraph -->
+<header class="wp-block-group alignwide wp-pattern-hidden-hero-single-event wp-pattern-hidden-hero-single-event-2" style="margin-bottom:var(--wp--preset--spacing--3-xl)">
+<!-- wp:yoast-seo/breadcrumbs {"className":"alignfull"} /-->
 
 <!-- wp:columns {"verticalAlignment":"top","align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|3-xl"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top","width":"55.6%","style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl"}}}} -->

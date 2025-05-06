@@ -11,7 +11,7 @@
 		"./.wp-env/plugins/safe-svg",
 		"./.wp-env/plugins/sugar-calendar",
 		"./.wp-env/plugins/wp-grid-builder",
-		"./.wp-env/plugins/wp-seopress"
+		"./.wp-env/plugins/wordpress-seo"
 	],
 	"themes": [
 		"."
