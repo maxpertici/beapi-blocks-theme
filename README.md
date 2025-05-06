@@ -108,6 +108,13 @@ $home-variations: (2);
 $hero-single-variations: (3);
 ```
 
+## Résultats de recherche
+
+2 mises en formes sont disponibles pour les résultats de recherche, `patterns/hidden-search-results-[1-2].php`. Pour la modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/search.html`.
+```html
+<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-search-results-2"} /-->
+```
+
 ## Single Event
 
 2 heros sont disponibles pour les singles, `patterns/hidden-hero-single-event-[1-2].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/single-sc_event.html`.
