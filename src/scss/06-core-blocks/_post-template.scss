@@ -3,6 +3,7 @@
  */
 @use "sass:list";
 @use "../00-variables/config" as *;
+@use "../01-mixins/breakpoints" as *;
 @use "../08-patterns/wp-pattern-hidden-card" as *;
 
 .wp-block-post-template {
@@ -12,11 +13,11 @@
 		// ---
 		&.grid-home-1 {
 			gap: var(--wp--preset--spacing--xl);
-
+	
 			> li {
 				&:first-child {
 					grid-column: 1/-1;
-
+	
 					> * {
 						@extend %wp-pattern-hidden-card-post-2;
 					}
@@ -31,6 +32,20 @@
 		// ---
 		&.grid-home-2 {
 			gap: var(--wp--preset--spacing--md);
+		}
+	}
+
+	&.grid-events-1 {
+		gap: var(--wp--preset--spacing--xl);
+
+		> li {
+			&:first-child {
+				grid-column: 1/-1;
+
+				.wp-pattern-hidden-card {
+					@extend %wp-pattern-hidden-card-event-2;
+				}
+			}
 		}
 	}
 }

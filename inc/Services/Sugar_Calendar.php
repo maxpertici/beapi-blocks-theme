@@ -42,6 +42,14 @@ class Sugar_Calendar implements Service {
 		);
 
 		register_block_bindings_source(
+			'sugar-calendar/event-date-short',
+			[
+				'label'              => __( 'Event Date Short', 'beapi-blocks-theme' ),
+				'get_value_callback' => [ $this, 'get_event_dates_short_binding' ],
+			]
+		);
+
+		register_block_bindings_source(
 			'sugar-calendar/event-time',
 			[
 				'label'              => __( 'Event time', 'beapi-blocks-theme' ),
@@ -73,6 +81,15 @@ class Sugar_Calendar implements Service {
 	 */
 	public function get_event_dates_binding(): string {
 		return \BEA\Theme\Framework\Helpers\Sugar_Calendar\get_event_dates();
+	}
+
+	/**
+	 * Get event dates at short format (d M)
+	 *
+	 * @return string
+	 */
+	public function get_event_dates_short_binding(): string {
+		return \BEA\Theme\Framework\Helpers\Sugar_Calendar\get_event_dates( $event_id = get_the_ID(), $format = 'd M', $formatted = true, $separator = '' );
 	}
 
 	/**
