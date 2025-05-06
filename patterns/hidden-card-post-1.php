@@ -18,8 +18,8 @@ $terms_class           = ! empty( $args['terms_class'] ) ? $args['terms_class'] 
 <!-- wp:group {"tagName":"article","className":"wp-pattern-hidden-card wp-pattern-hidden-card-post <?php echo esc_attr( $card_additional_class ); ?>","layout":{"type":"constrained"},"metadata":{"patternName":"beapi-blocks-theme/hidden-card-post-1","name":"Hidden card post 1"}} -->
 <article class="wp-block-group wp-pattern-hidden-card wp-pattern-hidden-card-post <?php echo esc_attr( $card_additional_class ); ?>">
 	<!-- wp:post-featured-image {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|s"}}}} /-->
-	<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}}} -->
-	<div class="wp-block-group" style="margin-top:0">
+	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|xs"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group">
 		<!-- wp:post-date {"className":"is-style-label"} /-->
 		<!-- wp:post-title {"isLink":true,"level":<?php echo esc_attr( $heading_level ); ?>,"className":"<?php echo esc_attr( $heading_class ); ?>"} /-->
 		<!-- wp:post-terms {"term":"category","className":"<?php echo esc_attr( $terms_class ); ?>"} /-->
