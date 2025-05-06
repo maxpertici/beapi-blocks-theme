@@ -3,6 +3,7 @@
  */
 @use "sass:list";
 @use "../00-variables/config" as *;
+@use "../01-mixins/breakpoints" as *;
 @use "../08-patterns/wp-pattern-hidden-card" as *;
 
 .wp-block-post-template {
@@ -12,11 +13,11 @@
 		// ---
 		&.grid-home-1 {
 			gap: var(--wp--preset--spacing--xl);
-
+	
 			> li {
 				&:first-child {
 					grid-column: 1/-1;
-
+	
 					> * {
 						@extend %wp-pattern-hidden-card-post-2;
 					}
@@ -31,6 +32,41 @@
 		// ---
 		&.grid-home-2 {
 			gap: var(--wp--preset--spacing--md);
+		}
+	}
+
+	@if (list.index($archive-events-variations, 2) != null) {
+		// ---
+		// Archive events variation 2
+		// ---
+		&.grid-events-2 {
+			> li {
+				.wp-pattern-hidden-card-event {
+					@extend %wp-pattern-hidden-card-event-3;
+				}
+
+				&:first-child {	
+					.wp-pattern-hidden-card-event {
+						@extend %wp-pattern-hidden-card-event-4;
+					}
+				}
+			}
+		}
+	}
+
+	@if ($has-sugar-calendar-enabled && list.index($archive-events-variations, 1)) {
+		&.grid-events-1 {
+			gap: var(--wp--preset--spacing--xl);
+
+			> li {
+				&:first-child {
+					grid-column: 1/-1;
+
+					.wp-pattern-hidden-card-event {
+						@extend %wp-pattern-hidden-card-event-2;
+					}
+				}
+			}
 		}
 	}
 }

@@ -115,6 +115,22 @@ $hero-single-variations: (3);
 <!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-search-results-2"} /-->
 ```
 
+
+## Archive Events
+
+2 gabarits sont disponibles pour l'archive des events, `patterns/hidden-archive-events-[1-2].php`.
+Le premier présente les événements en une colonne, le second en deux colonnes.
+Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/archive-sc_event.html`.
+
+```html
+<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-archive-events-2"} /-->
+```
+
+Puis charger le CSS correspondant dans le fichier `00-variables/_config.scss` :
+```scss
+$archive-events-variations: (2);
+```
+
 ## Single Event
 
 2 heros sont disponibles pour les singles, `patterns/hidden-hero-single-event-[1-2].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/single-sc_event.html`.
