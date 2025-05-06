@@ -35,7 +35,26 @@
 		}
 	}
 
-	@if (list.index($archive-events-variations, 2) != null) {
+	@if ($has-sugar-calendar-enabled && list.index($archive-events-variations, 1)) {
+		// ---
+		// Archive events variation 1
+		// ---
+		&.grid-events-1 {
+			gap: var(--wp--preset--spacing--xl);
+
+			> li {
+				&:first-child {
+					grid-column: 1/-1;
+
+					.wp-pattern-hidden-card-event {
+						@extend %wp-pattern-hidden-card-event-2;
+					}
+				}
+			}
+		}
+	}
+
+	@if ($has-sugar-calendar-enabled && list.index($archive-events-variations, 2) != null) {
 		// ---
 		// Archive events variation 2
 		// ---
@@ -48,22 +67,6 @@
 				&:first-child {	
 					.wp-pattern-hidden-card-event {
 						@extend %wp-pattern-hidden-card-event-4;
-					}
-				}
-			}
-		}
-	}
-
-	@if ($has-sugar-calendar-enabled && list.index($archive-events-variations, 1)) {
-		&.grid-events-1 {
-			gap: var(--wp--preset--spacing--xl);
-
-			> li {
-				&:first-child {
-					grid-column: 1/-1;
-
-					.wp-pattern-hidden-card-event {
-						@extend %wp-pattern-hidden-card-event-2;
 					}
 				}
 			}
