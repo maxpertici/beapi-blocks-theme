@@ -16,7 +16,7 @@
 <div class="wp-block-group wp-pattern-hero-page wp-pattern-hero-page-2" style="margin-bottom:var(--wp--preset--spacing--2-xl)"><!-- wp:post-title {"level":1,"className":"is-style-h2"} /-->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">This is a place for a exerpt. Lorem ipsum dolor sit amet consectetur. At fusce ac netus non nam ut amet. Arcu tempor rhoncus varius purus aliquam nunc.</p>
+<p class="has-text-align-center">This is a place for an excerpt. Lorem ipsum dolor sit amet consectetur. At fusce ac netus non nam ut amet. Arcu tempor rhoncus varius purus aliquam nunc.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->

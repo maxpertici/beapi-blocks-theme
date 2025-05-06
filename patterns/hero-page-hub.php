@@ -12,15 +12,15 @@
  * @since BeAPI Blocks Theme 1.0
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Hero page 4"},"align":"full","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|2-xl"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="margin-bottom:var(--wp--preset--spacing--2-xl)"><!-- wp:post-featured-image {"aspectRatio":"16/9","width":"100%","height":"400px","align":"wide"} /-->
+<!-- wp:group {"metadata":{"name":"Hero page 4"},"align":"full",className:"wp-pattern-hero-page-hub",style":{"spacing":{"margin":{"bottom":"var:preset|spacing|2-xl"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull wp-pattern-hero-page-hub" style="margin-bottom:var(--wp--preset--spacing--2-xl)"><!-- wp:post-featured-image {"aspectRatio":"16/9","width":"100%","height":"400px","align":"wide"} /-->
 
 <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|3-xl"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"66.66%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:66.66%"><!-- wp:post-title {"level":1,"className":"is-style-h2"} /-->
 
 <!-- wp:paragraph -->
-<p>This is a place for a exerpt. Lorem ipsum dolor sit amet consectetur. At fusce ac netus non nam ut amet. Arcu tempor rhoncus varius purus aliquam nunc.</p>
+<p>This is a place for an excerpt. Lorem ipsum dolor sit amet consectetur. At fusce ac netus non nam ut amet. Arcu tempor rhoncus varius purus aliquam nunc.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 

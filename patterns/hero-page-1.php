@@ -17,7 +17,7 @@
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:56%"><!-- wp:post-title {"level":1,"className":"is-style-h2"} /-->
 
 <!-- wp:paragraph -->
-<p>This is a place for a exerpt. Lorem ipsum dolor sit amet consectetur. At fusce ac netus non nam ut amet. Arcu tempor rhoncus varius purus aliquam nunc.</p>
+<p>This is a place for an excerpt. Lorem ipsum dolor sit amet consectetur. At fusce ac netus non nam ut amet. Arcu tempor rhoncus varius purus aliquam nunc.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
