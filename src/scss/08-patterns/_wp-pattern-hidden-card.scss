@@ -121,52 +121,54 @@
 		}
 	}
 
-	&-event {
-		--card-event-gap: var(--wp--preset--spacing--s);
-		--card-event-date-direction: row;
-		--card-event-date-size: 60px;
-		--card-event-date-padding: var(--wp--preset--spacing--2-xs) var(--wp--preset--spacing--xs);
-		--card-event-date-font-size: 16px;
-		--card-event-sep-height: 2px;
-		--card-event-sep-width: 16px;
-		--card-event-sep-margin: 0 -4px;
+	@if ($has-sugar-calendar-enabled) {
+		&-event {
+			--card-event-gap: var(--wp--preset--spacing--s);
+			--card-event-date-direction: row;
+			--card-event-date-size: 60px;
+			--card-event-date-padding: var(--wp--preset--spacing--2-xs) var(--wp--preset--spacing--xs);
+			--card-event-date-font-size: 16px;
+			--card-event-sep-height: 2px;
+			--card-event-sep-width: 16px;
+			--card-event-sep-margin: 0 -4px;
 
-		gap: var(--card-event-gap);
+			gap: var(--card-event-gap);
 
-		&__dates {
-			display: flex;
-			flex-direction: var(--card-event-date-direction);
-			align-items: center;
-
-			.event-date {
+			&__dates {
 				display: flex;
+				flex-direction: var(--card-event-date-direction);
 				align-items: center;
-				justify-content: center;
-				width: var(--card-event-date-size);
-				height: var(--card-event-date-size);
-				padding: var(--card-event-date-padding);
-				font-size: var(--card-event-date-font-size);
-				font-weight: 500;
-				line-height: 1.2;
-				text-align: center;
-				text-transform: uppercase;
-				background-color: var(--wp--preset--color--gray-10);
+
+				.event-date {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: var(--card-event-date-size);
+					height: var(--card-event-date-size);
+					padding: var(--card-event-date-padding);
+					font-size: var(--card-event-date-font-size);
+					font-weight: 500;
+					line-height: 1.2;
+					text-align: center;
+					text-transform: uppercase;
+					background-color: var(--wp--preset--color--gray-10);
+				}
+
+				.event-date-sep {
+					z-index: 1;
+					width: var(--card-event-sep-width);
+					height: var(--card-event-sep-height);
+					margin: var(--card-event-sep-margin);
+					background-color: var(--wp--preset--color--gray-100);
+				}
 			}
 
-			.event-date-sep {
-				z-index: 1;
-				width: var(--card-event-sep-width);
-				height: var(--card-event-sep-height);
-				margin: var(--card-event-sep-margin);
-				background-color: var(--wp--preset--color--gray-100);
+			@include breakpoints(2xs) {
+				--card-event-date-direction: column;
+				--card-event-sep-height: 16px;
+				--card-event-sep-width: 2px;
+				--card-event-sep-margin: -4px 0;
 			}
-		}
-
-		@include breakpoints(2xs) {
-			--card-event-date-direction: column;
-			--card-event-sep-height: 16px;
-			--card-event-sep-width: 2px;
-			--card-event-sep-margin: -4px 0;
 		}
 	}
 

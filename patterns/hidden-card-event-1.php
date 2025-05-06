@@ -15,8 +15,8 @@ $card_additional_class = ! empty( $args['card_additional_classes'] ) ? $args['ca
 $heading_level         = ! empty( $args['heading_level'] ) ? $args['heading_level'] : 2;
 $heading_class         = ! empty( $args['heading_class'] ) ? $args['heading_class'] : 'is-style-h5';
 ?>
-<!-- wp:group {"tagName":"article","metadata":{"patternName":"beapi-blocks-theme/hidden-card-event-1","name":"Hidden card event 1"},"className":"wp-pattern-hidden-card wp-pattern-hidden-card-event wp-pattern-hidden-card-event-1 event <?php echo esc_attr( $card_additional_class ); ?>","layout":{"type":"grid","minimumColumnWidth":"25rem","columnCount":null}} -->
-<article class="wp-block-group wp-pattern-hidden-card wp-pattern-hidden-card-event wp-pattern-hidden-card-event-1 event <?php echo esc_attr( $card_additional_class ); ?>"><!-- wp:post-featured-image {"aspectRatio":"4/3","style":{"spacing":{"margin":{"bottom":"0","top":"0"}}}} /-->
+<!-- wp:group {"tagName":"article","metadata":{"patternName":"beapi-blocks-theme/hidden-card-event-1","name":"Hidden card event 1"},"className":"wp-pattern-hidden-card wp-pattern-hidden-card-event event <?php echo esc_attr( $card_additional_class ); ?>","layout":{"type":"grid","minimumColumnWidth":"25rem","columnCount":null}} -->
+<article class="wp-block-group wp-pattern-hidden-card wp-pattern-hidden-card-event event <?php echo esc_attr( $card_additional_class ); ?>"><!-- wp:post-featured-image {"aspectRatio":"4/3","style":{"spacing":{"margin":{"bottom":"0","top":"0"}}}} /-->
 
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"0"},"blockGap":"var:preset|spacing|s"}}} -->
 <div class="wp-block-group" style="margin-top:0"><!-- wp:columns {"className":"wp-pattern-hidden-card-event__content","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|s","left":"var:preset|spacing|s"}}}} -->

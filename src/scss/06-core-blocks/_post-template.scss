@@ -54,15 +54,17 @@
 		}
 	}
 
-	&.grid-events-1 {
-		gap: var(--wp--preset--spacing--xl);
+	@if ($has-sugar-calendar-enabled && list.index($archive-events-variations, 1)) {
+		&.grid-events-1 {
+			gap: var(--wp--preset--spacing--xl);
 
-		> li {
-			&:first-child {
-				grid-column: 1/-1;
+			> li {
+				&:first-child {
+					grid-column: 1/-1;
 
-				.wp-pattern-hidden-card-event {
-					@extend %wp-pattern-hidden-card-event-2;
+					.wp-pattern-hidden-card-event {
+						@extend %wp-pattern-hidden-card-event-2;
+					}
 				}
 			}
 		}

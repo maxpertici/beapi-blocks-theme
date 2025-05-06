@@ -1,7 +1,11 @@
-.event {
-    &__meta {
-        &:has(p:empty) {
-            display: none;
+@use "../00-variables/config" as *;
+
+@if ($has-sugar-calendar-enabled) {
+    .event {
+        &__meta {
+            &:has(p:empty) {
+                display: none;
+            }
         }
     }
 }
