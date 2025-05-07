@@ -4,7 +4,7 @@
 		"Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
 		"This file is @generated automatically"
 	],
-	"content-hash": "3860fca931ea6dbdc5aff21074b68f42",
+	"content-hash": "c9e51723cd6174e3e74f1b14c68b7734",
 	"packages": [
 		{
 			"name": "beapi/blockparty-accordion",
@@ -330,17 +330,17 @@
 		},
 		{
 			"name": "beapi/mega-menu-block",
-			"version": "1.0.2",
+			"version": "1.0.3",
 			"source": {
 				"type": "git",
 				"url": "git@github.com:BeAPI/beapi-mega-menu-block.git",
-				"reference": "39fd10fd048097f5b84a99e520a16053443a73c7"
+				"reference": "44ebc9d72028df90388a564b34d77734931a1d56"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://composer.beapi.fr/dist/beapi/mega-menu-block/beapi-mega-menu-block-39fd10fd048097f5b84a99e520a16053443a73c7-zip-1a411f.zip",
-				"reference": "39fd10fd048097f5b84a99e520a16053443a73c7",
-				"shasum": "3dc16876bf9fbf17d116ea15113f48065359c217"
+				"url": "https://composer.beapi.fr/dist/beapi/mega-menu-block/beapi-mega-menu-block-44ebc9d72028df90388a564b34d77734931a1d56-zip-fb99ac.zip",
+				"reference": "44ebc9d72028df90388a564b34d77734931a1d56",
+				"shasum": "3abe6b4ee9273eea616674ad3baeea6f06f01aae"
 			},
 			"require": {
 				"composer/installers": "^1.0 || ^2.0",
@@ -401,10 +401,10 @@
 				"wordpress"
 			],
 			"support": {
-				"source": "https://github.com/BeAPI/beapi-mega-menu-block/tree/1.0.2",
+				"source": "https://github.com/BeAPI/beapi-mega-menu-block/tree/1.0.3",
 				"issues": "https://github.com/BeAPI/beapi-mega-menu-block/issues"
 			},
-			"time": "2025-03-19T13:56:54+00:00"
+			"time": "2025-05-07T13:22:52+00:00"
 		},
 		{
 			"name": "composer/installers",
