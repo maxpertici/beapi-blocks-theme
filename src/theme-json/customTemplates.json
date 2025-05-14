@@ -6,6 +6,26 @@
 			"name": "page-no-title",
 			"postTypes": ["page"],
 			"title": "Page No Title"
+		},
+		{
+			"name": "archive-sc_event",
+			"postTypes": ["sc_event"],
+			"title": "Archive Events"
+		},
+		{
+			"name": "single-sc_event",
+			"postTypes": ["sc_event"],
+			"title": "Single Event"
+		},
+		{
+			"name": "archive-publication",
+			"postTypes": ["publication"],
+			"title": "Archive Publications"
+		},
+		{
+			"name": "single-publication",
+			"postTypes": ["publication"],
+			"title": "Single Publication"
 		}
 	]
 }
