@@ -41,7 +41,7 @@
 		"beapi/blockparty-key-figure": "^1.0",
 		"beapi/blockparty-tabs": "^1.0",
 		"beapi/icon-block": "^2.2",
-		"beapi/mega-menu-block": "^1.0",
+		"beapi/mega-menu-block": "^1.0.3",
 		"sandhills/sugar-calendar": "^3.0",
 		"themeone/wp-grid-builder": "^2.1",
 		"wpackagist-plugin/safe-svg": "^2.0",

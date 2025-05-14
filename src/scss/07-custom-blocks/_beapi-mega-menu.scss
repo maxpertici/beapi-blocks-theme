@@ -9,12 +9,6 @@
 @use "../01-mixins/text" as *;
 
 .wp-block-beapi-mega-menu {
-	--wp--preset--spacing--64: var(--wp--preset-spacing--2-xl); // 72px
-	--wp--preset--spacing--48: var(--wp--preset-spacing--xl);   // 40px
-	--wp--preset--spacing--24: var(--wp--preset-spacing--md);   // 24px
-	--wp--preset--spacing--16: var(--wp--preset-spacing--s);    // 16px
-	--wp--preset--spacing--8: var(--wp--preset-spacing--2-xs);  // 8px
-
 	.has-m-font-size {
 		@include heading(h4);
 	}
@@ -24,11 +18,11 @@
 	}
 
 	ul + ul {
-		margin-top: var(--wp--preset-spacing--md);
+		margin-top: var(--wp--preset--spacing--md);
 	}
 
 	li + li {
-		margin-top: var(--wp--preset-spacing--s);
+		margin-top: var(--wp--preset--spacing--s);
 	}
 }
 
