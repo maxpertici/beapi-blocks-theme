@@ -17,7 +17,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:post-terms {"term":"category","className":"is-style-tag","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|2-xs"}}}} /-->
-			<!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|xl"}}}} /-->
+			<!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|xs"}}}} /-->
 			<!-- wp:post-date {"className":"is-style-label","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|xl"}}}} /-->
 			<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-share"} /-->
 		</div>

@@ -73,6 +73,34 @@
 	}
 }
 
+%wp-pattern-hidden-card-press-release {
+	> .wp-block-columns {
+		> .wp-block-column:first-child {
+			display: none;
+		}
+	}
+
+	.wp-block-post-excerpt {
+		display: none;
+	}
+}
+
+%wp-pattern-hidden-card-press-release-2 {
+	overflow: hidden;
+
+	@include breakpoints(md, max) {
+		> .wp-block-columns {
+			> .wp-block-column:first-child {
+				display: none;
+			}
+		}
+	
+		.wp-block-post-excerpt {
+			display: none;
+		}
+	}
+}
+
 .wp-pattern-hidden-card {
 	$el: &;
 	$base: ".wp-block-group";
@@ -157,6 +185,12 @@
 				--card-event-sep-width: 2px;
 				--card-event-sep-margin: -4px 0;
 			}
+		}
+	}
+
+	@if ($has-press-releases-enabled) {
+		&-press-release {
+			height: 100%;
 		}
 	}
 

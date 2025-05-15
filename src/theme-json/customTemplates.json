@@ -26,6 +26,16 @@
 			"name": "single-publication",
 			"postTypes": ["publication"],
 			"title": "Single Publication"
+		},
+		{
+			"name": "archive-press-release",
+			"postTypes": ["press-release"],
+			"title": "Archive Press Releases"
+		},
+		{
+			"name": "single-press-release",
+			"postTypes": ["press-release"],
+			"title": "Single Press Release"
 		}
 	]
 }

@@ -72,4 +72,50 @@
 			}
 		}
 	}
+
+	@if ($has-press-releases-enabled && list.index($archive-press-releases-variations, 2) != null) {
+		// ---
+		// Archive press releases variation 2
+		// ---
+		&.grid-press-releases-2 {
+			> li {
+				&:not(:first-child) {
+					.wp-pattern-hidden-card-press-release {
+						@extend %wp-pattern-hidden-card-press-release;
+					}
+				}
+
+				&:first-child {
+					.wp-pattern-hidden-card-press-release {
+						@extend %wp-pattern-hidden-card-press-release-2;
+					}
+				}
+
+				@include breakpoints(md) {
+					&:first-child {
+						grid-row: span 3;
+						grid-column: span 2;
+					}
+
+					&:nth-child(2),
+					&:nth-child(3),
+					&:nth-child(4) {
+						grid-column: 3;
+					}
+
+					&:nth-child(2) {
+						grid-row: 1;
+					}
+
+					&:nth-child(3) {
+						grid-row: 2;
+					}
+
+					&:nth-child(4) {
+						grid-row: 3;
+					}
+				}
+			}
+		}
+	}
 }
