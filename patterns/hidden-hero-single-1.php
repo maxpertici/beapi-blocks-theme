@@ -23,7 +23,7 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|xl"}}}} /-->
+	<!-- wp:post-title {"className":"is-style-h2","level":1,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|xl"}}}} /-->
 	<!-- wp:post-excerpt {"excerptLength":10000,"className":"is-style-huge","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"bottom":"var:preset|spacing|xl"}}}} /-->
 	<!-- wp:post-featured-image {"style":{"spacing":{"margin":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l"}}}} /-->
 	<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-share"} /-->

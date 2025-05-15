@@ -1,0 +1,49 @@
+<?php
+/**
+ * Title: More press releases
+ * Slug: beapi-blocks-theme/more-press-releases
+ * Description: Displays a list of press releases with title and date.
+ * Categories: query
+ * Block Types: core/query
+ *
+ * @package WordPress
+ * @subpackage BeAPI Blocks Theme
+ * @since BeAPI Blocks Theme 1.0
+ */
+
+?>
+<!-- wp:group {"tagName":"section","className":"wp-pattern-more-press-releases","align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|4-xl","bottom":"var:preset|spacing|4-xl"}}},"layout":{"type":"constrained"},"metadata":{"patternName":"beapi-blocks-theme/more-press-releases","name":"More press releases"}} -->
+<section class="wp-block-group wp-pattern-more-press-releases alignwide" style="margin-top:var(--wp--preset--spacing--4-xl);margin-bottom:var(--wp--preset--spacing--4-xl)">
+	<!-- wp:columns {"align":"full","verticalAlignment":"bottom","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|l"}}}} -->
+	<div class="wp-block-columns alignfull are-vertically-aligned-bottom" style="margin-bottom:var(--wp--preset--spacing--l)">
+		<!-- wp:column {"verticalAlignment":"bottom","width":"66.66%"} -->
+		<div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:66.66%">
+			<!-- wp:heading {"className":"is-style-h3","align":"full"} -->
+			<h2 class="wp-block-heading alignfull is-style-h3"><?php esc_html_e( 'Recent press releases', 'beapi-blocks-theme' ); ?></h2>
+			<!-- /wp:heading -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"bottom","width":"33.33%"} -->
+		<div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:33.33%">
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons">
+				<!-- wp:button -->
+				<div class="wp-block-button is-style-link"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( get_post_type_archive_link( 'press-release' ) ); ?>"><?php esc_html_e( 'See more', 'beapi-blocks-theme' ); ?></a></div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+
+	<!-- wp:query {"query":{"perPage":3,"pages":0,"offset":0,"postType":"press-release","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":null,"parents":[]},"align":"full","layout":{"type":"default"}} -->
+	<div class="wp-block-query alignfull">
+		<!-- wp:post-template {"align":"full","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"grid","columnCount":null,"minimumColumnWidth":"18rem"}} -->
+			<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-card-press-release-2"} /-->
+		<!-- /wp:post-template -->
+	</div>
+	<!-- /wp:query -->
+</section>
+<!-- /wp:group -->
