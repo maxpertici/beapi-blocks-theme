@@ -1,17 +1,6 @@
 {
 	"facets": [
 		{
-			"id": "12",
-			"slug": "sc_event_agenda",
-			"name": "Agenda",
-			"date": "2025-05-06 09:41:52",
-			"modified_date": "2025-05-06 09:42:55",
-			"favorite": "0",
-			"type": "select",
-			"source": "taxonomy/sc_event_category",
-			"settings": "{\"name\":\"Agenda\",\"title\":\"Cat\\u00e9gorie\",\"slug\":\"sc_event_agenda\",\"action\":\"filter\",\"filter_type\":\"select\",\"source\":\"taxonomy\",\"include\":[],\"exclude\":[],\"depth\":\"\",\"child_of\":\"\",\"parent\":\"\",\"hierarchical\":false,\"children\":true,\"show_empty\":true,\"show_count\":true,\"current_terms\":false,\"logic\":\"AND\",\"limit\":99,\"orderby\":\"count\",\"order\":\"DESC\",\"combobox\":true,\"clearable\":true,\"searchable\":true,\"async\":false,\"no_results\":\"Aucun r\\u00e9sultat trouv\\u00e9\",\"multiple\":false,\"select_placeholder\":\"Toutes\",\"actions\":[],\"taxonomy\":\"sc_event_category\",\"field_type\":\"post\"}"
-		},
-		{
 			"id": "11",
 			"slug": "counter_simple",
 			"name": "Nombre de résultats simple",

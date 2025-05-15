@@ -94,9 +94,17 @@
 				display: none;
 			}
 		}
-	
+
 		.wp-block-post-excerpt {
 			display: none;
+		}
+	}
+}
+
+%wp-pattern-hidden-card-job-offer {
+	.wp-block-post-terms {
+		> a {
+			text-decoration: none;
 		}
 	}
 }

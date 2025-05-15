@@ -28,7 +28,8 @@
 
 		#{$el}-facet-title {
 			@include heading(h6);
-			margin-bottom: 4px;
+
+			margin-bottom: var(--wp--preset--spacing--2-xs);
 		}
 
 		#{$el}-result-count {
