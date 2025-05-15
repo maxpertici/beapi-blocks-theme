@@ -144,3 +144,19 @@ Il est possible de désactiver les styles relatifs à sugar calendar en  modifia
 ```scss
 $has-sugar-calendar-enabled: false;
 ```
+
+## Archive Communiqués de presse
+
+2 gabarits sont disponibles pour l'archive des communiqués de presse, `patterns/hidden-archive-press-release-[1-2].php`.
+Le premier présente les événements en deux colonnes, le second en grille.
+Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/archive-press-release.html`.
+
+```html
+<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-archive-press-release-2"} /-->
+```
+
+Puis charger le CSS correspondant dans le fichier `00-variables/_config.scss` :
+```scss
+$has-press-releases-enabled: true;
+$archive-press-releases-variations: (1, 2);
+```

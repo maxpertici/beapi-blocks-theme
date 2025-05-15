@@ -86,7 +86,7 @@
 			"favorite": "0",
 			"type": "result_count",
 			"source": "",
-			"settings": "{\"name\":\"Nombre de r\\u00e9sultats\",\"title\":\"\",\"slug\":\"counter\",\"action\":\"load\",\"load_type\":\"result_count\",\"result_count_singular\":\"1 publication trouv\\u00e9e\",\"result_count_plural\":\"[from] - [to] sur [total] publications\",\"actions\":[],\"source\":\"metadata\",\"field_type\":\"post\"}"
+			"settings": "{\"name\":\"Nombre de r\\u00e9sultats\",\"title\":\"\",\"slug\":\"counter\",\"action\":\"load\",\"load_type\":\"result_count\",\"result_count_singular\":\"1 résultat trouv\\u00e9e\",\"result_count_plural\":\"[from] - [to] sur [total] résultats\",\"actions\":[],\"source\":\"metadata\",\"field_type\":\"post\"}"
 		},
 		{
 			"id": "7",
