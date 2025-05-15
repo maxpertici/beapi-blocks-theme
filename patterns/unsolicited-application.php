@@ -25,7 +25,7 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-fill"} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button"><strong>Unsolicited application</strong></a></div>
+<div class="wp-block-button is-style-fill"><a href="#" class="wp-block-button__link wp-element-button"><strong>Unsolicited application</strong></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
