@@ -11,8 +11,6 @@
  */
 ?>
 
-<!-- wp:yoast-seo/breadcrumbs {"className":"alignwide"} /-->
-
 <!-- wp:group {"tagName":"main","align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|3-xl"},"blockGap":"var:preset|spacing|xl"}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group alignwide" style="margin-bottom:var(--wp--preset--spacing--3-xl)"><!-- wp:yoast-seo/breadcrumbs {"className":"alignwide"} /-->
 
