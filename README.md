@@ -148,7 +148,7 @@ $has-sugar-calendar-enabled: false;
 ## Archive Communiqués de presse
 
 2 gabarits sont disponibles pour l'archive des communiqués de presse, `patterns/hidden-archive-press-release-[1-2].php`.
-Le premier présente les événements en une colonne, le second en deux colonnes.
+Le premier présente les événements en deux colonnes, le second en grille.
 Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/archive-press-release.html`.
 
 ```html
