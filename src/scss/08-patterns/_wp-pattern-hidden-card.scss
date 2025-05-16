@@ -103,29 +103,6 @@
 
 %wp-pattern-hidden-card-job-offer {
 	.wp-block-post-terms {
-		display: flex;
-		gap: var(--wp--preset--spacing--2-xs);
-		align-items: center;
-
-		&::before {
-			width: 20px;
-			height: 20px;
-			content: "";
-			background-size: 20px;
-		}
-
-		&.taxonomy-contract-type::before {
-			background-image: url(../img/static/file.webp);
-		}
-
-		&.taxonomy-seniority-level::before {
-			background-image: url(../img/static/user.webp);
-		}
-
-		&.taxonomy-location::before {
-			background-image: url(../img/static/pin.webp);
-		}
-
 		> a {
 			text-decoration: none;
 		}
