@@ -13,12 +13,12 @@
 <!-- wp:columns {"metadata":{"name":"Related job offers"},"align":"wide","style":{"border":{"top":{"color":"var:preset|color|black","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|3-xl"}}}} -->
 <div class="wp-block-columns alignwide" style="border-top-color:var(--wp--preset--color--black);border-top-width:1px;padding-top:var(--wp--preset--spacing--3-xl)"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph {"className":"is-style-h3"} -->
-<p class="is-style-h3">Opportunities that may interest you</p>
+<p class="is-style-h3"><?php esc_html_e( 'Opportunities that may interest you', 'beapi-blocks-theme' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-link"} -->
-<div class="wp-block-button is-style-link"><a class="wp-block-button__link wp-element-button" href="#">See all</a></div>
+<div class="wp-block-button is-style-link"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'See all', 'beapi-blocks-theme' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->
