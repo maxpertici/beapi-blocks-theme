@@ -5,6 +5,9 @@
 		"layout": {
 			"contentSize": "min(100vw - var(--wp--custom--layout--fluid-external-gutter) * 2, var(--wp--custom--layout--content-size))",
 			"wideSize": "min(100vw - var(--wp--custom--layout--fluid-external-gutter) * 2, var(--wp--custom--layout--wide-size))"
+		},
+		"position": {
+			"sticky": true
 		}
 	}
 }
