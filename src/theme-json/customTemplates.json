@@ -36,6 +36,16 @@
 			"name": "single-press-release",
 			"postTypes": ["press-release"],
 			"title": "Single Press Release"
+		},
+		{
+			"name": "archive-job-offer",
+			"postTypes": ["job-offer"],
+			"title": "Archive Job Offers"
+		},
+		{
+			"name": "single-job-offer",
+			"postTypes": ["job-offer"],
+			"title": "Single Job Offer"
 		}
 	]
 }

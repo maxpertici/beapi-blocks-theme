@@ -148,4 +148,15 @@
 			}
 		}
 	}
+
+	@if (list.index($hero-single-variations, 5) != null) {
+		// ----
+		// variation 5
+		// ----
+		&-5 {
+			.wp-block-post-terms__prefix {
+				display: block;
+			}
+		}
+	}
 }
