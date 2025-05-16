@@ -13,11 +13,11 @@
 		// ---
 		&.grid-home-1 {
 			gap: var(--wp--preset--spacing--xl);
-	
+
 			> li {
 				&:first-child {
 					grid-column: 1/-1;
-	
+
 					> * {
 						@extend %wp-pattern-hidden-card-post-2;
 					}
@@ -64,7 +64,7 @@
 					@extend %wp-pattern-hidden-card-event-3;
 				}
 
-				&:first-child {	
+				&:first-child {
 					.wp-pattern-hidden-card-event {
 						@extend %wp-pattern-hidden-card-event-4;
 					}
@@ -114,6 +114,19 @@
 					&:nth-child(4) {
 						grid-row: 3;
 					}
+				}
+			}
+		}
+	}
+
+	@if ($has-job-offers-enabled && list.index($archive-job-offers-variations, 1) != null) {
+		// ---
+		// Archive job offers variation 1
+		// ---
+		&.grid-job-offers-1 {
+			> li {
+				.wp-pattern-hidden-card-job-offer {
+					@extend %wp-pattern-hidden-card-job-offer;
 				}
 			}
 		}
