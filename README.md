@@ -116,7 +116,7 @@ $hero-single-variations: (3);
 ```
 
 
-## Archive Events
+## Archive Evénements
 
 2 gabarits sont disponibles pour l'archive des events, `patterns/hidden-archive-events-[1-2].php`.
 Le premier présente les événements en une colonne, le second en deux colonnes.
@@ -131,7 +131,7 @@ Puis charger le CSS correspondant dans le fichier `00-variables/_config.scss` :
 $archive-events-variations: (2);
 ```
 
-## Single Event
+## Single Evénement
 
 2 heros sont disponibles pour les singles, `patterns/hidden-hero-single-event-[1-2].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/single-sc_event.html`.
 
