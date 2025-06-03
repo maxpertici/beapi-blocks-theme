@@ -1,11 +1,11 @@
 {
 	"extends": [
 		"plugin:@wordpress/eslint-plugin/recommended",
-        "prettier"
+		"prettier"
 	],
-    "plugins": [
-        "prettier"
-    ],
+	"plugins": [
+		"prettier"
+	],
 	"globals": {
 		"jQuery": true,
 		"wp": true
