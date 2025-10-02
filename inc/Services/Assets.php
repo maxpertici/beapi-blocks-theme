@@ -37,7 +37,7 @@ class Assets implements Service {
 		add_action( 'wp', [ $this, 'register_assets' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_styles' ] );
-		add_action( 'wp_enqueue_scripts', [ $this, 'add_theme_capabilities_script' ], 0 );
+		add_action( 'wp_enqueue_scripts', [ $this, 'add_theme_capabilities_script' ] );
 		add_filter( 'stylesheet_uri', [ $this, 'stylesheet_uri' ] );
 		add_filter( 'wp_login_page_theme_css', [ $this, 'login_stylesheet_uri' ] );
 	}
@@ -242,11 +242,6 @@ class Assets implements Service {
 	 * Add theme capabilities script
 	 */
 	public function add_theme_capabilities_script(): void {
-		$name = 'theme-capabilities-script';
-
-		$this->assets_tools->register_script( $name, '', [], null, [ 'in_footer' => false ] );
-		$this->assets_tools->enqueue_script( $name );
-
-		$this->assets_tools->add_inline_script( $name, "(function() {const html=document.documentElement;html.classList.add('js');if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && !window.location.hash.includes('no-js-animation')){html.classList.add('js-animation');}})();" );
+		wp_print_inline_script_tag( "(function() {const html=document.documentElement;html.classList.add('js');if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && !window.location.hash.includes('no-js-animation')){html.classList.add('js-animation');}})();");
 	}
 }
