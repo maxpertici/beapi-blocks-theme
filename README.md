@@ -32,6 +32,99 @@ yarn start
 yarn build
 ```
 
+## Assets splitting
+
+``` bash
+|_ src
+    |_ js
+        |_ common # Fichiers editor.js, index.js ...
+        |_ template # Fichier nommés selon la class du body (home.js, blog.js, single.js, single-post.js, ...)
+        |_ wp-block # Fichiers nommés selon la class du block sans wp-block- (ex: button.js, beapi-icon.js...)
+        |_ wp-pattern # Fichiers nommés selon la class du pattern sans wp-pattern-
+    |_ scss
+        |_ common # Fichiers editor.scss, style.scss ...
+        |_ template # Fichier nommés selon la class du body (home.scss, blog.scss)
+        |_ wp-block # Fichiers nommés selon la class du block sans wp-block- (ex: button.scss, beapi-icon.scss...)
+        |_ wp-pattern # Fichiers nommés selon la class du pattern sans wp-pattern-
+```
+
+### Chargement des assets
+
+Le chargment des fichiers présents dans les dossiers `common/` doit être déclaré explicitement dans le fichier `Assets.php`. Le chargement des assets est automatique pour les fichiers présents dans les dossier `template/`, `wp-block/` et `wp-pattern/`.
+
+Les assests des dossiers `wp-block/` sont ajoutés aux metadatas des blocs. Pour les dossiers `template/` et `wp-pattern/`, les assets sont chargés en fonction des classes présentes sur les blocks et sur les classes présentes à l'appel de la fonction php `get_body_class()`. Point de vigilance, la fonction `get_body_class()` est appellée au moment du hook `wp_enqueue_scripts`, des classes customs peuvent potentiellement être absentes.
+
+Pour l'éditeur, la totalité des assets est chargée sans détection.
+
+#### Exemples de nommage
+- `wp-block/button.scss` sera chargé si un bloc button est présent dans la page.
+- `wp-block/beapi-icon.scss` sera chargé si un bloc beapi icon est présent dans la page.
+- `wp-block/columns.scss` sera chargé si un bloc columns est présent dans la page.
+- `wp-pattern/card.scss` sera chargé si un bloc ayant la class `wp-pattern-card` est présent dans la page.
+- `wp-template/home.scss` sera chargé si la balise `body` possède la class `home`
+
+### Exposition des ressources JS communes
+
+Le fichier `index.js` et `editor.js` importent le fichier `js/utils/beapi.js` qui expose les classes, instances et objets communs :
+```js
+import AbstractDomElement from '../classes/AbstractDomElement';
+import scrollDirection from '../classes/ScrollDirection';
+import * as oneloop from 'oneloop.js';
+import extend from './extend';
+
+// ----
+// First declaration of beapi object is normally done in Assets.php
+// ----
+window.beapi = window.beapi || {};
+
+// ----
+// Expose classes and libraries for partial assets (wp-block, wp-pattern, template)
+// ----
+extend(window.beapi, {
+	classes: {
+		AbstractDomElement,
+	},
+	libraries: {
+		oneloop,
+	},
+	instances: {
+		scrollDirection,
+	},
+});
+```
+
+L'objet `beapi` est ensuite accessible dans les fichiers partiels, voir le fichier `js/wp-block/button.js` :
+```js
+/**
+ * Button block
+ */
+
+const AbstractDomElement = window.beapi.classes.AbstractDomElement;
+const oneloop = window.beapi.libraries.oneloop;
+const scrollDirection = window.beapi.instances.scrollDirection;
+
+class Button extends AbstractDomElement {
+	constructor(element, options) {
+		const instance = super(element, options);
+
+		// avoid double init :
+		if (!instance.isNewInstance()) {
+			return instance;
+		}
+
+		// eslint-disable-next-line no-console
+		console.log(
+			'[Button] constructor',
+			this._element,
+			oneloop,
+			scrollDirection
+		);
+	}
+}
+
+Button.init('.wp-block-button');
+```
+
 ## Theme.json
 
 Le fichier `theme.json`, stocké à la racine du thème, est utilisé pour configurer le thème dans l'interface Gutenberg. Il est généré automatiquement à partir des fichiers json dans `src/theme-json/`. 
