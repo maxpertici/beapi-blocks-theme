@@ -1,8 +1,10 @@
 /**
  * Heading
+ * This file needs to be included in the common/style.scss file.
+ * class is-style-hn are used on paragraphs, wp-block-post-title, ...
  */
 
-@use "../common/01-mixins/heading" as *;
+@use "../01-mixins/heading" as *;
 
 @for $i from 1 through 6 {
 	.is-style-h#{$i} {
