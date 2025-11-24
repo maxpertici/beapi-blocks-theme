@@ -1,4 +1,5 @@
 {
+	"core": "WordPress/WordPress#6.7",
 	"plugins": [
 		"./.wp-env/plugins/advanced-custom-fields-pro",
 		"./.wp-env/plugins/beapi-blocks-theme-custom-post-types",
@@ -19,5 +20,8 @@
 	"mappings": {
 		"wp-content/mu-plugins": "./.wp-env/mu-plugins",
 		"wp-content/plugins": "./.wp-env/plugins"
+	},
+	"config": {
+		"WP_DEVELOPMENT_MODE": "all"
 	}
 }

@@ -1,0 +1,25 @@
+/**
+ * SEO
+ */
+
+@use "../01-mixins/seo" as *;
+
+%seo-container {
+	@include seo-container;
+}
+
+%seo-target {
+	@include seo-target;
+}
+
+%seo-target-before {
+	@include seo-target-before;
+}
+
+%seo-target-after {
+	@include seo-target-after;
+}
+
+%seo-over-overlay {
+	@include seo-over-overlay;
+}

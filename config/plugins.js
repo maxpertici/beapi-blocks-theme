@@ -1,12 +1,13 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const WebpackPHPManifestPlugin = require('webpack-php-manifest');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const WebpackBar = require('webpackbar');
 const DependencyExtractionWebpackPlugin = require('@wordpress/dependency-extraction-webpack-plugin');
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const BundleAnalyzerPlugin =
 	require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -46,12 +47,10 @@ module.exports = {
 				})
 			);
 			plugins.push(
-				new WebpackManifestPlugin({
-					fileName: 'assets.json',
-				}),
 				new MiniCssExtractPlugin({
 					filename: '[name].[contenthash:8].min.css',
-				})
+				}),
+				new RemoveEmptyScriptsPlugin()
 			);
 		} else {
 			plugins.push(
@@ -60,6 +59,12 @@ module.exports = {
 				})
 			);
 		}
+
+		plugins.push(
+			new WebpackPHPManifestPlugin({
+				output: 'assets',
+			})
+		);
 
 		return plugins;
 	},

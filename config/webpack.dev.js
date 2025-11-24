@@ -8,7 +8,7 @@ const mode = 'development';
 module.exports = merge(common, {
 	mode,
 	stats: 'errors-only',
-	devtool: 'inline-source-map',
+	devtool: 'source-map',
 	devServer: {
 		contentBase: path.join(__dirname, 'public'),
 	},

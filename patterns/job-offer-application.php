@@ -17,7 +17,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><?php esc_html_e( 'We look forward to receiving your application.<br>All applications will be treated confidentially.', 'beapi-blocks-theme' ); ?></p>
+<p class="has-text-align-center"><?php esc_html_e( 'We look forward to receiving your application. All applications will be treated confidentially.', 'beapi-blocks-theme' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
