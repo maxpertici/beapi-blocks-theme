@@ -10,8 +10,8 @@ const DependencyExtractionWebpackPlugin = require('@wordpress/dependency-extract
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const BundleAnalyzerPlugin =
 	require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
 const WebpackThemeJsonPlugin = require('./WebpackThemeJsonPlugin');
+const WatchedGlobEntriesPlugin = require('webpack-watched-glob-entries-plugin');
 
 module.exports = {
 	get(mode) {
@@ -54,6 +54,7 @@ module.exports = {
 			);
 		} else {
 			plugins.push(
+				new WatchedGlobEntriesPlugin(),
 				new MiniCssExtractPlugin({
 					filename: '[name].css',
 				})
