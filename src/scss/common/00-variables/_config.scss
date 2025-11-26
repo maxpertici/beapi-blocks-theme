@@ -53,5 +53,5 @@ $breakpoints: (
 	xs: 784,  // admin bar height change
 	s: 960,
 	md: 1024,
-	l: math.div($settings-custom-layout-content-size + $settings-custom-layout-desktop-external-gutter * 2, 1px),
+	l: math.div($settings-custom-layout-wide-size + $settings-custom-layout-desktop-external-gutter * 2, 1px),
 );
