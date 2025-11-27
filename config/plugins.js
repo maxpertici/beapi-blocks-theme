@@ -11,7 +11,7 @@ const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const BundleAnalyzerPlugin =
 	require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const WebpackThemeJsonPlugin = require('./WebpackThemeJsonPlugin');
-const WatchedGlobEntriesPlugin = require('webpack-watched-glob-entries-plugin');
+const WatchedGlobEntriesPlugin = require('./WebpackWatchedGlobEntriesPlugin');
 
 module.exports = {
 	get(mode) {
