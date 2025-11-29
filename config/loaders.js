@@ -120,6 +120,18 @@ module.exports = {
 											propWhiteList: [],
 										},
 										'postcss-sort-media-queries': {},
+										cssnano: {
+											preset: [
+												'default',
+												{
+													discardComments: {
+														removeAll: true,
+													},
+													normalizeWhitespace:
+														isProduction,
+												},
+											],
+										},
 									},
 								};
 
