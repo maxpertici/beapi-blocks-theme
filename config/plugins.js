@@ -49,8 +49,7 @@ module.exports = {
 			plugins.push(
 				new MiniCssExtractPlugin({
 					filename: '[name].[contenthash:8].min.css',
-				}),
-				new RemoveEmptyScriptsPlugin()
+				})
 			);
 		} else {
 			plugins.push(
@@ -64,7 +63,8 @@ module.exports = {
 		plugins.push(
 			new WebpackPHPManifestPlugin({
 				output: 'assets',
-			})
+			}),
+			new RemoveEmptyScriptsPlugin()
 		);
 
 		return plugins;
