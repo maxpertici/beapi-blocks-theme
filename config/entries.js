@@ -18,7 +18,7 @@ module.exports = function () {
 	return Object.assign(
 		{
 			app: ['./src/js/common/index.js', './src/scss/common/style.scss'],
-			wpgb: './src/js/common/wpgb.js',
+			wpgb: ['./src/js/common/wpgb.js', './src/scss/common/wpgb.scss'],
 			editor: [
 				'./src/js/common/editor.js',
 				'./src/scss/common/editor.scss',

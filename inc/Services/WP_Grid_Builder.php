@@ -11,6 +11,10 @@ use BEA\Theme\Framework\Service_Container;
  * @package BEA\Theme\Framework\Services
  */
 class WP_Grid_Builder implements Service {
+	/**
+	 * @var Assets_Tools
+	 */
+	private $assets;
 
 	/**
 	 * Register the service.
@@ -18,8 +22,7 @@ class WP_Grid_Builder implements Service {
 	 * @param Service_Container $container The service container.
 	 */
 	public function register( Service_Container $container ): void {
-		add_filter( 'wp_grid_builder/frontend/register_scripts', [ $this, 'wpgb_register_scripts' ], 10, 1 );
-		add_filter( 'wp_grid_builder/facet/title_tag', [ $this, 'facet_title_tag' ], 10, 1 );
+		$this->assets = \BEA\Theme\Framework\Framework::get_container()->get_service( 'assets' );
 	}
 
 	/**
@@ -27,7 +30,11 @@ class WP_Grid_Builder implements Service {
 	 *
 	 * @param Service_Container $container The service container.
 	 */
-	public function boot( Service_Container $container ): void {}
+	public function boot( Service_Container $container ): void {
+		add_filter( 'wp_grid_builder/frontend/register_scripts', [ $this, 'wpgb_register_scripts' ], 10, 1 );
+		add_filter( 'wp_grid_builder/frontend/register_styles', [ $this, 'wpgb_register_styles' ], 10, 1 );
+		add_filter( 'wp_grid_builder/facet/title_tag', [ $this, 'facet_title_tag' ], 10, 1 );
+	}
 
 	/**
 	 * Get the service name.
@@ -52,25 +59,48 @@ class WP_Grid_Builder implements Service {
 			return $scripts;
 		}
 
-		if ( file_exists( \get_theme_file_path( '/dist/wpgb-min.js' ) ) ) {
-			$file = \get_theme_file_uri( '/dist/wpgb-min.js' );
-		} else {
-			$file = \get_theme_file_uri( '/dist/wpgb.js' );
-		}
+		$asset = $this->assets->get_asset_file( 'wpgb', 'js' );
 
-		if ( ! $file ) {
+		if ( ! $asset ) {
 			return $scripts;
 		}
 
-		$theme = \wp_get_theme();
-
 		$scripts[] = [
 			'handle'  => 'wpgb-theme-script',
-			'source'  => $file,
-			'version' => $theme->get( 'Version' ),
+			'source'  => \get_theme_file_uri( $asset['file'] ),
+			'version' => $asset['version'],
 		];
 
 		return $scripts;
+	}
+
+		/**
+	 * Register scripts
+	 *
+	 * @param array $scripts The scripts.
+	 * @see https://docs.wpgridbuilder.com/resources/js-events/#events-in-external-script
+	 *
+	 * @return array
+	 */
+	public function wpgb_register_styles( $styles ): array {
+		// return if is gutenberg editor.
+		if ( \defined( 'REST_REQUEST' ) && REST_REQUEST ) {
+			return $styles;
+		}
+
+		$asset = $this->assets->get_asset_file( 'wpgb', 'css' );
+
+		if ( ! $asset ) {
+			return $styles;
+		}
+
+		$styles[] = [
+			'handle'  => 'wpgb-theme-style',
+			'source'  => \get_theme_file_uri( $asset['file'] ),
+			'version' => $asset['version'],
+		];
+
+		return $styles;
 	}
 
 	/**

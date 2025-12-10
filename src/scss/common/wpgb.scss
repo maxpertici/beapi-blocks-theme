@@ -2,9 +2,13 @@
  * WP Grid Builder
  */
 
-@use "../01-mixins/button" as *;
-@use "../01-mixins/heading" as *;
-@use "../01-mixins/text" as *;
+@use "./00-variables/config" as *;
+
+$entry-file-name: wpgb;
+
+@use "./01-mixins/button" as *;
+@use "./01-mixins/heading" as *;
+@use "./01-mixins/text" as *;
 
 .wpgb {
 	$el: &;
