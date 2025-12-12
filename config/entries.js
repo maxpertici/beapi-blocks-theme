@@ -1,5 +1,5 @@
 const path = require('path');
-const WatchedGlobEntriesPlugin = require('./WebpackWatchedGlobEntriesPlugin');
+const WatchedGlobEntriesPlugin = require('webpack-watched-glob-entries-plugin');
 
 const dynamicEntries = WatchedGlobEntriesPlugin.getEntries(
 	[
