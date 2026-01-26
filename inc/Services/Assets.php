@@ -108,6 +108,13 @@ class Assets implements Service {
 			$version = $this->is_dev() ? filemtime( get_theme_file_path( $style['file'] ) ) : null;
 			wp_register_style( 'theme-style', get_stylesheet_uri(), [], $version );
 		}
+
+		// Register print stylesheet
+		$print_style = $this->get_asset_file( 'print', 'css' );
+		if ( $print_style ) {
+			$version = $this->is_dev() ? filemtime( get_theme_file_path( $print_style['file'] ) ) : null;
+			$this->assets_tools->register_style( 'theme-print', $print_style['file'], [], $version, 'print' );
+		}
 	}
 
 	/**
@@ -124,6 +131,9 @@ class Assets implements Service {
 	public function enqueue_styles(): void {
 		// CSS
 		$this->assets_tools->enqueue_style( 'theme-style' );
+
+		// Print stylesheet
+		$this->assets_tools->enqueue_style( 'theme-print' );
 	}
 
 	/**

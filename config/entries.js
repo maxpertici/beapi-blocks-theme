@@ -25,6 +25,7 @@ module.exports = function () {
 			],
 			'post-build': './src/js/common/post-build.js',
 			login: './src/scss/common/login.scss',
+			print: './src/scss/common/print.scss',
 		},
 		dynamicEntries()
 	);
