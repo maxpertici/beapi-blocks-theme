@@ -98,14 +98,17 @@ class WebpackThemeJsonPlugin {
 		const tasks = {
 			'settings-color-palette'(key, value) {
 				let result = '';
+				const palette = [];
 
 				for (const color of value) {
-					result += `${getVariableName(
+					const colorVar = getVariableName(
 						'settings-color-' + color.slug
-					)}: ${color.color};\n`;
+					);
+					result += `${colorVar}: ${color.color};\n`;
+					palette.push(`${color.slug}: ${colorVar}`);
 				}
 
-				return result;
+				return result + `$settings-palette: (${palette.join(', ')});\n`;
 			},
 			'settings-custom': 'default',
 			'settings-spacing-spacingSizes'(key, value) {
