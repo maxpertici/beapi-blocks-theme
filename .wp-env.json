@@ -2,7 +2,6 @@
 	"core": "WordPress/WordPress#6.7",
 	"plugins": [
 		"./.wp-env/plugins/advanced-custom-fields-pro",
-		"./.wp-env/plugins/beapi-blocks-theme-custom-post-types",
 		"./.wp-env/plugins/blockparty-accordion",
 		"./.wp-env/plugins/blockparty-faq",
 		"./.wp-env/plugins/blockparty-key-figure",
@@ -10,7 +9,6 @@
 		"./.wp-env/plugins/icon-block",
 		"./.wp-env/plugins/mega-menu-block",
 		"./.wp-env/plugins/safe-svg",
-		"./.wp-env/plugins/sugar-calendar",
 		"./.wp-env/plugins/wp-grid-builder",
 		"./.wp-env/plugins/wordpress-seo"
 	],

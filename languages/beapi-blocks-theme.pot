@@ -1,4 +1,4 @@
-# Copyright (C) 2025 BeAPI
+# Copyright (C) 2026 BeAPI
 # This file is distributed under the same license as the BeAPI Blocks Theme theme.
 msgid ""
 msgstr ""
@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-02T10:12:24+00:00\n"
+"POT-Creation-Date: 2026-04-07T13:08:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: beapi-blocks-theme\n"
 
 #. Theme Name of the theme
@@ -69,16 +69,16 @@ msgstr ""
 msgid "Share on Email"
 msgstr ""
 
-#: inc/Helpers/Sugar_Calendar.php:73
-msgid "Register"
-msgstr ""
-
-#: inc/Helpers/Sugar_Calendar.php:119
-msgid "Add to my calendar"
+#: inc/Services/Editor.php:413
+msgid "Post type"
 msgstr ""
 
 #: inc/Services/Editor_Patterns.php:54
 msgid "Common"
+msgstr ""
+
+#: inc/Services/Editor_Patterns.php:55
+msgid "Hero"
 msgstr ""
 
 #: inc/Services/Menu.php:37
@@ -87,22 +87,6 @@ msgstr ""
 
 #: inc/Services/Menu.php:38
 msgid "Footer menu"
-msgstr ""
-
-#: inc/Services/Sugar_Calendar.php:39
-msgid "Event Date"
-msgstr ""
-
-#: inc/Services/Sugar_Calendar.php:47
-msgid "Event time"
-msgstr ""
-
-#: inc/Services/Sugar_Calendar.php:55
-msgid "Event Location"
-msgstr ""
-
-#: inc/Services/Sugar_Calendar.php:63
-msgid "Event Registration URL"
 msgstr ""
 
 #: patterns/comments.php
@@ -163,6 +147,7 @@ msgstr ""
 
 #. translators: Designed by BeAPI. %s: BeAPI link.
 #: patterns/footer.php:82
+#, php-format
 msgid "Designed by %s"
 msgstr ""
 
@@ -174,6 +159,46 @@ msgstr ""
 #: patterns/header.php
 msgctxt "Pattern description"
 msgid "Header with site title and navigation."
+msgstr ""
+
+#: patterns/hero-page-1.php
+msgctxt "Pattern title"
+msgid "Hero page 1"
+msgstr ""
+
+#: patterns/hero-page-1.php
+msgctxt "Pattern description"
+msgid "Hero in two columns with title, excerpt, buttons and featured image."
+msgstr ""
+
+#: patterns/hero-page-2.php
+msgctxt "Pattern title"
+msgid "Hero page 2"
+msgstr ""
+
+#: patterns/hero-page-2.php
+msgctxt "Pattern description"
+msgid "Hero with centered title, excerpt an buttons."
+msgstr ""
+
+#: patterns/hero-page-3.php
+msgctxt "Pattern title"
+msgid "Hero page 3"
+msgstr ""
+
+#: patterns/hero-page-3.php
+msgctxt "Pattern description"
+msgid "Hero in one column with full featured image, title, excerpt and buttons."
+msgstr ""
+
+#: patterns/hero-page-hub.php
+msgctxt "Pattern title"
+msgid "Hero page Hub"
+msgstr ""
+
+#: patterns/hero-page-hub.php
+msgctxt "Pattern description"
+msgid "Hero in one column with wide featured image, title, excerpt and buttons."
 msgstr ""
 
 #: patterns/hidden-404.php
@@ -216,6 +241,15 @@ msgctxt "Pattern description"
 msgid "Card post."
 msgstr ""
 
+#: patterns/hidden-filters-horizontal.php
+msgctxt "Pattern title"
+msgid "Hidden filters horizontal"
+msgstr ""
+
+#: patterns/hidden-filters-horizontal.php:18
+msgid "Filter by"
+msgstr ""
+
 #: patterns/hidden-hero-single-1.php
 msgctxt "Pattern title"
 msgid "Hero single"
@@ -240,41 +274,9 @@ msgctxt "Pattern title"
 msgid "Hero single 4"
 msgstr ""
 
-#: patterns/hidden-hero-single-event-1.php
+#: patterns/hidden-hero-single-5.php
 msgctxt "Pattern title"
-msgid "Hero single event 1"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:33
-msgid "Date and time"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:38
-msgid "Event dates"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:42
-msgid "Event times"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:54
-msgid "Location"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:59
-msgid "Event location"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:70
-msgid "Price"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:75
-msgid "xxx euros"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:83
-msgid "Registration link"
+msgid "Hero single 5"
 msgstr ""
 
 #: patterns/hidden-home-content-1.php
@@ -302,24 +304,40 @@ msgctxt "Pattern description"
 msgid "Hidden heading for the archive page."
 msgstr ""
 
-#: patterns/hidden-search.php
+#: patterns/hidden-search-card-1.php
 msgctxt "Pattern title"
+msgid "Hidden search card 1"
+msgstr ""
+
+#: patterns/hidden-search-card-1.php
+#: patterns/hidden-search-card-2.php
+msgctxt "Pattern description"
+msgid "Card search."
+msgstr ""
+
+#: patterns/hidden-search-card-2.php
+msgctxt "Pattern title"
+msgid "Hidden search card 2"
+msgstr ""
+
+#: patterns/hidden-search-form.php
+msgctxt "Pattern title"
+msgid "Hidden search form"
+msgstr ""
+
+#: patterns/hidden-search-form.php:14
+#: patterns/hidden-search-results-2.php:16
 msgid "Search"
 msgstr ""
 
-#: patterns/hidden-search.php:14
-msgctxt "Search form label."
-msgid "Search"
+#: patterns/hidden-search-results-1.php
+msgctxt "Pattern title"
+msgid "Search results 1"
 msgstr ""
 
-#: patterns/hidden-search.php:14
-msgctxt "Search input field placeholder text."
-msgid "Type here..."
-msgstr ""
-
-#: patterns/hidden-search.php:14
-msgctxt "Button text. Verb."
-msgid "Search"
+#: patterns/hidden-search-results-2.php
+msgctxt "Pattern title"
+msgid "Search results 2"
 msgstr ""
 
 #: patterns/hidden-share.php
@@ -373,25 +391,6 @@ msgstr ""
 msgid "in"
 msgstr ""
 
-#: patterns/more-events.php
-msgctxt "Pattern title"
-msgid "More events"
-msgstr ""
-
-#: patterns/more-events.php
-msgctxt "Pattern description"
-msgid "Displays a list of events with title and date."
-msgstr ""
-
-#: patterns/more-events.php:22
-#: patterns/more-posts.php:22
-msgid "Other poetry that may interest you"
-msgstr ""
-
-#: patterns/more-events.php:32
-msgid "See more events"
-msgstr ""
-
 #: patterns/more-posts.php
 msgctxt "Pattern title"
 msgid "More posts"
@@ -400,6 +399,10 @@ msgstr ""
 #: patterns/more-posts.php
 msgctxt "Pattern description"
 msgid "Displays a list of posts with title and date."
+msgstr ""
+
+#: patterns/more-posts.php:22
+msgid "Other poetry that may interest you"
 msgstr ""
 
 #: patterns/more-posts.php:32

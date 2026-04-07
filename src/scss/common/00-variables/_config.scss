@@ -25,20 +25,6 @@ $home-variations: (1, 2);
 // hero single variations, by default the four styles are enabled
 $hero-single-variations: (1, 2, 3, 4, 5);
 
-// has sugar calendar enabled
-$has-sugar-calendar-enabled: true;
-
-// archive events variations
-$archive-events-variations: (1);
-
-// has press releases enabled
-$has-press-releases-enabled: true;
-$archive-press-releases-variations: (1);
-
-// has job offers enabled
-$has-job-offers-enabled: true;
-$archive-job-offers-variations: (1);
-
 // ----
 // Breakpoints
 // Based on WordPress breakpoints (https://github.com/WordPress/gutenberg/blob/trunk/packages/base-styles/_breakpoints.scss)

@@ -4,48 +4,10 @@
 	"customTemplates": [
 		{
 			"name": "page-no-title",
-			"postTypes": ["page"],
+			"postTypes": [
+				"page"
+			],
 			"title": "Page No Title"
-		},
-		{
-			"name": "archive-sc_event",
-			"postTypes": ["sc_event"],
-			"title": "Archive Events"
-		},
-		{
-			"name": "single-sc_event",
-			"postTypes": ["sc_event"],
-			"title": "Single Event"
-		},
-		{
-			"name": "archive-publication",
-			"postTypes": ["publication"],
-			"title": "Archive Publications"
-		},
-		{
-			"name": "single-publication",
-			"postTypes": ["publication"],
-			"title": "Single Publication"
-		},
-		{
-			"name": "archive-press-release",
-			"postTypes": ["press-release"],
-			"title": "Archive Press Releases"
-		},
-		{
-			"name": "single-press-release",
-			"postTypes": ["press-release"],
-			"title": "Single Press Release"
-		},
-		{
-			"name": "archive-job-offer",
-			"postTypes": ["job-offer"],
-			"title": "Archive Job Offers"
-		},
-		{
-			"name": "single-job-offer",
-			"postTypes": ["job-offer"],
-			"title": "Single Job Offer"
 		}
 	]
 }
