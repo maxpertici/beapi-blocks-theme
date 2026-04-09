@@ -176,34 +176,3 @@ Sera nommé :
 ```bash
 styles-blocks-coreParagraph.json
 ```
-
-## Archive news
-
-2 mises en formes sont disponibles pour l'archive news, `patterns/hidden-home-content-[1-2].php`. Pour la modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/home.html`. Puis sélectionner le numéro correspondant dans le fichier `00-variables/_config.scss`
-
-```html
-<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-home-content-2"} /-->
-```
-
-```scss
-$home-variations: (2);
-```
-
-## Single
-
-4 heros sont disponibles pour les singles, `patterns/hidden-hero-single-[1-4].php`. Pour le modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier template, ex : `templates/single.html`. Puis sélectionner le numéro correspondant dans le fichier `00-variables/_config.scss`
-
-```html
-<!-- wp:pattern {"slug":"beapi-blocks-theme/hero-single-3"} /-->
-```
-
-```scss
-$hero-single-variations: (3);
-```
-
-## Résultats de recherche
-
-2 mises en formes sont disponibles pour les résultats de recherche, `patterns/hidden-search-results-[1-2].php`. Pour la modifier, il faut changer le numéro au niveau de l’inclusion du pattern dans le fichier `templates/search.html`.
-```html
-<!-- wp:pattern {"slug":"beapi-blocks-theme/hidden-search-results-2"} /-->
-```

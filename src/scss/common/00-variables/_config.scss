@@ -17,13 +17,12 @@ $is-rtl-enabled: false;
 $mobile-to-desktop-nav-breakpoint: md;
 
 // paragraph sizes
-$paragraph-sizes: (default, small, large, huge);
-
-// home variations, by default the two styles are enabled
-$home-variations: (1, 2);
-
-// hero single variations, by default the four styles are enabled
-$hero-single-variations: (1, 2, 3, 4, 5);
+$paragraph-sizes: (
+	default,
+	small,
+	large,
+	huge
+);
 
 // ----
 // Breakpoints
@@ -32,11 +31,14 @@ $hero-single-variations: (1, 2, 3, 4, 5);
 $breakpoints: (
 	7xs: 480,
 	6xs: 600,
-	5xs: 601, // 601px is a wordpress breakpoint (admin-bar become sticky)
+	5xs: 601,
+	// 601px is a wordpress breakpoint (admin-bar become sticky)
 	4xs: 768,
 	3xs: 781,
-	2xs: 782, // columns orientation change
-	xs: 784,  // admin bar height change
+	2xs: 782,
+	// columns orientation change
+	xs: 784,
+	// admin bar height change
 	s: 960,
 	md: 1024,
 	l: math.div($settings-custom-layout-wide-size + $settings-custom-layout-desktop-external-gutter * 2, 1px),

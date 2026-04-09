@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: BeAPI Blocks Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/beapi-blocks-"
 "theme\n"
-"POT-Creation-Date: 2026-04-07T13:08:14+00:00\n"
-"PO-Revision-Date: 2026-04-07 15:08+0200\n"
+"POT-Creation-Date: 2026-04-09T15:21:13+00:00\n"
+"PO-Revision-Date: 2026-04-09 17:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -90,20 +90,6 @@ msgstr "Menu principal"
 msgid "Footer menu"
 msgstr "Menu pied de page"
 
-#: patterns/comments.php
-msgctxt "Pattern title"
-msgid "Comments"
-msgstr ""
-
-#: patterns/comments.php
-msgctxt "Pattern description"
-msgid "Comments area with comments list, pagination, and comment form."
-msgstr ""
-
-#: patterns/comments.php:20
-msgid "Comments"
-msgstr "Commentaires"
-
 #: patterns/footer.php
 msgctxt "Pattern title"
 msgid "Footer"
@@ -162,48 +148,6 @@ msgctxt "Pattern description"
 msgid "Header with site title and navigation."
 msgstr ""
 
-#: patterns/hero-page-1.php
-msgctxt "Pattern title"
-msgid "Hero page 1"
-msgstr ""
-
-#: patterns/hero-page-1.php
-msgctxt "Pattern description"
-msgid "Hero in two columns with title, excerpt, buttons and featured image."
-msgstr ""
-
-#: patterns/hero-page-2.php
-msgctxt "Pattern title"
-msgid "Hero page 2"
-msgstr ""
-
-#: patterns/hero-page-2.php
-msgctxt "Pattern description"
-msgid "Hero with centered title, excerpt an buttons."
-msgstr ""
-
-#: patterns/hero-page-3.php
-msgctxt "Pattern title"
-msgid "Hero page 3"
-msgstr ""
-
-#: patterns/hero-page-3.php
-msgctxt "Pattern description"
-msgid ""
-"Hero in one column with full featured image, title, excerpt and buttons."
-msgstr ""
-
-#: patterns/hero-page-hub.php
-msgctxt "Pattern title"
-msgid "Hero page Hub"
-msgstr ""
-
-#: patterns/hero-page-hub.php
-msgctxt "Pattern description"
-msgid ""
-"Hero in one column with wide featured image, title, excerpt and buttons."
-msgstr ""
-
 #: patterns/hidden-404.php
 msgctxt "Pattern title"
 msgid "404"
@@ -232,113 +176,6 @@ msgstr "Retour à l’accueil"
 #: patterns/hidden-404.php:41 patterns/hidden-404.php:45
 msgid "Link"
 msgstr "Lien"
-
-#: patterns/hidden-card-post-1.php
-msgctxt "Pattern title"
-msgid "Hidden card post 1"
-msgstr ""
-
-#: patterns/hidden-card-post-1.php
-msgctxt "Pattern description"
-msgid "Card post."
-msgstr ""
-
-#: patterns/hidden-filters-horizontal.php
-msgctxt "Pattern title"
-msgid "Hidden filters horizontal"
-msgstr ""
-
-#: patterns/hidden-filters-horizontal.php:18
-msgid "Filter by"
-msgstr "Filtrer par"
-
-#: patterns/hidden-hero-single-1.php
-msgctxt "Pattern title"
-msgid "Hero single"
-msgstr ""
-
-#: patterns/hidden-hero-single-2.php
-msgctxt "Pattern title"
-msgid "Hero single 2"
-msgstr ""
-
-#: patterns/hidden-hero-single-2.php:20
-msgid "News"
-msgstr "Actualités"
-
-#: patterns/hidden-hero-single-3.php
-msgctxt "Pattern title"
-msgid "Hero single 3"
-msgstr ""
-
-#: patterns/hidden-hero-single-4.php
-msgctxt "Pattern title"
-msgid "Hero single 4"
-msgstr ""
-
-#: patterns/hidden-hero-single-5.php
-msgctxt "Pattern title"
-msgid "Hero single 5"
-msgstr ""
-
-#: patterns/hidden-home-content-1.php
-msgctxt "Pattern title"
-msgid "Home content 1"
-msgstr ""
-
-#: patterns/hidden-home-content-2.php
-msgctxt "Pattern title"
-msgid "Home content 2"
-msgstr ""
-
-#: patterns/hidden-pagination.php
-msgctxt "Pattern title"
-msgid "Pagination"
-msgstr ""
-
-#: patterns/hidden-queried-object-title.php
-msgctxt "Pattern title"
-msgid "Hidden queried object title"
-msgstr ""
-
-#: patterns/hidden-queried-object-title.php
-msgctxt "Pattern description"
-msgid "Hidden heading for the archive page."
-msgstr ""
-
-#: patterns/hidden-search-card-1.php
-msgctxt "Pattern title"
-msgid "Hidden search card 1"
-msgstr ""
-
-#: patterns/hidden-search-card-1.php patterns/hidden-search-card-2.php
-msgctxt "Pattern description"
-msgid "Card search."
-msgstr ""
-
-#: patterns/hidden-search-card-2.php
-msgctxt "Pattern title"
-msgid "Hidden search card 2"
-msgstr ""
-
-#: patterns/hidden-search-form.php
-msgctxt "Pattern title"
-msgid "Hidden search form"
-msgstr ""
-
-#: patterns/hidden-search-form.php:14 patterns/hidden-search-results-2.php:16
-msgid "Search"
-msgstr "Recherche"
-
-#: patterns/hidden-search-results-1.php
-msgctxt "Pattern title"
-msgid "Search results 1"
-msgstr ""
-
-#: patterns/hidden-search-results-2.php
-msgctxt "Pattern title"
-msgid "Search results 2"
-msgstr ""
 
 #: patterns/hidden-share.php
 msgctxt "Pattern title"
@@ -377,72 +214,6 @@ msgstr "Envoyer par email"
 #: patterns/hidden-share.php:45
 msgid "Print"
 msgstr "Imprimer"
-
-#: patterns/hidden-written-by.php
-msgctxt "Pattern title"
-msgid "Written by"
-msgstr ""
-
-#: patterns/hidden-written-by.php:16
-msgid "Written by "
-msgstr "Écrit par"
-
-#: patterns/hidden-written-by.php:20
-msgid "in"
-msgstr "dans"
-
-#: patterns/more-posts.php
-msgctxt "Pattern title"
-msgid "More posts"
-msgstr ""
-
-#: patterns/more-posts.php
-msgctxt "Pattern description"
-msgid "Displays a list of posts with title and date."
-msgstr ""
-
-#: patterns/more-posts.php:22
-msgid "Other poetry that may interest you"
-msgstr "D'autres articles qui pourraient vous intéresser"
-
-#: patterns/more-posts.php:32
-msgid "See more posts"
-msgstr "Voir plus d’articles"
-
-#: patterns/post-navigation.php
-msgctxt "Pattern title"
-msgid "Post navigation"
-msgstr ""
-
-#: patterns/post-navigation.php
-msgctxt "Pattern description"
-msgid "Next and previous post links."
-msgstr ""
-
-#: patterns/post-navigation.php:17 patterns/post-navigation.php:18
-msgid "Post navigation"
-msgstr "Navigation entre les articles"
-
-#: patterns/template-query-loop.php
-msgctxt "Pattern title"
-msgid "List of posts, 1 column"
-msgstr ""
-
-#: patterns/template-query-loop.php
-msgctxt "Pattern description"
-msgid "A list of posts, 1 column, with featured image and post date."
-msgstr ""
-
-#: patterns/template-query-loop.php:24
-msgctxt "Message explaining that there are no results returned from a search."
-msgid ""
-"Sorry, but nothing was found. Please try a search with different keywords."
-msgstr ""
-
-#: theme.json
-msgctxt "Custom template name"
-msgid "Page No Title"
-msgstr ""
 
 #: theme.json
 msgctxt "Color name"
@@ -603,6 +374,33 @@ msgstr ""
 msgctxt "Template part name"
 msgid "Footer"
 msgstr ""
+
+#~ msgid "Comments"
+#~ msgstr "Commentaires"
+
+#~ msgid "Filter by"
+#~ msgstr "Filtrer par"
+
+#~ msgid "News"
+#~ msgstr "Actualités"
+
+#~ msgid "Search"
+#~ msgstr "Recherche"
+
+#~ msgid "Written by "
+#~ msgstr "Écrit par"
+
+#~ msgid "in"
+#~ msgstr "dans"
+
+#~ msgid "Other poetry that may interest you"
+#~ msgstr "D'autres articles qui pourraient vous intéresser"
+
+#~ msgid "See more posts"
+#~ msgstr "Voir plus d’articles"
+
+#~ msgid "Post navigation"
+#~ msgstr "Navigation entre les articles"
 
 #~ msgid "Didn't find what you were looking for?"
 #~ msgstr "Vous n'avez pas trouvé ce que vous cherchiez ?"

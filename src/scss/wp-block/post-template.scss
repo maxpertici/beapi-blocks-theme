@@ -1,39 +1,5 @@
 /**
  * Post template
  */
-@use "sass:list";
-@use "../common/00-variables/config" as *;
-@use "../common/01-mixins/breakpoints" as *;
-@use "../common/01-mixins/wp-pattern-hidden-card" as *;
 
-.wp-block-post-template {
-	@if (list.index($home-variations, 1) !=null) {
-
-		// ---
-		// Home variation 1
-		// ---
-		&.grid-home-1 {
-			gap: var(--wp--preset--spacing--xl);
-
-			> li {
-				&:first-child {
-					grid-column: 1/-1;
-
-					> * {
-						@include wp-pattern-hidden-card-post-2;
-					}
-				}
-			}
-		}
-	}
-
-	@if (list.index($home-variations, 2) !=null) {
-
-		// ---
-		// Home variation 2
-		// ---
-		&.grid-home-2 {
-			gap: var(--wp--preset--spacing--md);
-		}
-	}
-}
+// .wp-block-post-template {}
