@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: BeAPI Blocks Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/beapi-blocks-"
 "theme\n"
-"POT-Creation-Date: 2026-04-09T15:21:13+00:00\n"
-"PO-Revision-Date: 2026-04-09 17:22+0200\n"
+"POT-Creation-Date: 2026-04-10T14:28:33+00:00\n"
+"PO-Revision-Date: 2026-04-10 16:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -177,44 +177,6 @@ msgstr "Retour à l’accueil"
 msgid "Link"
 msgstr "Lien"
 
-#: patterns/hidden-share.php
-msgctxt "Pattern title"
-msgid "Share"
-msgstr ""
-
-#: patterns/hidden-share.php:18
-msgctxt "Share an article by mail - Start of the message"
-msgid ""
-"Hi ! \n"
-"\n"
-"Here, an interesting article"
-msgstr ""
-
-#: patterns/hidden-share.php:21
-msgctxt "Share an article by mail - End of the message"
-msgid ""
-"\n"
-"\n"
-"Enjoy !"
-msgstr ""
-
-#: patterns/hidden-share.php:22
-msgctxt "Share an article by mail - Title of the mail"
-msgid "Discover an article:"
-msgstr ""
-
-#: patterns/hidden-share.php:28
-msgid "Share"
-msgstr "Partager"
-
-#: patterns/hidden-share.php:42
-msgid "Send by email"
-msgstr "Envoyer par email"
-
-#: patterns/hidden-share.php:45
-msgid "Print"
-msgstr "Imprimer"
-
 #: theme.json
 msgctxt "Color name"
 msgid "Gray 100"
@@ -374,6 +336,15 @@ msgstr ""
 msgctxt "Template part name"
 msgid "Footer"
 msgstr ""
+
+#~ msgid "Share"
+#~ msgstr "Partager"
+
+#~ msgid "Send by email"
+#~ msgstr "Envoyer par email"
+
+#~ msgid "Print"
+#~ msgstr "Imprimer"
 
 #~ msgid "Comments"
 #~ msgstr "Commentaires"
