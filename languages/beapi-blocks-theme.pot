@@ -1,4 +1,4 @@
-# Copyright (C) 2025 BeAPI
+# Copyright (C) 2026 BeAPI
 # This file is distributed under the same license as the BeAPI Blocks Theme theme.
 msgid ""
 msgstr ""
@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-02T10:12:24+00:00\n"
+"POT-Creation-Date: 2026-04-10T14:28:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: beapi-blocks-theme\n"
 
 #. Theme Name of the theme
@@ -69,16 +69,16 @@ msgstr ""
 msgid "Share on Email"
 msgstr ""
 
-#: inc/Helpers/Sugar_Calendar.php:73
-msgid "Register"
-msgstr ""
-
-#: inc/Helpers/Sugar_Calendar.php:119
-msgid "Add to my calendar"
+#: inc/Services/Editor.php:413
+msgid "Post type"
 msgstr ""
 
 #: inc/Services/Editor_Patterns.php:54
 msgid "Common"
+msgstr ""
+
+#: inc/Services/Editor_Patterns.php:55
+msgid "Hero"
 msgstr ""
 
 #: inc/Services/Menu.php:37
@@ -87,36 +87,6 @@ msgstr ""
 
 #: inc/Services/Menu.php:38
 msgid "Footer menu"
-msgstr ""
-
-#: inc/Services/Sugar_Calendar.php:39
-msgid "Event Date"
-msgstr ""
-
-#: inc/Services/Sugar_Calendar.php:47
-msgid "Event time"
-msgstr ""
-
-#: inc/Services/Sugar_Calendar.php:55
-msgid "Event Location"
-msgstr ""
-
-#: inc/Services/Sugar_Calendar.php:63
-msgid "Event Registration URL"
-msgstr ""
-
-#: patterns/comments.php
-msgctxt "Pattern title"
-msgid "Comments"
-msgstr ""
-
-#: patterns/comments.php
-msgctxt "Pattern description"
-msgid "Comments area with comments list, pagination, and comment form."
-msgstr ""
-
-#: patterns/comments.php:20
-msgid "Comments"
 msgstr ""
 
 #: patterns/footer.php
@@ -163,6 +133,7 @@ msgstr ""
 
 #. translators: Designed by BeAPI. %s: BeAPI link.
 #: patterns/footer.php:82
+#, php-format
 msgid "Designed by %s"
 msgstr ""
 
@@ -204,241 +175,6 @@ msgstr ""
 #: patterns/hidden-404.php:41
 #: patterns/hidden-404.php:45
 msgid "Link"
-msgstr ""
-
-#: patterns/hidden-card-post-1.php
-msgctxt "Pattern title"
-msgid "Hidden card post 1"
-msgstr ""
-
-#: patterns/hidden-card-post-1.php
-msgctxt "Pattern description"
-msgid "Card post."
-msgstr ""
-
-#: patterns/hidden-hero-single-1.php
-msgctxt "Pattern title"
-msgid "Hero single"
-msgstr ""
-
-#: patterns/hidden-hero-single-2.php
-msgctxt "Pattern title"
-msgid "Hero single 2"
-msgstr ""
-
-#: patterns/hidden-hero-single-2.php:20
-msgid "News"
-msgstr ""
-
-#: patterns/hidden-hero-single-3.php
-msgctxt "Pattern title"
-msgid "Hero single 3"
-msgstr ""
-
-#: patterns/hidden-hero-single-4.php
-msgctxt "Pattern title"
-msgid "Hero single 4"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php
-msgctxt "Pattern title"
-msgid "Hero single event 1"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:33
-msgid "Date and time"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:38
-msgid "Event dates"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:42
-msgid "Event times"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:54
-msgid "Location"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:59
-msgid "Event location"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:70
-msgid "Price"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:75
-msgid "xxx euros"
-msgstr ""
-
-#: patterns/hidden-hero-single-event-1.php:83
-msgid "Registration link"
-msgstr ""
-
-#: patterns/hidden-home-content-1.php
-msgctxt "Pattern title"
-msgid "Home content 1"
-msgstr ""
-
-#: patterns/hidden-home-content-2.php
-msgctxt "Pattern title"
-msgid "Home content 2"
-msgstr ""
-
-#: patterns/hidden-pagination.php
-msgctxt "Pattern title"
-msgid "Pagination"
-msgstr ""
-
-#: patterns/hidden-queried-object-title.php
-msgctxt "Pattern title"
-msgid "Hidden queried object title"
-msgstr ""
-
-#: patterns/hidden-queried-object-title.php
-msgctxt "Pattern description"
-msgid "Hidden heading for the archive page."
-msgstr ""
-
-#: patterns/hidden-search.php
-msgctxt "Pattern title"
-msgid "Search"
-msgstr ""
-
-#: patterns/hidden-search.php:14
-msgctxt "Search form label."
-msgid "Search"
-msgstr ""
-
-#: patterns/hidden-search.php:14
-msgctxt "Search input field placeholder text."
-msgid "Type here..."
-msgstr ""
-
-#: patterns/hidden-search.php:14
-msgctxt "Button text. Verb."
-msgid "Search"
-msgstr ""
-
-#: patterns/hidden-share.php
-msgctxt "Pattern title"
-msgid "Share"
-msgstr ""
-
-#: patterns/hidden-share.php:18
-msgctxt "Share an article by mail - Start of the message"
-msgid ""
-"Hi ! \n"
-"\n"
-"Here, an interesting article"
-msgstr ""
-
-#: patterns/hidden-share.php:21
-msgctxt "Share an article by mail - End of the message"
-msgid ""
-"\n"
-"\n"
-"Enjoy !"
-msgstr ""
-
-#: patterns/hidden-share.php:22
-msgctxt "Share an article by mail - Title of the mail"
-msgid "Discover an article:"
-msgstr ""
-
-#: patterns/hidden-share.php:28
-msgid "Share"
-msgstr ""
-
-#: patterns/hidden-share.php:42
-msgid "Send by email"
-msgstr ""
-
-#: patterns/hidden-share.php:45
-msgid "Print"
-msgstr ""
-
-#: patterns/hidden-written-by.php
-msgctxt "Pattern title"
-msgid "Written by"
-msgstr ""
-
-#: patterns/hidden-written-by.php:16
-msgid "Written by "
-msgstr ""
-
-#: patterns/hidden-written-by.php:20
-msgid "in"
-msgstr ""
-
-#: patterns/more-events.php
-msgctxt "Pattern title"
-msgid "More events"
-msgstr ""
-
-#: patterns/more-events.php
-msgctxt "Pattern description"
-msgid "Displays a list of events with title and date."
-msgstr ""
-
-#: patterns/more-events.php:22
-#: patterns/more-posts.php:22
-msgid "Other poetry that may interest you"
-msgstr ""
-
-#: patterns/more-events.php:32
-msgid "See more events"
-msgstr ""
-
-#: patterns/more-posts.php
-msgctxt "Pattern title"
-msgid "More posts"
-msgstr ""
-
-#: patterns/more-posts.php
-msgctxt "Pattern description"
-msgid "Displays a list of posts with title and date."
-msgstr ""
-
-#: patterns/more-posts.php:32
-msgid "See more posts"
-msgstr ""
-
-#: patterns/post-navigation.php
-msgctxt "Pattern title"
-msgid "Post navigation"
-msgstr ""
-
-#: patterns/post-navigation.php
-msgctxt "Pattern description"
-msgid "Next and previous post links."
-msgstr ""
-
-#: patterns/post-navigation.php:17
-#: patterns/post-navigation.php:18
-msgid "Post navigation"
-msgstr ""
-
-#: patterns/template-query-loop.php
-msgctxt "Pattern title"
-msgid "List of posts, 1 column"
-msgstr ""
-
-#: patterns/template-query-loop.php
-msgctxt "Pattern description"
-msgid "A list of posts, 1 column, with featured image and post date."
-msgstr ""
-
-#: patterns/template-query-loop.php:24
-msgctxt "Message explaining that there are no results returned from a search."
-msgid "Sorry, but nothing was found. Please try a search with different keywords."
-msgstr ""
-
-#: theme.json
-msgctxt "Custom template name"
-msgid "Page No Title"
 msgstr ""
 
 #: theme.json

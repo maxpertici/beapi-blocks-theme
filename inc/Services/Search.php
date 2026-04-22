@@ -62,7 +62,6 @@ class Search implements Service {
 			[
 				'post',
 				'page',
-				'sc_event',
 			]
 		);
 

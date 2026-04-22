@@ -12,7 +12,6 @@ use BEA\Theme\Framework\Services\Menu;
 use BEA\Theme\Framework\Services\Svg;
 use BEA\Theme\Framework\Services\Theme;
 use BEA\Theme\Framework\Services\WP_Grid_Builder;
-use BEA\Theme\Framework\Services\Sugar_Calendar;
 use BEA\Theme\Framework\Tools\Body_Class;
 use BEA\Theme\Framework\Tools\Template_Parts;
 
@@ -42,7 +41,6 @@ class Framework {
 		Acf::class,
 		Menu::class,
 		WP_Grid_Builder::class,
-		Sugar_Calendar::class,
 		// Services as Tools
 		Body_Class::class,
 		Template_Parts::class,

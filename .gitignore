@@ -11,7 +11,6 @@ package-lock.json
 
 .wp-env/mu-plugins/
 .wp-env/plugins/*
-!.wp-env/plugins/beapi-blocks-theme-custom-post-types.php
 vendor/
 
 assets/conf-img/image-locations.json
