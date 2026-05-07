@@ -25,7 +25,7 @@ module.exports = {
 							['jpegtran', { progressive: true }],
 							['optipng', { optimizationLevel: 5 }],
 							// Svgo configuration here https://github.com/svg/svgo#configuratio
-							['svgo', { svgoconfig }],
+							['svgo', svgoconfig],
 						],
 					},
 				},
