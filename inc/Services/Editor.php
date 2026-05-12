@@ -211,14 +211,12 @@ class Editor implements Service {
 		/**
 		 * Do not enqueue a nonexistent file on admin
 		 */
-		if ( ! $editor_asset ) {
-			return;
+		if ( $editor_asset ) {
+			add_editor_style( $editor_asset['file'] );
 		}
 
-		add_editor_style( $editor_asset['file'] );
-
 		/**
-		 * Load all partial assets
+		 * Load all partial css assets
 		 */
 		foreach ( $this->assets->partial_assets['css'] as $asset ) {
 			add_editor_style( $asset['path_from_theme_root'] );
@@ -248,8 +246,41 @@ class Editor implements Service {
 		/**
 		 * Do not enqueue a nonexistent file on admin
 		 */
-		if ( ! $editor_asset ) {
-			return;
+		if ( $editor_asset ) {
+			$this->assets_tools->register_script(
+				'theme-admin-editor-script',
+				$editor_asset['file'],
+				$editor_asset['dependencies'],
+				$editor_asset['version'],
+				[ 'in_footer' => true ]
+			);
+
+			$this->assets_tools->add_inline_script(
+				'theme-admin-editor-script',
+				'const BFFEditorSettings = ' . wp_json_encode(
+					apply_filters(
+						'bff_editor_custom_settings',
+						[
+							'disableAllBlocksStyles'  => [
+								'core/separator',
+								'core/quote',
+								'core/pullquote',
+								'core/table',
+								'core/image',
+							],
+							'disabledBlocksStyles'    => [
+								// 'core/button' => [ 'outline' ]
+							],
+							'allowedBlocksVariations' => [
+								'core/embed' => [ 'youtube', 'vimeo', 'dailymotion' ],
+							],
+						]
+					)
+				),
+				'before'
+			);
+
+			$this->assets_tools->enqueue_script( 'theme-admin-editor-script' );
 		}
 
 		$this->assets_tools->register_script(

@@ -51,13 +51,21 @@ class Assets implements Service {
 		/**
 		 * Add hooks for the scripts and styles to hook on
 		 */
+		add_action( 'wp_enqueue_scripts', [ $this, 'add_theme_capabilities_script' ] );
+		add_filter( 'wp_login_page_theme_css', [ $this, 'login_stylesheet_uri' ] );
+
+		/**
+		 * Following hooks are only needed in the frontend
+		 */
+		if ( is_admin() ) {
+			return;
+		}
+
 		add_action( 'wp', [ $this, 'register_assets' ] );
 		add_action( 'init', [ $this, 'register_partial_assets' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_styles' ] );
-		add_action( 'wp_enqueue_scripts', [ $this, 'add_theme_capabilities_script' ] );
 		add_filter( 'stylesheet_uri', [ $this, 'stylesheet_uri' ] );
-		add_filter( 'wp_login_page_theme_css', [ $this, 'login_stylesheet_uri' ] );
 		add_filter( 'block_type_metadata', [ $this, 'add_block_assets_to_metadata' ], 1000, 1 );
 		add_filter( 'render_block', [ $this, 'enqueue_pattern_assets' ], 1000, 2 );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_template_assets' ], 1000, 1 );
@@ -74,10 +82,6 @@ class Assets implements Service {
 	 * Register all the Theme assets
 	 */
 	public function register_assets(): void {
-		if ( is_admin() ) {
-			return;
-		}
-
 		// Js
 		$asset = $this->get_asset_file( 'app', 'js' );
 		if ( $asset ) {
