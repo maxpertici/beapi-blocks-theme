@@ -2,36 +2,77 @@
 
 /* Customize BFFEditorSettings in inc/Services/Editor.php or with `bff_editor_custom_settings` filter (see readme). */
 import domReady from '@wordpress/dom-ready';
+import { subscribe } from '@wordpress/data';
 import { addFilter } from '@wordpress/hooks';
 import {
 	unregisterBlockStyle,
 	getBlockVariations,
+	getBlockType,
 	unregisterBlockVariation,
 } from '@wordpress/blocks';
 import './utils/beapi';
 
-// Native Gutenberg
-domReady(() => {
-	// Disable specific block styles
-	if (BFFEditorSettings.disabledBlocksStyles) {
-		Object.entries(BFFEditorSettings.disabledBlocksStyles).forEach(
-			([block, styles]) => {
-				unregisterBlockStyle(block, styles);
-			}
-		);
+const unregisterDisabledBlockStyles = () => {
+	if (!BFFEditorSettings.disabledBlocksStyles) {
+		return;
 	}
 
-	// Allow blocks variations
+	Object.entries(BFFEditorSettings.disabledBlocksStyles).forEach(
+		([blockName, styles]) => {
+			[].concat(styles).forEach((styleName) => {
+				unregisterBlockStyle(blockName, styleName);
+			});
+		}
+	);
+};
+
+const unregisterDisallowedBlockVariations = () => {
+	if (!BFFEditorSettings.allowedBlocksVariations) {
+		return;
+	}
+
+	Object.entries(BFFEditorSettings.allowedBlocksVariations).forEach(
+		([blockName, allowedVariationNames]) => {
+			const blockVariations = getBlockVariations(blockName) || [];
+
+			blockVariations.forEach((variation) => {
+				if (!allowedVariationNames.includes(variation.name)) {
+					unregisterBlockVariation(blockName, variation.name);
+				}
+			});
+		}
+	);
+};
+
+const whenBlocksRegistered = (blockNames, callback) => {
+	const areBlocksReady = () =>
+		blockNames.every((blockName) => getBlockType(blockName));
+
+	if (areBlocksReady()) {
+		callback();
+		return;
+	}
+
+	const unsubscribe = subscribe(() => {
+		if (!areBlocksReady()) {
+			return;
+		}
+
+		unsubscribe();
+		callback();
+	});
+};
+
+// Native Gutenberg
+domReady(() => {
+	unregisterDisabledBlockStyles();
+
 	if (BFFEditorSettings.allowedBlocksVariations) {
-		Object.entries(BFFEditorSettings.allowedBlocksVariations).forEach(
-			([block, variations]) => {
-				getBlockVariations(block).forEach((variant) => {
-					if (!variations.includes(variant.name)) {
-						unregisterBlockVariation(block, variant.name);
-					}
-				});
-			}
+		const blockNames = Object.keys(
+			BFFEditorSettings.allowedBlocksVariations
 		);
+
+		whenBlocksRegistered(blockNames, unregisterDisallowedBlockVariations);
 	}
 });
 
