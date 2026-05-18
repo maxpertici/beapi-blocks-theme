@@ -1,6 +1,6 @@
-/* global BFFEditorSettings */
+/* global BEAPI_EDITOR_SETTINGS */
 
-/* Customize BFFEditorSettings in inc/Services/Editor.php or with `bff_editor_custom_settings` filter (see readme). */
+/* Customize BEAPI_EDITOR_SETTINGS in inc/Services/Editor.php or with `bff_editor_custom_settings` filter (see readme). */
 import domReady from '@wordpress/dom-ready';
 import { subscribe } from '@wordpress/data';
 import { addFilter } from '@wordpress/hooks';
@@ -13,11 +13,11 @@ import {
 import './utils/beapi';
 
 const unregisterDisabledBlockStyles = () => {
-	if (!BFFEditorSettings.disabledBlocksStyles) {
+	if (!BEAPI_EDITOR_SETTINGS.disabledBlocksStyles) {
 		return;
 	}
 
-	Object.entries(BFFEditorSettings.disabledBlocksStyles).forEach(
+	Object.entries(BEAPI_EDITOR_SETTINGS.disabledBlocksStyles).forEach(
 		([blockName, styles]) => {
 			[].concat(styles).forEach((styleName) => {
 				unregisterBlockStyle(blockName, styleName);
@@ -27,11 +27,11 @@ const unregisterDisabledBlockStyles = () => {
 };
 
 const unregisterDisallowedBlockVariations = () => {
-	if (!BFFEditorSettings.allowedBlocksVariations) {
+	if (!BEAPI_EDITOR_SETTINGS.allowedBlocksVariations) {
 		return;
 	}
 
-	Object.entries(BFFEditorSettings.allowedBlocksVariations).forEach(
+	Object.entries(BEAPI_EDITOR_SETTINGS.allowedBlocksVariations).forEach(
 		([blockName, allowedVariationNames]) => {
 			const blockVariations = getBlockVariations(blockName) || [];
 
@@ -67,9 +67,9 @@ const whenBlocksRegistered = (blockNames, callback) => {
 domReady(() => {
 	unregisterDisabledBlockStyles();
 
-	if (BFFEditorSettings.allowedBlocksVariations) {
+	if (BEAPI_EDITOR_SETTINGS.allowedBlocksVariations) {
 		const blockNames = Object.keys(
-			BFFEditorSettings.allowedBlocksVariations
+			BEAPI_EDITOR_SETTINGS.allowedBlocksVariations
 		);
 
 		whenBlocksRegistered(blockNames, unregisterDisallowedBlockVariations);
@@ -87,8 +87,8 @@ addFilter(
 	function (settings, name) {
 		// Disable all styles
 		if (
-			BFFEditorSettings.disableAllBlocksStyles &&
-			BFFEditorSettings.disableAllBlocksStyles.includes(name)
+			BEAPI_EDITOR_SETTINGS.disableAllBlocksStyles &&
+			BEAPI_EDITOR_SETTINGS.disableAllBlocksStyles.includes(name)
 		) {
 			settings.styles = [];
 		}
