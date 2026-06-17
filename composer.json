@@ -77,7 +77,6 @@
 		"psalm": "./vendor/bin/psalm",
 		"cli": "php ./beapi",
 		"beapi": "php ./beapi",
-		"pattern:create": "php ./beapi pattern:create",
 		"pattern:generate": "php ./beapi pattern:generate",
 		"test:pattern-generator": "php ./tests/pattern-generator/run.php"
 	},
