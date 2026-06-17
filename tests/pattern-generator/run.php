@@ -32,6 +32,7 @@ $root = dirname( __DIR__, 2 );
 tmp_cleanup( $root );
 
 $generator = new PatternGenerator( $root );
+$action    = new GeneratePatternAction( $generator );
 
 assert_true( 'my-pattern' === PatternGenerator::normalizeSlug( 'My Pattern' ), 'Slug normalization failed.' );
 assert_true( 'hero-banner' === PatternGenerator::normalizeSlug( 'Hero___Banner' ), 'Slug cleanup failed.' );
@@ -72,9 +73,7 @@ $generator->generate( new PatternGenerationRequest( name: 'Landing Hero', slug: 
 'Collision without force should throw an exception.'
 );
 
-$action = new GeneratePatternAction( $generator );
-$scss_only_result = $action->handle(
-name: 'Cards',
+$create_result = $action->create(
 slug: 'cards-grid',
 category: 'common',
 title: 'Cards',
@@ -84,14 +83,30 @@ only_scss: true,
 force: false,
 );
 
-assert_true( 1 === count( $scss_only_result->createdFiles ), 'SCSS-only mode should create one file.' );
-assert_true( str_ends_with( $scss_only_result->createdFiles[0], '/src/scss/wp-pattern/cards-grid.scss' ), 'SCSS-only mode created wrong file.' );
+assert_true( 1 === count( $create_result->createdFiles ), 'SCSS-only mode should create one file.' );
+assert_true( str_ends_with( $create_result->createdFiles[0], '/src/scss/wp-pattern/cards-grid.scss' ), 'SCSS-only mode created wrong file.' );
+
+$generate_result = $action->generateFromModel(
+model: 'hero',
+slug: null,
+category: 'hero',
+title: 'Hero',
+description: 'Generated from model.',
+only_php: false,
+only_scss: false,
+force: false,
+);
+
+assert_true( 'hero' === $generate_result->slug, 'Model generation should default slug to model slug.' );
+assert_true( is_file( $root . '/patterns/hero.php' ), 'Model PHP pattern file was not created.' );
+assert_true( is_file( $root . '/src/scss/wp-pattern/hero.scss' ), 'Model SCSS pattern file was not created.' );
+$hero_content = file_get_contents( $root . '/patterns/hero.php' ) ?: '';
+assert_true( str_contains( $hero_content, 'Hero title' ), 'Model generation should use the model stub content.' );
 
 assert_throws(
 static function () use ( $action ): void {
-$action->handle(
-name: 'Invalid',
-slug: null,
+$action->create(
+slug: 'invalid',
 category: 'common',
 title: null,
 description: null,
@@ -103,6 +118,22 @@ force: false,
 'Mutually exclusive CLI options should throw an exception.'
 );
 
+assert_throws(
+static function () use ( $action ): void {
+$action->generateFromModel(
+model: 'missing-model',
+slug: null,
+category: 'common',
+title: null,
+description: null,
+only_php: false,
+only_scss: false,
+force: false,
+);
+},
+'Unknown model should throw an exception.'
+);
+
 tmp_cleanup( $root );
 
 echo "Pattern generator tests passed.\n";
@@ -112,4 +143,6 @@ function tmp_cleanup( string $root ): void {
 @unlink( $root . '/src/scss/wp-pattern/landing-hero.scss' );
 @unlink( $root . '/patterns/cards-grid.php' );
 @unlink( $root . '/src/scss/wp-pattern/cards-grid.scss' );
+@unlink( $root . '/patterns/hero.php' );
+@unlink( $root . '/src/scss/wp-pattern/hero.scss' );
 }

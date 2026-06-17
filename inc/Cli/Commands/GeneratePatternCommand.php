@@ -18,10 +18,10 @@ private Console $console,
 ) {
 }
 
-#[ConsoleCommand( name: 'make:pattern', description: 'Generate a PHP pattern and/or SCSS file from stubs.' )]
+#[ConsoleCommand( name: 'pattern:generate', description: 'Generate a pattern from an existing model stub.' )]
 public function __invoke(
-string $name,
-#[ConsoleArgument( description: 'Custom slug (defaults to a normalized version of name).' )]
+string $model,
+#[ConsoleArgument( description: 'Custom slug (defaults to the model slug).' )]
 ?string $slug = null,
 #[ConsoleArgument( description: 'Pattern category (common or hero).' )]
 string $category = 'common',
@@ -37,30 +37,30 @@ bool $only_scss = false,
 bool $force = false,
 ): ExitCode {
 $action = new GeneratePatternAction(
-new PatternGenerator( dirname( __DIR__, 3 ) )
+	new PatternGenerator( dirname( __DIR__, 3 ) )
 );
 
 try {
-$result = $action->handle(
-name: $name,
-slug: $slug,
-category: $category,
-title: $title,
-description: $description,
-only_php: $only_php,
-only_scss: $only_scss,
-force: $force,
-);
+	$result = $action->generateFromModel(
+		model: $model,
+		slug: $slug,
+		category: $category,
+		title: $title,
+		description: $description,
+		only_php: $only_php,
+		only_scss: $only_scss,
+		force: $force,
+	);
 } catch ( Throwable $exception ) {
-$this->console->error( $exception->getMessage() );
+	$this->console->error( $exception->getMessage() );
 
-return ExitCode::ERROR;
+	return ExitCode::ERROR;
 }
 
-$this->console->success( sprintf( 'Pattern "%s" generated with class "%s".', $result->slug, $result->className ) );
+$this->console->success( sprintf( 'Pattern "%s" generated from model "%s" with class "%s".', $result->slug, $model, $result->className ) );
 
 foreach ( $result->createdFiles as $file ) {
-$this->console->writeln( sprintf( ' - %s', $file ) );
+	$this->console->writeln( sprintf( ' - %s', $file ) );
 }
 
 return ExitCode::SUCCESS;

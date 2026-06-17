@@ -90,40 +90,49 @@ return in_array( $category, $this->allowedCategories, true );
  * @return array<int, array{path: string, stub: string}>
  */
 private function resolveFilesToGenerate( string $slug, PatternGenerationRequest $request ): array {
-$files = [];
+$files    = [];
+$base_dir = sprintf( '%s/stubs/pattern-generator', $this->projectRoot );
 
 if ( $request->createPhp ) {
-$files[] = [
-'path' => sprintf( '%s/patterns/%s.php', $this->projectRoot, $slug ),
-'stub' => $this->resolveStubPath( 'pattern.php.stub', $request->category ),
-];
+	$files[] = [
+		'path' => sprintf( '%s/patterns/%s.php', $this->projectRoot, $slug ),
+		'stub' => $this->resolveStubPathForRequest( $base_dir, 'pattern.php.stub', $request->category, $request->model ),
+	];
 }
 
 if ( $request->createScss ) {
-$files[] = [
-'path' => sprintf( '%s/src/scss/wp-pattern/%s.scss', $this->projectRoot, $slug ),
-'stub' => $this->resolveStubPath( 'pattern.scss.stub', $request->category ),
-];
+	$files[] = [
+		'path' => sprintf( '%s/src/scss/wp-pattern/%s.scss', $this->projectRoot, $slug ),
+		'stub' => $this->resolveStubPathForRequest( $base_dir, 'pattern.scss.stub', $request->category, $request->model ),
+	];
 }
 
 if ( [] === $files ) {
-throw new InvalidArgumentException( 'Nothing to generate: enable at least one target file.' );
+	throw new InvalidArgumentException( 'Nothing to generate: enable at least one target file.' );
 }
 
 return $files;
 }
 
-private function resolveStubPath( string $stub_file, string $category ): string {
-$base_dir      = sprintf( '%s/stubs/pattern-generator', $this->projectRoot );
+private function resolveStubPathForRequest( string $base_dir, string $stub_file, string $category, ?string $model = null ): string {
+if ( null !== $model ) {
+	$model_stub = sprintf( '%s/%s.%s', $base_dir, self::normalizeSlug( $model ), $stub_file );
+	if ( is_file( $model_stub ) ) {
+		return $model_stub;
+	}
+
+	throw new RuntimeException( sprintf( 'Model stub not found: %s', $model_stub ) );
+}
+
 $category_stub = sprintf( '%s/%s.%s', $base_dir, $category, $stub_file );
 
 if ( is_file( $category_stub ) ) {
-return $category_stub;
+	return $category_stub;
 }
 
 $default_stub = sprintf( '%s/%s', $base_dir, $stub_file );
 if ( ! is_file( $default_stub ) ) {
-throw new RuntimeException( sprintf( 'Stub file not found: %s', $default_stub ) );
+	throw new RuntimeException( sprintf( 'Stub file not found: %s', $default_stub ) );
 }
 
 return $default_stub;

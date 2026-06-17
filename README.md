@@ -57,25 +57,36 @@ Vous pouvez ajouter des variantes par catégorie :
 
 ### Utilisation
 
+Création directe à partir d'un slug :
+
 ```bash
-beapi make:pattern "Nom du pattern"
+beapi pattern:create "landing-hero"
+```
+
+Génération à partir d'un modèle existant (le slug reprend celui du modèle par défaut) :
+
+```bash
+beapi pattern:generate "hero"
 ```
 
 En local dans le dépôt, l'entrée correspond au binaire `./beapi` :
 
 ```bash
-./beapi make:pattern "Nom du pattern"
+./beapi pattern:create "landing-hero"
+./beapi pattern:generate "hero"
 ```
 
 Options disponibles :
 
-- `--slug=` : slug personnalisé (sinon slug généré depuis le nom)
+- `--slug=` : slug personnalisé pour `pattern:generate` (sinon slug du modèle)
 - `--category=` : catégorie (`common` ou `hero`)
 - `--title=` : titre du pattern dans l'entête PHP
 - `--description=` : description du pattern dans l'entête PHP
 - `--only-php` : génère uniquement `patterns/{slug}.php`
 - `--only-scss` : génère uniquement `src/scss/wp-pattern/{slug}.scss`
 - `--force` : écrase les fichiers existants
+
+`pattern:generate` s'appuie sur un stub de modèle existant dans `stubs/pattern-generator/{model}.pattern.php.stub` et `stubs/pattern-generator/{model}.pattern.scss.stub`.
 
 ### Conventions générées
 

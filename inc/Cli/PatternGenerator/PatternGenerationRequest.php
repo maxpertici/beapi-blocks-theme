@@ -8,6 +8,7 @@ final readonly class PatternGenerationRequest {
 public function __construct(
 public string $name,
 public ?string $slug = null,
+public ?string $model = null,
 public string $category = 'common',
 public ?string $title = null,
 public ?string $description = null,
