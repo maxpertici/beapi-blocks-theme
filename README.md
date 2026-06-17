@@ -40,6 +40,7 @@ Le thème expose une commande CLI basée sur Tempest Console pour générer les 
 
 ```bash
 composer install
+composer require --dev tempest/console:^1.0.0-alpha.4
 ```
 
 ### Stubs
