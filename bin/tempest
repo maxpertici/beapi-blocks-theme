@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+$autoload = dirname( __DIR__ ) . '/vendor/autoload.php';
+if ( ! is_file( $autoload ) ) {
+fwrite( STDERR, "Missing vendor/autoload.php. Run composer install first.\n" );
+exit( 1 );
+}
+
+require_once $autoload;
+
+if ( ! class_exists( Tempest\Console\ConsoleApplication::class ) ) {
+fwrite( STDERR, "Tempest Console is not installed. Run composer install/update.\n" );
+exit( 1 );
+}
+
+Tempest\Console\ConsoleApplication::boot(
+name: 'BEAPI Blocks Theme CLI',
+root: dirname( __DIR__ )
+)->run();

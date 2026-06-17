@@ -1,0 +1,20 @@
+<?php
+/**
+ * Title: {{title}}
+ * Slug: beapi-blocks-theme/{{slug}}
+ * Categories: hero
+ * Description: {{description}}
+ *
+ * @package WordPress
+ * @subpackage BeAPI Blocks Theme
+ * @since BeAPI Blocks Theme 1.0
+ */
+
+?>
+<!-- wp:group {"className":"{{class_name}}","layout":{"type":"constrained"}} -->
+<div class="wp-block-group {{class_name}}">
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading"><?php esc_html_e( 'Hero title', 'beapi-blocks-theme' ); ?></h1>
+<!-- /wp:heading -->
+</div>
+<!-- /wp:group -->

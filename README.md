@@ -32,6 +32,52 @@ yarn start
 yarn build
 ```
 
+## Générateur de patterns (CLI Tempest)
+
+Le thème expose une commande CLI basée sur Tempest Console pour générer les fichiers d'un pattern à partir de stubs versionnés.
+
+### Pré-requis
+
+```bash
+composer install
+```
+
+### Stubs
+
+Les stubs sont stockés dans :
+
+- `stubs/pattern-generator/pattern.php.stub`
+- `stubs/pattern-generator/pattern.scss.stub`
+
+Vous pouvez ajouter des variantes par catégorie :
+
+- `stubs/pattern-generator/{category}.pattern.php.stub`
+- `stubs/pattern-generator/{category}.pattern.scss.stub`
+
+### Utilisation
+
+```bash
+composer pattern:generate "Nom du pattern"
+```
+
+Options disponibles :
+
+- `--slug=` : slug personnalisé (sinon slug généré depuis le nom)
+- `--category=` : catégorie (`common` ou `hero`)
+- `--title=` : titre du pattern dans l'entête PHP
+- `--description=` : description du pattern dans l'entête PHP
+- `--only-php` : génère uniquement `patterns/{slug}.php`
+- `--only-scss` : génère uniquement `src/scss/wp-pattern/{slug}.scss`
+- `--force` : écrase les fichiers existants
+
+### Conventions générées
+
+- Le template PHP est créé dans `patterns/{slug}.php`
+- Le SCSS est créé dans `src/scss/wp-pattern/{slug}.scss`
+- Le slug est normalisé et partagé entre nom de fichier, slug WordPress et classe CSS `wp-pattern-{slug}`
+
+Le markup généré inclut la classe `wp-pattern-{slug}` pour permettre le chargement automatique du SCSS côté front.
+
 ## Assets splitting
 
 ``` bash

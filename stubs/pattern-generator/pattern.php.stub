@@ -1,0 +1,20 @@
+<?php
+/**
+ * Title: {{title}}
+ * Slug: beapi-blocks-theme/{{slug}}
+ * Categories: {{category}}
+ * Description: {{description}}
+ *
+ * @package WordPress
+ * @subpackage BeAPI Blocks Theme
+ * @since BeAPI Blocks Theme 1.0
+ */
+
+?>
+<!-- wp:group {"className":"{{class_name}}","layout":{"type":"constrained"}} -->
+<div class="wp-block-group {{class_name}}">
+<!-- wp:paragraph -->
+<p><?php esc_html_e( 'Pattern content', 'beapi-blocks-theme' ); ?></p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
