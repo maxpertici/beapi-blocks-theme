@@ -58,7 +58,13 @@ Vous pouvez ajouter des variantes par catégorie :
 ### Utilisation
 
 ```bash
-composer pattern:generate "Nom du pattern"
+beapi make:pattern "Nom du pattern"
+```
+
+En local dans le dépôt, l'entrée correspond au binaire `./beapi` :
+
+```bash
+./beapi make:pattern "Nom du pattern"
 ```
 
 Options disponibles :

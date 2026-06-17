@@ -18,7 +18,7 @@ private Console $console,
 ) {
 }
 
-#[ConsoleCommand( name: 'pattern:generate', description: 'Generate a PHP pattern and/or SCSS file from stubs.' )]
+#[ConsoleCommand( name: 'make:pattern', description: 'Generate a PHP pattern and/or SCSS file from stubs.' )]
 public function __invoke(
 string $name,
 #[ConsoleArgument( description: 'Custom slug (defaults to a normalized version of name).' )]
