@@ -57,6 +57,12 @@ Vous pouvez ajouter des variantes par catégorie :
 
 ### Utilisation
 
+Création directe à partir d'un slug :
+
+```bash
+beapi pattern:create "landing-hero"
+```
+
 Génération à partir d'un modèle existant (le slug reprend celui du modèle par défaut) :
 
 ```bash
@@ -66,6 +72,7 @@ beapi pattern:generate "hero"
 En local dans le dépôt, l'entrée correspond au binaire `./beapi` :
 
 ```bash
+./beapi pattern:create "landing-hero"
 ./beapi pattern:generate "hero"
 ```
 

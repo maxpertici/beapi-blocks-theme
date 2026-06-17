@@ -12,6 +12,31 @@ private PatternGenerator $generator,
 ) {
 }
 
+public function create(
+string $slug,
+string $category,
+?string $title,
+?string $description,
+bool $only_php,
+bool $only_scss,
+bool $force,
+): PatternGenerationResult {
+$this->assertExclusiveTargets( $only_php, $only_scss );
+
+return $this->generator->generate(
+	new PatternGenerationRequest(
+		name: $slug,
+		slug: $slug,
+		category: $category,
+		title: $title,
+		description: $description,
+		createPhp: ! $only_scss,
+		createScss: ! $only_php,
+		force: $force,
+	)
+);
+}
+
 public function generateFromModel(
 string $model,
 ?string $slug,

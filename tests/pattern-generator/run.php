@@ -73,6 +73,19 @@ $generator->generate( new PatternGenerationRequest( name: 'Landing Hero', slug: 
 'Collision without force should throw an exception.'
 );
 
+$create_result = $action->create(
+slug: 'cards-grid',
+category: 'common',
+title: 'Cards',
+description: null,
+only_php: false,
+only_scss: true,
+force: false,
+);
+
+assert_true( 1 === count( $create_result->createdFiles ), 'SCSS-only mode should create one file.' );
+assert_true( str_ends_with( $create_result->createdFiles[0], '/src/scss/wp-pattern/cards-grid.scss' ), 'SCSS-only mode created wrong file.' );
+
 $generate_result = $action->generateFromModel(
 model: 'hero',
 slug: null,
@@ -92,8 +105,7 @@ assert_true( str_contains( $hero_content, 'Hero title' ), 'Model generation shou
 
 assert_throws(
 static function () use ( $action ): void {
-$action->generateFromModel(
-model: 'hero',
+$action->create(
 slug: 'invalid',
 category: 'common',
 title: null,
@@ -129,6 +141,8 @@ echo "Pattern generator tests passed.\n";
 function tmp_cleanup( string $root ): void {
 @unlink( $root . '/patterns/landing-hero.php' );
 @unlink( $root . '/src/scss/wp-pattern/landing-hero.scss' );
+@unlink( $root . '/patterns/cards-grid.php' );
+@unlink( $root . '/src/scss/wp-pattern/cards-grid.scss' );
 @unlink( $root . '/patterns/hero.php' );
 @unlink( $root . '/src/scss/wp-pattern/hero.scss' );
 }
